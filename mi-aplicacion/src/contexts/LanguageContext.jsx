@@ -1,5 +1,11 @@
 import { createContext, useState, useContext, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { aboutUsTranslations } from './sections/AboutUsContent';
+import { architectureTranslations } from './sections/ArchitectureContent';
+import { contactTranslations } from './sections/ContactContent';
+import { homeTranslations } from './sections/HomeContent';
+import { managementTranslations } from './sections/ManagementContent';
+import { footerTranslations } from './sections/FooterContent';
 
 const translations = {
   es: {
@@ -8,6 +14,12 @@ const translations = {
     management: "Gestión",
     aboutUs: "Sobre Nosotros",
     contact: "Contacto",
+    ...aboutUsTranslations.es,
+    ...architectureTranslations.es,
+    ...contactTranslations.es,
+    ...homeTranslations.es,
+    ...managementTranslations.es,
+    ...footerTranslations.es,
   },
   eu: {
     home: "Hasiera",
@@ -15,6 +27,12 @@ const translations = {
     management: "Kudeaketa",
     aboutUs: "Guri Buruz",
     contact: "Kontaktua",
+    ...aboutUsTranslations.eu,
+    ...architectureTranslations.eu,
+    ...contactTranslations.eu,
+    ...homeTranslations.eu,
+    ...managementTranslations.eu,
+    ...footerTranslations.eu,
   },
   en: {
     home: "Home",
@@ -22,6 +40,12 @@ const translations = {
     management: "Management",
     aboutUs: "About Us",
     contact: "Contact",
+    ...aboutUsTranslations.en,
+    ...architectureTranslations.en,
+    ...contactTranslations.en,
+    ...homeTranslations.en,
+    ...managementTranslations.en,
+    ...footerTranslations.en,
   }
 };
 
