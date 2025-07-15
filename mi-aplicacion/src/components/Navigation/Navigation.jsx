@@ -1,29 +1,32 @@
-import { Link } from 'react-router-dom';
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLocation } from 'react-router-dom';
+import './Navigation.css'
 
-const Navigation = () => {
-  const { t, getRoute, changeLanguage, language, availableLanguages } = useLanguage();
+const Navigation = ({ t, getRoute, Link }) => {
+  const location = useLocation();
+  
+  const navigationItems = [
+    { key: 'architecture', route: 'architecture' },
+    { key: 'management', route: 'management' },
+    { key: 'aboutUs', route: 'aboutUs' },
+    { key: 'contact', route: 'contact' }
+  ];
+
+  const isHome = location.pathname === getRoute('home');
 
   return (
-    <nav>
-      <Link to={getRoute('home')}>{t('home')}</Link>
-      <Link to={getRoute('architecture')}>{t('architecture')}</Link>
-      <Link to={getRoute('management')}>{t('management')}</Link>
-      <Link to={getRoute('aboutUs')}>{t('aboutUs')}</Link>
-      <Link to={getRoute('contact')}>{t('contact')}</Link>
-      
-      <div>
-        {availableLanguages.map(lang => (
-          <button 
-            key={lang}
-            onClick={() => changeLanguage(lang)}
-            className={language === lang ? 'active' : ''}
+    <div>
+      <nav>
+        {navigationItems.map(item => (
+          <Link
+            key={item.key}
+            to={getRoute(item.route)}
+            className={`${location.pathname === getRoute(item.route) ? 'active' : ''} ${isHome ? 'home-page' : ''}`}
           >
-            {lang.toUpperCase()}
-          </button>
+            {t(item.key)}
+          </Link>
         ))}
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 

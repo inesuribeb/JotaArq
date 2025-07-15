@@ -12,7 +12,7 @@ const translations = {
     home: "Inicio",
     architecture: "Arquitectura",
     management: "Gestión",
-    aboutUs: "Sobre Nosotros",
+    aboutUs: "Nosotros",
     contact: "Contacto",
     ...aboutUsTranslations.es,
     ...architectureTranslations.es,

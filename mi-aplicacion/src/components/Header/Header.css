@@ -1,0 +1,30 @@
+.header-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    aspect-ratio: 1; 
+    background-color: var(--light-grey);
+    border-radius: 50%;
+}
+
+.logo-container img{
+    max-width: 65%;
+    max-height: 65%;
+    object-fit: contain;
+}
+
+.header-bottom {
+    flex: 1;
+}
