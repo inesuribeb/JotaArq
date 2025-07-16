@@ -1,9 +1,12 @@
+.navigation-container {
+    height: 60px;
+}
 nav {
     display: flex;
     width: 100%;
+    height: 100%;
 }
 
-/* Estilos base SIN color */
 nav a {
     flex: 1;
     text-align: left;
@@ -17,7 +20,6 @@ nav a {
     transition: transform 0.3s ease;
 }
 
-/* Pseudo-elementos base */
 nav a::before {
     content: '';
     position: absolute;
@@ -42,19 +44,14 @@ nav a::after {
     transition: transform 0.3s ease, height 0.3s ease;
 }
 
-/* Estados específicos por orden de especificidad */
-
-/* 1. Enlaces en home (todos oscuros) */
 nav a.home-page {
     color: var(--dark-color);
 }
 
-/* 2. Enlaces no activos fuera de home (grises) */
 nav a:not(.active):not(.home-page) {
     color: var(--light-grey);
 }
 
-/* 3. Enlaces activos (siempre oscuros y en posición baja) */
 nav a.active {
     transform: translateY(0.6rem);
     color: var(--dark-color);
@@ -69,7 +66,6 @@ nav a.active::after {
     transform: scaleY(1);
 }
 
-/* 4. Hover en enlaces no activos (más específico) */
 nav a:not(.active):hover {
     transform: translateY(0.6rem);
     color: var(--dark-color);

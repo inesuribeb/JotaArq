@@ -14,7 +14,7 @@ const Navigation = ({ t, getRoute, Link }) => {
   const isHome = location.pathname === getRoute('home');
 
   return (
-    <div>
+    <div className="navigation-container">
       <nav>
         {navigationItems.map(item => (
           <Link

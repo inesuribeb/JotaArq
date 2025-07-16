@@ -1,6 +1,8 @@
+// import './Home.css'
+
 function Home () {
     return (
-        <div>
+        <div className="home-page">
             <h1>inicio</h1>
         </div>
     )
