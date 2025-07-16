@@ -33,7 +33,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: var(--light-color);
+  background-color: var(--background-color);
   overscroll-behavior-y: none;
   scroll-behavior: smooth; 
 }
@@ -50,12 +50,12 @@ body {
   --burgundy-color: #6a0b0c;
   --orange-color: #ff6223;
 
-  --light-grey: #d8d8d8;
+  --light-grey: #c0c0c0;
   --light-sand: #e2dccc;
   --light-cream: #f7f6f2;
   --light-color: white;
 
-
+  --background-color: #eeeeee;
 
   --main-font: 'Scto Grotesk A', Helvetica, Arial, sans-serif;
   --serif-one-font: 'Playfair', serif;
