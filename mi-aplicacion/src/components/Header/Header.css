@@ -12,8 +12,8 @@
     /* max-height: 100px;  */
     /* height: 100svh; */
     box-sizing: border-box;
-    background: yellow; /* Añadir esto para que no interfiera */
-    overflow: hidden;
+    background: transparent; /* Añadir esto para que no interfiera */
+    /* overflow: hidden; */
 }
 
 .header-top {
@@ -30,7 +30,7 @@
     align-items: center;
     width: 50px;
     aspect-ratio: 1;
-    background-color: var(--light-grey);
+    background-color: var(--dark-color);
     border-radius: 50%;
 }
 
@@ -38,6 +38,7 @@
     max-width: 65%;
     max-height: 65%;
     object-fit: contain;
+    filter: invert();
 }
 
 .header-right {

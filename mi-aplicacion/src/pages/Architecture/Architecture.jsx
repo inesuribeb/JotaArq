@@ -1,7 +1,11 @@
-function Architecture () {
+import { useLanguage } from '../../contexts/LanguageContext';
+import './Architecture.css'
+
+function Architecture() {
+    const { t, getRoute, changeLanguage, language, availableLanguages } = useLanguage();
     return (
-        <div>
-            <h1>Architecture</h1>
+        <div className="architecture-content">
+            <h1>{t('architecture')}</h1>
         </div>
     )
 }

@@ -1,7 +1,11 @@
-function Contact () {
+import { useLanguage } from '../../contexts/LanguageContext';
+import './Contact.css'
+
+function Contact() {
+    const { t, getRoute, changeLanguage, language, availableLanguages } = useLanguage();
     return (
-        <div>
-            <h1>Contact</h1>
+        <div className="contact-content">
+            <h1>{t('contact')}</h1>
         </div>
     )
 }

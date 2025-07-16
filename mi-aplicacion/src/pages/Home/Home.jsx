@@ -1,9 +1,11 @@
-// import './Home.css'
+import { useLanguage } from '../../contexts/LanguageContext';
+import './Home.css'
 
-function Home () {
+function Home() {
+    const { t, getRoute, changeLanguage, language, availableLanguages } = useLanguage();
     return (
-        <div className="home-page">
-            <h1>inicio</h1>
+        <div className="home-content">
+            <h1 dangerouslySetInnerHTML={{ __html: t('homeIntro') }}></h1>
         </div>
     )
 }
