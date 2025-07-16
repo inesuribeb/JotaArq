@@ -38,10 +38,51 @@
 .header-right {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Espaciado entre Navigation y los idiomas */
+    gap: 0rem; /* Espaciado entre Navigation y los idiomas */
 }
 
+
 .header-language {
+    position: relative;
+    display: inline-block;
+}
+
+.language-main {
+    padding: 0.7rem 1.2rem;
+    border: 1px solid var(--dark-color);
+    background: var(--dark-color);
+    color: var(--light-color);
+    cursor: pointer;
+    border-radius: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    padding-top: 0.5rem; /* Separación del botón principal */
     display: flex;
-    gap: 0.5rem; /* Espaciado entre botones de idioma */
+    flex-direction: column;
+    gap: 0.5rem; /* Separación entre botones del dropdown */
+}
+
+.language-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 1.1rem; /* Mismo padding que el principal */
+    border: 1px solid var(--dark-color);
+    background: var(--light-color); /* Color opuesto */
+    color: var(--dark-color); /* Color opuesto */
+    cursor: pointer;
+    border-radius: 1.2rem; /* Mismo border-radius */
+    font-size: 0.9rem; /* Mismo font-size */
+    transition: all 0.3s ease;
+}
+
+.language-dropdown button:hover {
+    background: var(--dark-grey);
+    color: var(--light-color);
 }
