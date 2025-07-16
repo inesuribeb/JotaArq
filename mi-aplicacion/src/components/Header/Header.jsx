@@ -14,13 +14,28 @@ function Header() {
                     </div>
                 </Link>
 
-                <Navigation
-                    t={t}
-                    getRoute={getRoute}
-                    Link={Link}
-                />
+                <div className='header-right'>
+                    <Navigation
+                        t={t}
+                        getRoute={getRoute}
+                        Link={Link}
+                    />
+
+                    <div className='header-language'>
+                        {availableLanguages.map(lang => (
+                            <button
+                                key={lang}
+                                onClick={() => changeLanguage(lang)}
+                                className={language === lang ? 'active' : ''}
+                            >
+                                {lang.toUpperCase()}
+                            </button>
+                        ))}
+                    </div>
+                </div>
             </div>
-            <div className='header-bottom'>
+
+            {/* <div className='header-bottom'>
                 {availableLanguages.map(lang => (
                     <button
                         key={lang}
@@ -30,7 +45,7 @@ function Header() {
                         {lang.toUpperCase()}
                     </button>
                 ))}
-            </div>
+            </div> */}
         </div>
     )
 }

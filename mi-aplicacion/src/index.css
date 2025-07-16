@@ -21,6 +21,10 @@ body {
   scroll-behavior: smooth; 
 }
 
+*{
+  box-sizing: border-box; 
+}
+
 :root {
   --dark-color: black;
   --dark-grey: #2e2e2e;
