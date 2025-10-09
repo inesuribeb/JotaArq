@@ -13,7 +13,7 @@ const LanguageButton = ({ changeLanguage, language, availableLanguages }) => {
         >
             <ButtonJota
                 variant="primary"
-                className="language-main"
+                className={`language-main ${showAllLanguages ? 'active' : ''}`}
                 onClick={() => changeLanguage(language)}
             >
                 {language.toUpperCase()}
@@ -23,11 +23,12 @@ const LanguageButton = ({ changeLanguage, language, availableLanguages }) => {
                 <div className='language-dropdown'>
                     {availableLanguages
                         .filter(lang => lang !== language)
-                        .map(lang => (
+                        .map((lang, index) => (
                             <ButtonJota
                                 key={lang}
                                 variant="secondary"
                                 onClick={() => changeLanguage(lang)}
+                                className={`language-item language-item-${index + 1}`}
                             >
                                 {lang.toUpperCase()}
                             </ButtonJota>

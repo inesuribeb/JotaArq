@@ -1,0 +1,8 @@
+.section-services-intro {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    padding-top: 6rem;
+}

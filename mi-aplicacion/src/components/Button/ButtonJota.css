@@ -1,5 +1,5 @@
 .button-jota {
-    padding: 0.6rem 1.1rem;
+    padding: 0.6rem 0.8rem;
     border: 1px solid var(--dark-color);
     cursor: pointer;
     border-radius: 1.2rem;
@@ -73,10 +73,10 @@
 }
 
 /* Hover effect */
-.button-jota:hover::before {
+.button-jota:not(.language-main):not(.active):hover::before {
     transform: translateY(-100%);
 }
 
-.button-jota:hover::after {
+.button-jota:not(.language-main):not(.active):hover::after {
     transform: translateY(-100%);
 }

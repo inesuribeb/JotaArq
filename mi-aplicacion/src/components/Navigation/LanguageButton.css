@@ -17,21 +17,21 @@
 }
 
 /* animaciones */
-.language-dropdown>* {
+.language-item {
     opacity: 0;
     transform: translateY(-8px) scale(0.95);
     animation: elegantAppear 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.language-dropdown>*:nth-child(1) {
+.language-item-1 {
     animation-delay: 0ms;
 }
 
-.language-dropdown>*:nth-child(2) {
+.language-item-2 {
     animation-delay: 100ms;
 }
 
-.language-dropdown>*:nth-child(3) {
+.language-item-3 {
     animation-delay: 200ms;
 }
 
@@ -50,4 +50,8 @@
         opacity: 1;
         transform: translateY(0) scale(1);
     }
+}
+
+.language-main.active {
+    pointer-events: none;
 }

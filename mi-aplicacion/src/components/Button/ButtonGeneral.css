@@ -1,0 +1,27 @@
+.button-general {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-general.primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button-general.secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.button-general.success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.button-general.danger {
+    background-color: #dc3545;
+    color: #fff;
+}

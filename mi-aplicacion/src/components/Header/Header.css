@@ -14,6 +14,7 @@
     box-sizing: border-box;
     background: transparent; /* Añadir esto para que no interfiera */
     /* overflow: hidden; */
+    /* background-color: var(--background-color); */
 }
 
 .header-top {
