@@ -6,14 +6,16 @@ import './ServicesIntro.css';
 function ServicesIntro({ t }) {
     return (
         <section className='section-services-intro'>
-            <MiniTitle text={t('services')} />
-
-            <ArqIntro
-                t={t}
-            />
-            <MgmntIntro
-                t={t}
-            />
+            <MiniTitle className='mini-title-services' text={t('services')} />
+            <div className='container-services'>
+                <ArqIntro
+                    t={t}
+                />
+                <div className='black-connector'></div> 
+                <MgmntIntro
+                    t={t}
+                />
+            </div>
         </section>
     );
 }

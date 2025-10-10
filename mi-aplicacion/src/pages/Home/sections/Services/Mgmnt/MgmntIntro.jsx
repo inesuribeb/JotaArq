@@ -1,18 +1,20 @@
-import IntroLayout from '../components/IntroLayout';
+import IntroLayout2 from '../components/IntroLayout2';
 import './MngmntIntro.css';
 
 function MgmntIntro({ t }) {
     return (
-        <div>
-            <IntroLayout
+        <div className="mgmnt-intro-wrapper">
+            <IntroLayout2
                 t={t}
                 titleKey="two"
                 subtitleKey="management"
                 textKey="mngIntro"
-                buttonTextKey="management"
+                buttonTextKey="knowMore"
                 buttonRoute="/services"
-                imageSrc="/path/to/image.jpg"
+                imageSrc="/Images/Home/Parke.png"
                 imageAlt="Descripción de la imagen"
+                reverse={true}  
+                variant="management"
             />
         </div>
     );

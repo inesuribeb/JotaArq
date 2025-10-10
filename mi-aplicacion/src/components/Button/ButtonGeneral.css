@@ -1,27 +1,54 @@
 .button-general {
-    padding: 10px 20px;
+    padding: 11px 50px;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
+    /* max-width: 200px; */
+    width: fit-content; 
+    display: inline-flex;  /* AÑADE ESTO */
+    align-items: center;  
+    gap: 8px; 
 }
 
+
+.button-icon {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+    top: 1rem;
+    transform: translateY(0.5px);
+}
+
+.button-general.primary .button-icon,
+.button-general.secondary .button-icon {
+    filter: brightness(0) invert(1); /* Blanco */
+}
+
+.button-general.minimal .button-icon {
+    filter: brightness(0); /* Negro */
+}
+
+.button-general:hover .button-icon {
+    transform: translateX(4px); 
+}
+
+
+
 .button-general.primary {
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--orange-color);
+    color: var(--light-color);
+    border: 1px solid var(--orange-color);
 }
 
 .button-general.secondary {
-    background-color: #6c757d;
-    color: #fff;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: 1px solid var(--dark-color);
 }
 
-.button-general.success {
-    background-color: #28a745;
-    color: #fff;
-}
-
-.button-general.danger {
-    background-color: #dc3545;
-    color: #fff;
+.button-general.minimal {
+    background-color: var(--transparent-color);
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
 }

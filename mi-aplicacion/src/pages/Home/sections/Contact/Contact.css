@@ -1,0 +1,66 @@
+.home-contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    
+    padding: 2rem 1rem;
+    padding-top: 6rem;
+    gap: 6rem;
+    /* align-items: center; */
+}
+
+.img-contact,
+.contact-refs {
+    display: flex;
+}
+
+.img-contact {
+    justify-content: center;
+}
+
+.img-contact img{
+    width: 80%;
+    aspect-ratio: 16/9;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+}
+
+/* .second-line-contact {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+
+} */
+
+.second-line-contact {
+    display: flex;
+    /* align-items: flex-end; */
+    align-items: stretch;
+    margin-top: 20px;
+    /* padding: 2rem 0; */
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+    gap: 1rem;
+    height: 35vh;
+}
+
+.button-container-large {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    padding-bottom: 1rem;
+}
+
+.button-container-small {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-end;
+    padding-left: 1rem;
+    border-left: 1px solid var(--light-grey);
+    padding-bottom: 1rem;
+}

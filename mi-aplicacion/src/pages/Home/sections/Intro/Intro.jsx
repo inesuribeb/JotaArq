@@ -3,14 +3,7 @@ import Texts from '../../../../components/Texts/Texts';
 import './Intro.css';
 
 function Intro({ t }) {
-    // const datos = [
-    //     { id: 1, type: "Viviendas", qty: 34 },
-    //     { id: 2, type: "Diseño urbano", qty: 1 },
-    //     { id: 3, type: "Terciarios", qty: 28 },
-    //     { id: 4, type: "Eficiencia energética", qty: 70 },
-    //     { id: 5, type: "Accesibilidad", qty: 26 },
-    //     { id: 6, type: "Project monitoring", qty: 26 },
-    // ]
+    
     const datos = [
         { id: 1, type: "viviendas", qty: 34 },
         { id: 2, type: "diseñoUrbano", qty: 1 },
@@ -19,6 +12,7 @@ function Intro({ t }) {
         { id: 5, type: "accesibilidad", qty: 26 },
         { id: 6, type: "projectMonitoring", qty: 26 },
     ];
+    
     return (
         <section className='intro-section'>
             <div className='first-line'>
@@ -37,6 +31,7 @@ function Intro({ t }) {
                     {/* <h1>Contamos con una amplia variedad de encargos, desarrollados en múltiples localizaciones y contextos. </h1> */}
                     <h1 dangerouslySetInnerHTML={{ __html: t('introText') }}></h1>
                     {/* <h1>hola</h1> */}
+                    <img src="/Images/Home/spain 1.png" alt="" />
 
                 </div>
             </div>

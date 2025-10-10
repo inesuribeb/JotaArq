@@ -1,4 +1,102 @@
 .layout-intro-services {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding-top: 3rem;
+    gap: 3rem;
+
+    position: relative;
 }
+
+.layout-intro-services.reverse {
+    flex-direction: row-reverse;
+    gap: 5rem;
+}
+
+.column1,
+.column2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
+    background-color: transparent;
+
+    position: relative; 
+    z-index: 10;
+}
+
+.column1 {
+    justify-content: flex-end;
+}
+.column2 {
+    justify-content: flex-start;
+}
+
+.column1 h4{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 0rem;
+}
+.column1 h5{
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 2.5rem;
+}
+
+.intro-services-home {
+    width: 70%;
+    border-left: 1px solid var(--light-grey);
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+    margin-left: 1.5rem;
+    margin-top: 0rem;
+}
+
+.button-services-home {
+    margin-left: 1.5rem;
+}
+
+.column2 img {
+    background-color: var(--light-grey);
+    width: 90%;
+    aspect-ratio: 4/5;
+    border-radius: 15px;
+}
+
+.title-architecture { color: var(--burgundy-color); }
+.subtitle-architecture { color: var(--light-color); }
+.text-architecture { color: var(--light-grey); }
+
+.title-management { color: var(--orange-color); }
+.subtitle-management { color: var(--dark-color); }
+.text-management { color: var(--dark-color); }
+
+
+/* .black-bg {
+    width: 100%;
+    position: absolute;
+    height: 60vh;
+    background-color: black;
+    z-index: 1;
+} */
+
+/* Para Architecture: fondo en la parte inferior */
+/* .layout-intro-services.architecture .black-bg {
+    bottom: 0;
+    height: 70vh; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} */
+
+/* Para Management: fondo en la parte superior */
+/* .layout-intro-services.management .black-bg {
+    top: 0;
+    height: 37vh; 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+} */
+
+
