@@ -1,0 +1,48 @@
+.pictures-arch {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 2rem;
+    width: 100%;
+    min-height: 60vh;
+    background-color: var(--transparent-color);
+}
+
+.picture-left {
+    flex: 1.3; 
+    overflow: hidden;
+}
+
+.picture-right {
+    flex: 2; 
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start; 
+}
+
+.picture-left img {
+    width: 100%;
+    overflow: hidden;
+    /* height: 100%; */
+    aspect-ratio: 16/9;
+    /* object-fit: cover; */
+    border-radius: 15px;
+}
+
+.picture-right img {
+    width: 100%;
+    /* height: 85%;  */
+    aspect-ratio: 16/9;
+
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* .pictures-arch {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 0.5rem;
+    height: 60vh;
+    background-color: var(--dark-color);
+    padding: 1rem;
+} */

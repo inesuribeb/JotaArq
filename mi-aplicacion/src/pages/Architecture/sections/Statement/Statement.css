@@ -1,0 +1,44 @@
+.arch-statement {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: transparent;
+    height: 50vh;
+    justify-content: center;
+}
+
+.first-line,
+.second-line {
+    display: flex;
+}
+
+.first-line {
+    flex-direction: row;
+}
+
+.fl-left,
+.fl-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.fl-left {
+    flex: 2;
+}
+.fl-right {
+    flex: 3;
+}
+
+
+.fl-right h1{
+    text-align: left;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+

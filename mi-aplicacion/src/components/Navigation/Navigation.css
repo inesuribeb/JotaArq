@@ -1,14 +1,14 @@
 .navigation-container {
     height: 50px;
 }
-nav {
+.header-nav {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
 }
 
-nav a {
+.header-nav a {
     flex: 1;
     text-align: left;
     padding: 0.7rem 1rem;
@@ -21,7 +21,7 @@ nav a {
     transition: transform 0.3s ease;
 }
 
-nav a::before {
+.header-nav a::before {
     content: '';
     position: absolute;
     left: 0;
@@ -32,7 +32,7 @@ nav a::before {
     transition: height 0.3s ease;
 }
 
-nav a::after {
+.header-nav a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -45,38 +45,38 @@ nav a::after {
     transition: transform 0.3s ease, height 0.3s ease;
 }
 
-nav a.home-page {
+.header-nav a.home-page {
     color: var(--dark-color);
 }
 
-nav a:not(.active):not(.home-page) {
+.header-nav a:not(.active):not(.home-page) {
     color: var(--light-grey);
 }
 
-nav a.active {
+.header-nav a.active {
     transform: translateY(0.6rem);
     color: var(--dark-color);
 }
 
-nav a.active::before {
+.header-nav a.active::before {
     height: calc(100% + 0.6rem);
 }
 
-nav a.active::after {
+.header-nav a.active::after {
     height: calc(100% + 0.6rem);
     transform: scaleY(1);
 }
 
-nav a:not(.active):hover {
+.header-nav a:not(.active):hover {
     transform: translateY(0.6rem);
     color: var(--dark-color);
 }
 
-nav a:not(.active):hover::before {
+.header-nav a:not(.active):hover::before {
     height: calc(100% + 0.6rem);
 }
 
-nav a:not(.active):hover::after {
+.header-nav a:not(.active):hover::after {
     height: calc(100% + 0.6rem);
     transform: scaleY(1);
 }

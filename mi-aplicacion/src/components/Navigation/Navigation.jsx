@@ -15,7 +15,7 @@ const Navigation = ({ t, getRoute, Link }) => {
 
   return (
     <div className="navigation-container">
-      <nav>
+      <nav className='header-nav'>
         {navigationItems.map(item => (
           <Link
             key={item.key}

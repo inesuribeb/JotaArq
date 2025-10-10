@@ -1,5 +1,8 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'JotaArq', system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
   line-height: 1.5;
 
 
@@ -8,7 +11,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-display: swap; 
+  font-display: swap;
 }
 
 /* body {
@@ -37,11 +40,11 @@ body {
   overflow-y: auto;
   background-color: var(--background-color);
   overscroll-behavior-y: none;
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
-*{
-  box-sizing: border-box; 
+* {
+  box-sizing: border-box;
 }
 
 :root {
@@ -62,4 +65,10 @@ body {
   --main-font: 'Scto Grotesk A', Helvetica, Arial, sans-serif;
   --serif-one-font: 'Playfair', serif;
   --serif-italic: 'Playfair-italic';
+
+
+
+  --light-weight: 300;
+  --medium-weight: 500;
+  --bold-weight: 700;
 }

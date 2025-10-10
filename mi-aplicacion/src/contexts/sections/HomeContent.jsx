@@ -23,7 +23,7 @@ export const homeTranslations = {
         contactUs: "Estamos a tu disposición para cualquier propuesta o interés en nuestro trabajo. Escríbenos o síguenos para estar al tanto de novedades.",
         contactWithUs: "Contáctanos",
 
-
+        notFound: "Página no encontrada",
     },
     eu: {
         homeIntro: 'Gure hirien etorkizunarekin<br/>konprometituak',
@@ -48,6 +48,8 @@ export const homeTranslations = {
 
         contactUs: "Zure proposamen edo interesak entzuteko prest gaude. Idatz iezaguzu edo jarrai gaitzazu gure proiektuen berri izateko.",
         contactWithUs: "Kontaktatu gurekin",
+    
+        notFound: "Orria ez da aurkitu",
     },
     en: {
         homeIntro: 'Committed to the future<br/>of our cities',
@@ -72,5 +74,7 @@ export const homeTranslations = {
 
         contactUs: "We’re available for any proposals or collaborations. Get in touch or follow us to stay updated on our latest projects.",
         contactWithUs: "Get in touch",
+    
+        notFound: "Page not found",
     }
 };

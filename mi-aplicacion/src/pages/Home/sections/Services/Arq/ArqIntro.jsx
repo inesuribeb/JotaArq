@@ -1,7 +1,10 @@
+import { useLanguage } from '../../../../../contexts/LanguageContext';
 import IntroLayout2 from '../components/IntroLayout2';
 import './ArqIntro.css';
 
 function ArqIntro({ t }) {
+    const { getRoute } = useLanguage();
+
     return (
         <div>
             <IntroLayout2
@@ -10,7 +13,7 @@ function ArqIntro({ t }) {
                 subtitleKey="architecture"
                 textKey="arqIntro"
                 buttonTextKey="knowMore"
-                buttonRoute="/services"
+                buttonRoute={getRoute('architecture')} 
                 imageSrc="/Images/Home/MANTILLA 2.png"
                 imageAlt="Descripción de la imagen"
                 variant="architecture"

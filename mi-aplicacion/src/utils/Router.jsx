@@ -4,6 +4,7 @@ import Architecture from '../pages/Architecture/Architecture'
 import Management from '../pages/Management/Management'
 import AboutUs from '../pages/AboutUs/AboutUs'
 import Contact from '../pages/Contact/Contact'
+import NotFound from "../components/NotFound/NotFound";
 import Root from '../root/Root'
 
 
@@ -79,6 +80,11 @@ const router = createBrowserRouter([
                 path: "/contact",
                 element: <Contact />
             },
+
+            {
+                path: "*",
+                element: <NotFound />
+              }
         ]
     },
 ]);

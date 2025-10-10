@@ -1,20 +1,17 @@
+import { useLanguage } from '../../../../contexts/LanguageContext';
 import MiniTitle from '../../../../components/Titles/MiniTitle';
 import Texts from '../../../../components/Texts/Texts';
 import ButtonGeneral from '../../../../components/Button/ButtonGeneral';
 import './Contact.css';
 
 function Contact({ t }) {
+    const { getRoute } = useLanguage();
 
-    // const contactButtons = [
-    //     { id: 1, type: "contactWithUs", style: "primary" },
-    //     { id: 2, type: "Instagram", style: "minimal"  },
-    //     { id: 3, type: "Linkedin", style: "minimal"  },
-    //     { id: 4, type: "Email", style: "minimal"  },
-    // ];
     const contactButtons = [
-        { id: 1, type: "contactWithUs", style: "primary", route: "/contact" },
+        // { id: 1, type: "contactWithUs", style: "primary", route: "/contact" },
+        { id: 1, type: "contactWithUs", style: "primary", route: getRoute('contact') }, // Usa getRoute
         { id: 2, type: "Instagram", style: "minimal", route: "https://www.instagram.com/jota.arquitectura_/" },
-        { id: 3, type: "Linkedin", style: "minimal", route: "https://linkedin.com/company/yourcompany" },
+        { id: 3, type: "Linkedin", style: "minimal", route: "https://www.linkedin.com/company/jotaarq/" },
         { id: 4, type: "Email", style: "minimal", route: "mailto:info@yourcompany.com" },
     ];
 

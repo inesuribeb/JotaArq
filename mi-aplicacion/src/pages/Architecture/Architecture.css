@@ -1,8 +1,10 @@
 .architecture-content {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    height: 100vh;
+
+    /* justify-content: flex-start;
+    align-items: flex-end; */
+    /* height: 75vh; */
+    flex-direction: column;
 }
 
 .architecture-content h1 {
