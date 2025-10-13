@@ -6,12 +6,13 @@ function Edification({ t }) {
         <ServicesLayout
             // bgImage="/Images/Architecture/services/ejemplo1.jpg"
             // image="/Images/Architecture/services/ejemplo1.1.jpg"
-            bgImage="/Images/Architecture/services/ejemplo1.jpg"
-            image="/Images/Architecture/services/ejemplo1.1.jpg"
-            title={t('urbanDesignTitle')}
-            subtitle={t('urbanDesignSubtitle')}
-            text={t('urbanDesignText')}
+            bgImage="/Images/Architecture/Randstand.png"
+            image="/Images/Architecture/Randstand.png"
+            title={t('edificacion')}
+            subtitle={t('edificationSubtitle')}
+            text={t('edificationText')}
             t={t}
+            reverse={true} 
         />
     )
 }

@@ -1,0 +1,224 @@
+// import MiniTitle from '../../../../components/Titles/MiniTitle';
+// import './Form.css';
+
+// function Form({ t }) {
+//     return (
+//         <section className='contact-form'>
+//             <div className='first-line'>
+//                 <div className='fl-left'>
+//                     <div className='fl-left-content'>
+//                         <MiniTitle text={t('services')} />
+
+//                     </div>
+//                 </div>
+
+//                 <div className='fl-right'>
+//                     <form action="">
+
+//                     </form>
+//                 </div>
+//             </div>
+//         </section>
+//     )
+// }
+
+// export default Form;
+
+// Form.jsx
+import { useState } from 'react';
+import MiniTitle from '../../../../components/Titles/MiniTitle';
+import ButtonGeneral from '../../../../components/Button/ButtonGeneral';
+import './Form.css';
+
+function Form({ t }) {
+    const [formData, setFormData] = useState({
+        nombre: '',
+        email: '',
+        empresa: '',
+        mensaje: ''
+    });
+    const [aceptaTerminos, setAceptaTerminos] = useState(false);
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Aquí puedes manejar el envío del formulario
+        console.log('Formulario enviado:', formData, aceptaTerminos);
+    };
+
+    return (
+        <section className='contact-form'>
+            <div className='first-line'>
+                <div className='fl-left'>
+                    <div className='fl-left-content'>
+                        <MiniTitle text={t('services')} />
+                    </div>
+                </div>
+
+                <div className='fl-center'></div>
+
+                <div className='fl-right'>
+                    {/* <form onSubmit={handleSubmit} className="form-container">
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                name="nombre"
+                                placeholder="Nombre"
+                                value={formData.nombre}
+                                onChange={handleInputChange}
+                                required
+                                className="form-input"
+                            />
+                            <span className="required-asterisk">*</span>
+                        </div>
+
+                        <div className="form-group">
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                required
+                                className="form-input"
+                            />
+                            <span className="required-asterisk">*</span>
+                        </div>
+
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                name="empresa"
+                                placeholder="Empresa"
+                                value={formData.empresa}
+                                onChange={handleInputChange}
+                                required
+                                className="form-input"
+                            />
+                            <span className="required-asterisk">*</span>
+                        </div>
+
+                        <div className="form-group">
+                            <textarea
+                                name="mensaje"
+                                placeholder="Mensaje"
+                                value={formData.mensaje}
+                                onChange={handleInputChange}
+                                required
+                                className="form-input form-textarea"
+                                rows="6"
+                            />
+                            <span className="required-asterisk">*</span>
+                        </div>
+
+                        <div className="form-checkbox">
+                            <input
+                                type="checkbox"
+                                id="terminos"
+                                checked={aceptaTerminos}
+                                onChange={(e) => setAceptaTerminos(e.target.checked)}
+                                required
+                            />
+                            <label htmlFor="terminos">
+                                Acepto los términos y condiciones
+                            </label>
+                        </div>
+
+                        <button type="submit" className="form-submit">
+                            Enviar
+                            <span className="arrow">→</span>
+                        </button>
+                    </form> */}
+                    <form onSubmit={handleSubmit} className="form-container">
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                name="nombre"
+                                value={formData.nombre}
+                                onChange={handleInputChange}
+                                required
+                                className="form-input"
+                                placeholder=" "
+                            />
+                            <label className="form-label">
+                                Nombre <span className="required-asterisk">*</span>
+                            </label>
+                        </div>
+
+                        <div className="form-group">
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                required
+                                className="form-input"
+                                placeholder=" "
+                            />
+                            <label className="form-label">
+                                Email <span className="required-asterisk">*</span>
+                            </label>
+                        </div>
+
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                name="empresa"
+                                value={formData.empresa}
+                                onChange={handleInputChange}
+                                required
+                                className="form-input"
+                                placeholder=" "
+                            />
+                            <label className="form-label">
+                                Empresa <span className="required-asterisk">*</span>
+                            </label>
+                        </div>
+
+                        <div className="form-group">
+                            <textarea
+                                name="mensaje"
+                                value={formData.mensaje}
+                                onChange={handleInputChange}
+                                required
+                                className="form-input form-textarea"
+                                rows="6"
+                                placeholder=" "
+                            />
+                            <label className="form-label">
+                                Mensaje <span className="required-asterisk">*</span>
+                            </label>
+                        </div>
+
+                        <div className="form-checkbox">
+                            <input
+                                type="checkbox"
+                                id="terminos"
+                                checked={aceptaTerminos}
+                                onChange={(e) => setAceptaTerminos(e.target.checked)}
+                                required
+                            />
+                            <label htmlFor="terminos">
+                                Acepto los términos y condiciones
+                            </label>
+                        </div>
+
+                        <button type="submit" className="form-submit">
+                            Enviar
+                            <span className="arrow">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+export default Form;

@@ -10,9 +10,18 @@ function Architecture() {
     return (
         <div className="architecture-content">
             {/* <h1>{t('architecture')}</h1> */}
-            <MainTitle
-                title={t('serviciosDe')}
+            {/* <MainTitle
+                title={t('serviciosDeArq')}
                 subtitle={t('deArquitectura')}
+                className="custom-class"
+            /> */}
+            <MainTitle
+                title={t('serviciosDeArq')}
+                subtitles={[
+                    t('sloganArq1'),
+                    t('sloganArq2'),
+                    t('sloganArq3'),
+                ]}
                 className="custom-class"
             />
 

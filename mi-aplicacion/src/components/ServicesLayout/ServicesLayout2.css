@@ -1,0 +1,192 @@
+/* .services-layout {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0rem;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.services-content.reverse {
+    direction: rtl; 
+}
+
+.services-layout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.services-image, 
+.services-text {
+    display: flex;
+}
+
+.services-image {
+    flex: 70%;
+}
+
+.services-text {
+    flex: 30%;
+}
+
+
+.services-text {
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--background-color);
+    width: 100%;
+}
+
+.services-text h3 {
+    font-size: 1rem;
+    color: var(--orange-color);
+    margin-bottom: 1rem;
+}
+
+.services-text h4 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: var(--bold-weight);
+}
+
+.services-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark-grey);
+}
+
+.services-image img {
+    
+    width: 80%;
+    aspect-ratio: 4/5;
+    
+    border-radius: 10px;
+    filter: grayscale(100%);
+} */
+
+
+/* ServicesLayout.css - Corregido */
+
+.services-layout {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-layout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: 60% 40%; /* Proporción 70/30 */
+    gap: 0; /* Sin gap para que estén pegados */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Invertir orden cuando tiene clase reverse */
+.services-content.reverse {
+    grid-template-columns: 40% 60%; /* Invierte las proporciones */
+}
+
+.services-content.reverse .services-image {
+    order: 2; /* Imagen a la derecha */
+}
+
+.services-content.reverse .services-text {
+    order: 1; /* Texto a la izquierda */
+}
+
+.services-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.services-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    height: 100%;
+    background-color: var(--background-color);
+    padding-left: 3rem;
+}
+
+.services-text h3 {
+    font-size: 1rem;
+    color: var(--orange-color);
+    margin-bottom: 1rem;
+}
+
+.services-text h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* .services-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark-grey);
+} */
+
+.services-text-desc {
+    border-left: 1px solid var(--light-grey);
+    color: var(--dark-color);
+    padding-left: 1rem;
+    margin-left: 1.5rem;
+    width: 70%;
+}
+
+.services-image img {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 4/5;
+    border-radius: 15px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}

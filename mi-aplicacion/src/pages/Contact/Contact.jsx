@@ -1,6 +1,7 @@
 import { useLanguage } from '../../contexts/LanguageContext';
 import MainTitle from '../../components/Titles/MainTitle';
 import PictureC from './sections/PictureC/PictureC';
+import Form from './sections/Form/Form';
 import './Contact.css'
 
 function Contact() {
@@ -15,6 +16,10 @@ function Contact() {
             />
 
             <PictureC />
+
+            <Form
+                t={t}
+            />
         </div>
     )
 }

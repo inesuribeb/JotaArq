@@ -8,7 +8,7 @@ function UrbanDesign({ t }) {
             // image="/Images/Architecture/services/ejemplo1.1.jpg"
             bgImage="/Images/Architecture/services/1.png"
             image="/Images/Architecture/services/2.png"
-            title={t('urbanDesignTitle')}
+            title={t('diseñoUrbano')}
             subtitle={t('urbanDesignSubtitle')}
             text={t('urbanDesignText')}
             t={t}

@@ -1,4 +1,4 @@
-.main-title-container {
+/* .main-title-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -13,13 +13,8 @@
     font-weight: var(--bold-weight);
     font-size: 2.5rem !important;
     margin: 0;
-    margin-left: 0;
     letter-spacing: 0.4rem;
-    /* Otros estilos */
-
     margin-left: 2rem;
-    /* text-align: center; */
-    font-size: 5rem;
     font-weight: 400;
     line-height: 5.5rem;
 }
@@ -32,5 +27,69 @@
     margin-left: 8rem;
     margin-top: -2rem;
     letter-spacing: 0.5rem;
-    /* Otros estilos */
+} */
+
+/* MainTitle.css - Con animaciones para subtítulos */
+.main-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 65vh;
+    padding-bottom: 2rem;
+}
+
+.main-title-heading {
+    font-family: 'JotaArq', sans-serif;
+    font-weight: var(--bold-weight);
+    font-size: 2.5rem !important;
+    margin: 0;
+    letter-spacing: 0.4rem;
+    margin-left: 2rem;
+    font-weight: 400;
+    line-height: 5.5rem;
+}
+
+.main-subtitle {
+    font-family: 'JotaArq', sans-serif;
+    font-weight: var(--light-weight);
+    /* font-size: 8rem; */
+    font-size: 6rem;
+    margin: 0;
+    margin-left: 8rem;
+    margin-top: -2rem;
+    letter-spacing: 0.5rem;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    overflow: hidden;
+}
+
+.main-subtitle.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.main-subtitle.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
 }
