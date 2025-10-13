@@ -7,7 +7,7 @@ function DireccionObra({ t }) {
         bgImage="/Images/Management/services/gestion4.webp"
         image="/Images/Management/services/gestion1.webp"
         title={t('direccionObra')}
-        subtitle={t('tramitacionLicencias')}
+        subtitle={t('direccionObra')}
         text={t('sostenibilityText')}
         t={t}
     />

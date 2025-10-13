@@ -7,9 +7,9 @@ export const architectureTranslations = {
         historiaVision: "Historia y Visión",
         creemosJuntos: "Creemos juntos",
 
-        sloganArq1: "Desarrollamos proyectos",
-        sloganArq2: "Diseñamos edificios",
-        sloganArq3: "Actualizamos ciudades",
+        sloganArq1: "desarrollamos proyectos",
+        sloganArq2: "diseñamos edificios",
+        sloganArq3: "actualizamos ciudades",
 
         archStatement: "Creemos que la arquitectura debe estar guiada por la singularidad de su entorno, de modo que el edificio resalte el lugar y el lugar habite en el edificio.",
 
@@ -39,9 +39,9 @@ export const architectureTranslations = {
         historiaVision: "Historia eta Ikuspegia",
         creemosJuntos: "Elkarrekin Sortu",
 
-        sloganArq1: "Proiektuak garatzen ditugu",
-        sloganArq2: "Eraikinak diseinatzen ditugu",
-        sloganArq3: "Hiriak berritzen ditugu",
+        sloganArq1: "proiektuak garatzen ditugu",
+        sloganArq2: "eraikinak diseinatzen ditugu",
+        sloganArq3: "hiriak berritzen ditugu",
 
         archStatement: "Uste dugu arkitektura ingurumenaren berezitasunak gidatu behar duela, eraikinak lekua nabarmentzeko eta lekua eraikinean bizitzeko.",
 
@@ -71,9 +71,9 @@ export const architectureTranslations = {
         historiaVision: "History & Vision",
         creemosJuntos: "Let's Create Together",
 
-        sloganArq1: "We develop projects",
-        sloganArq2: "We design buildings",
-        sloganArq3: "We renew cities",
+        sloganArq1: "we develop projects",
+        sloganArq2: "we design buildings",
+        sloganArq3: "we renew cities",
 
         archStatement: "We believe that architecture should be guided by the uniqueness of its environment, so that the building highlights the place and the place lives within the building.",
 
