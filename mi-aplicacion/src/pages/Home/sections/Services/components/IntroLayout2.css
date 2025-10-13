@@ -69,7 +69,7 @@
     width: 80%;
     border-left: 1px solid var(--light-grey);
     padding-left: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     margin-left: 1.5rem;
     margin-top: 0rem;
     font-weight: 400;
@@ -81,7 +81,7 @@
 }
 
 .button-services-home {
-    margin-left: 1.5rem;
+    margin-left: 2.5rem;
 }
 
 .column2 img {
