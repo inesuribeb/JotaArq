@@ -8,7 +8,6 @@ function Contact({ t }) {
     const { getRoute } = useLanguage();
 
     const contactButtons = [
-        // { id: 1, type: "contactWithUs", style: "primary", route: "/contact" },
         { id: 1, type: "contactWithUs", style: "primary", route: getRoute('contact') }, // Usa getRoute
         { id: 2, type: "Instagram", style: "minimal", route: "https://www.instagram.com/jota.arquitectura_/" },
         { id: 3, type: "Linkedin", style: "minimal", route: "https://www.linkedin.com/company/jotaarq/" },
@@ -37,18 +36,6 @@ function Contact({ t }) {
                 </div>
 
             </div>
-
-            {/* <div className='second-line-contact'>
-                {contactButtons.map(item => (
-                    <ButtonGeneral 
-                        key={item.id}
-                        color={item.style}
-                        text={t(item.type)}
-                        route={item.route}
-                        className='contact-button'
-                    />
-                ))}
-            </div> */}
 
             <div className='second-line-contact'>
                 {contactButtons.map((item, index) => (

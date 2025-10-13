@@ -18,7 +18,6 @@
     background: var(--light-color);
 }
 
-/* Texto visible inicial */
 .button-jota::before {
     content: attr(data-text);
     position: absolute;
@@ -34,7 +33,6 @@
     z-index: 1;
 }
 
-/* Texto oculto inicial */
 .button-jota::after {
     content: attr(data-text);
     position: absolute;
@@ -50,7 +48,6 @@
     z-index: 2;
 }
 
-/* Colores para variant primary */
 .button-jota.primary::before {
     background-color: var(--dark-color);
     color: var(--light-color);
@@ -61,7 +58,6 @@
     color: var(--dark-color);
 }
 
-/* Colores para variant secondary */
 .button-jota.secondary::before {
     background-color: var(--light-color);
     color: var(--dark-color);
@@ -72,7 +68,6 @@
     color: var(--light-color);
 }
 
-/* Hover effect */
 .button-jota:not(.language-main):not(.active):hover::before {
     transform: translateY(-100%);
 }

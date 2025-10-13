@@ -33,7 +33,7 @@
 }
 
 .column1 h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     margin: 0;
     margin-bottom: 0rem;
@@ -72,6 +72,7 @@
     margin-bottom: 3rem;
     margin-left: 1.5rem;
     margin-top: 0rem;
+    font-weight: 400;
 }
 
 .layout-intro-services.architecture .intro-services-home {
@@ -113,31 +114,6 @@
     color: var(--dark-color); 
 }
 
-/* Botón explore con blur */
-/* .explore-button {
-    position: fixed;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--dark-color);
-    padding: 1.5rem;
-    border-radius: 50%;
-    font-size: 0.9rem;
-    font-weight: 500;
-    pointer-events: none;
-    z-index: 1000;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
 .explore-button {
     position: fixed;
     background: rgba(255, 255, 255, 0.2);
@@ -145,28 +121,23 @@
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--light-color);
-    /* border-radius: 50%; */
     border-radius: 50px;
-
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 400;
     pointer-events: none;
     z-index: 1000;
     transform: translate(-50%, -50%);
-    /* text-transform: uppercase; */
     letter-spacing: 0.05rem;
-    /* width: 80px;  */
     width: 80px;   
     height: 130px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Importante para ocultar el texto que se desborda */
+    overflow: hidden;
     position: fixed;
     cursor: pointer;
 }
 
-/* Animación del texto */
 .explore-button::before {
     content: attr(data-text);
     position: absolute;
@@ -174,7 +145,6 @@
     animation: scrollText 3s linear infinite;
 }
 
-/* Para navegadores que no soportan ::before con content dinámico */
 .explore-button {
     animation: scrollTextContainer 3s linear infinite;
 }
@@ -188,7 +158,6 @@
     }
 }
 
-/* Alternativa: texto que aparece y desaparece continuamente */
 @keyframes scrollTextContainer {
     0% {
         text-indent: 80px;

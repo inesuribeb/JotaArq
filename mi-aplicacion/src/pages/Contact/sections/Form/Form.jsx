@@ -112,10 +112,6 @@ function Form({ t }) {
                             </label>
                         </div>
 
-                        {/* <button type="submit" className="form-submit">
-                            Enviar
-                            <span className="arrow">→</span>
-                        </button> */}
                         <div
                             onClick={handleSubmit}
                             className="form-button-wrapper"

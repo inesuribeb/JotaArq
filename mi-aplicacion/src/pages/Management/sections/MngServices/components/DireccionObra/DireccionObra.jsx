@@ -10,7 +10,6 @@ function DireccionObra({ t }) {
         subtitle={t('tramitacionLicencias')}
         text={t('sostenibilityText')}
         t={t}
-        // reverse={true} 
     />
     )
 }

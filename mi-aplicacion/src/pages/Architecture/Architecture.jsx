@@ -9,12 +9,6 @@ function Architecture() {
     const { t, getRoute, changeLanguage, language, availableLanguages } = useLanguage();
     return (
         <div className="architecture-content">
-            {/* <h1>{t('architecture')}</h1> */}
-            {/* <MainTitle
-                title={t('serviciosDeArq')}
-                subtitle={t('deArquitectura')}
-                className="custom-class"
-            /> */}
             <MainTitle
                 title={t('serviciosDeArq')}
                 subtitles={[

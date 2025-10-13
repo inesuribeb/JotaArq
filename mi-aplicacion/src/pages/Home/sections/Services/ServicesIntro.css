@@ -5,15 +5,12 @@
     flex-direction: column;
     padding: 2rem 0rem;
     padding-top: 6rem;
-    /* border-top: 1px solid var(--light-grey); */
 }
 
 .container-services {
     display: flex;
     flex-direction: column;
     position: relative;
-    /* gap: 5rem; */
-    /* background-color: black; */
 }
 
 .mini-title-services {
@@ -22,7 +19,7 @@
 
 .black-connector {
     width: 100vw;
-    height: 3rem; /* Altura del espacio entre componentes */
+    height: 3rem; 
     background-color: var(--dark-color);
     position: relative;
     left: 50%;

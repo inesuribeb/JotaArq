@@ -23,26 +23,13 @@
 .picture-left img {
     width: 100%;
     overflow: hidden;
-    /* height: 100%; */
     aspect-ratio: 16/9;
-    /* object-fit: cover; */
     border-radius: 15px;
 }
 
 .picture-right img {
     width: 100%;
-    /* height: 85%;  */
     aspect-ratio: 16/9;
-
     object-fit: cover;
     border-radius: 15px;
 }
-
-/* .pictures-arch {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 0.5rem;
-    height: 60vh;
-    background-color: var(--dark-color);
-    padding: 1rem;
-} */

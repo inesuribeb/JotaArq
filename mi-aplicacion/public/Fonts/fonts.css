@@ -12,6 +12,13 @@
 
 @font-face {
     font-family: 'JotaArq';
+    src: url('/Fonts/NeueHaasDisplayRoman.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JotaArq';
     src: url('/Fonts/NeueHaasDisplayLight.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;

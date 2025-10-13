@@ -17,8 +17,6 @@ function Statement({ t }) {
 
                 </div>
             </div>
-
-
         </section>
     )
 }

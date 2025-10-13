@@ -8,12 +8,9 @@ function Footer() {
 
     const currentPath = location.pathname;
     const homeRoute = getRoute('home');
-    // const contactRoute = getRoute('contact');
     const managementRoute = getRoute('management');
 
-    // Verificar si la ruta actual coincide con home, contact o management
     const isDarkFooter = currentPath === homeRoute ||
-        // currentPath === contactRoute ||
         currentPath === managementRoute ||
         currentPath === '/';
 
@@ -26,7 +23,6 @@ function Footer() {
     ];
 
     return (
-        // <section className='footer-container'>
         <section className={`footer-container ${isDarkFooter ? 'footer-dark' : 'footer-light'}`}>
 
             <div className='footer-f1'>
@@ -47,7 +43,6 @@ function Footer() {
                     <p>Linkedin</p>
                 </div>
                 <div className='col'>
-                    {/* <h1>Footer</h1> */}
                 </div>
                 <div className='col'>
                     <h1>{t('menu')}</h1>

@@ -30,6 +30,7 @@
 }
 .col p {
     margin-bottom: -1rem;
+    font-weight: 400;
 }
 
 .footer-nav .footer-nav-link {
@@ -140,6 +141,11 @@
     color: var(--orange-color);
 }
 
+
+.footer-nav-link {
+    font-weight: 400;
+}
+
 /* Footer oscuro */
 .footer-dark {
     background-color: var(--dark-color);
@@ -168,5 +174,5 @@
 }
 
 .footer-dark .col img {
-    filter: invert(1); /* Invierte colores de la imagen si es necesario */
+    filter: invert(1);
 }

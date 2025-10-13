@@ -11,22 +11,10 @@ function Root () {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
-    
-    // return (
-    //     <LanguageProvider>
-    //       <div className="app">
-    //         <Header />
-    //         <main>
-    //           <Outlet />
-    //         </main>
-    //         <Footer />
-    //       </div>
-    //     </LanguageProvider>
-    //   );
 
     return (
       <LanguageProvider>
-          <HeaderProvider> {/* ← AÑADIR ESTA LÍNEA */}
+          <HeaderProvider> 
               <div className="app">
                   <Header />
                   <main>
@@ -34,7 +22,7 @@ function Root () {
                   </main>
                   <Footer />
               </div>
-          </HeaderProvider> {/* ← Y ESTA LÍNEA */}
+          </HeaderProvider> 
       </LanguageProvider>
   );
 }

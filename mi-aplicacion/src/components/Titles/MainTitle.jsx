@@ -1,16 +1,3 @@
-// import './MainTitle.css';
-
-// function MainTitle({ title, subtitle, className }) {
-//     return (
-//         <div className={`main-title-container ${className || ''}`}>
-//             <h1 className="main-title-heading">{title}</h1>
-//             {subtitle && <h2 className="main-subtitle">{subtitle}</h2>}
-//         </div>
-//     )
-// }
-
-// export default MainTitle;
-
 import { useState, useEffect } from 'react';
 import './MainTitle.css';
 
@@ -18,7 +5,6 @@ function MainTitle({ title, subtitle, subtitles, className }) {
     const [currentSubtitleIndex, setCurrentSubtitleIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     
-    // Determinar si usar un solo subtítulo o múltiples
     const subtitleArray = subtitles || (subtitle ? [subtitle] : []);
     const hasMultipleSubtitles = subtitleArray.length > 1;
     
@@ -33,9 +19,9 @@ function MainTitle({ title, subtitle, subtitles, className }) {
                     (prevIndex + 1) % subtitleArray.length
                 );
                 setIsAnimating(false);
-            }, 500); // Duración de la animación de salida
+            }, 500); 
             
-        }, 2000); // Cambiar cada 3 segundos
+        }, 2000); 
         
         return () => clearInterval(interval);
     }, [hasMultipleSubtitles, subtitleArray.length]);

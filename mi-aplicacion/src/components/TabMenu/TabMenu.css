@@ -1,27 +1,8 @@
-/* .tab-menu {
-    position: sticky;
-    background-color:transparent;
-    z-index: 100;
-    width: 100%;
-
-}
-
-.tab-menu-container {
-    display: flex;
-    width: 70%;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0.6rem;
-    background-color: var(--dark-color);
-    border: 1px solid var(--light-grey);
-} */
-
 .tab-menu {
     position: sticky;
     background-color: transparent;
     z-index: 100;
     width: 100%;
-    /* Para centrar el contenido */
     display: flex;
     justify-content: center;
     margin-top: 0.5rem;
@@ -36,7 +17,6 @@
     background-color: var(--light-color);
     border: 1px solid var(--light-grey);
     border-radius: 30px;
-    /* No necesitas margin: 0 auto aquí porque el padre ya centra con flexbox */
 }
 
 .tab-item {
@@ -58,6 +38,6 @@
 }
 
 .tab-item.active {
-    color: var(--dark-color);
+    color: var(--burgundy-color);
     background-color: var(--background-color);
 }

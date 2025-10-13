@@ -3,7 +3,6 @@
     width: 100%;
 }
 
-/* Wrapper del TabMenu */
 .tab-menu-wrapper {
     position: absolute;
     top: 0;
@@ -11,12 +10,10 @@
     right: 0;
     z-index: 100;
     width: 100%;
-    /* Transición suave cuando cambia de absolute a fixed */
     transition: top 0.3s ease;
 }
 
 .arq-services-content {
-    /* El contenido empieza desde arriba */
     position: relative;
     display: flex;
     flex-direction: column;

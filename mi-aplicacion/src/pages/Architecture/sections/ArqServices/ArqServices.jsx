@@ -1,6 +1,5 @@
-// ArqServices.jsx - COMPLETO
 import { useEffect, useRef } from 'react';
-import { useHeader } from '../../../../contexts/HeaderContext'; // Ajusta esta ruta según tu estructura
+import { useHeader } from '../../../../contexts/HeaderContext';
 import TabMenu from "../../../../components/TabMenu/TabMenu";
 import UrbanDesign from "./components/UrbanDesign/UrbanDesign";
 import Edification from "./components/Edification/Edification";
@@ -9,7 +8,7 @@ import Sostenibility from "./components/Sostenibility/Sostenibility";
 import './ArqServices.css';
 
 function ArqServices({ t }) {
-    const { headerVisible, headerHeight } = useHeader(); // Usar el context del header
+    const { headerVisible, headerHeight } = useHeader(); 
     const wrapperRef = useRef(null);
     const menuRef = useRef(null);
 

@@ -1,11 +1,10 @@
-// contexts/HeaderContext.jsx
 import { createContext, useContext, useState, useEffect } from 'react';
 
 const HeaderContext = createContext();
 
 export function HeaderProvider({ children }) {
     const [headerVisible, setHeaderVisible] = useState(true);
-    const [headerHeight, setHeaderHeight] = useState(80); // altura por defecto
+    const [headerHeight, setHeaderHeight] = useState(80); 
 
     return (
         <HeaderContext.Provider value={{ 

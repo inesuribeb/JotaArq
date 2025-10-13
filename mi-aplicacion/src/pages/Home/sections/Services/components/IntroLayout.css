@@ -73,30 +73,3 @@
 .title-management { color: var(--orange-color); }
 .subtitle-management { color: var(--dark-color); }
 .text-management { color: var(--dark-color); }
-
-
-/* .black-bg {
-    width: 100%;
-    position: absolute;
-    height: 60vh;
-    background-color: black;
-    z-index: 1;
-} */
-
-/* Para Architecture: fondo en la parte inferior */
-/* .layout-intro-services.architecture .black-bg {
-    bottom: 0;
-    height: 70vh; 
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-} */
-
-/* Para Management: fondo en la parte superior */
-/* .layout-intro-services.management .black-bg {
-    top: 0;
-    height: 37vh; 
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-} */
-
-

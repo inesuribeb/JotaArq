@@ -25,17 +25,13 @@
 }
 
 .fl-left {
-    /* flex-basis: 40%; */
     flex: 2;
 }
 .fl-right {
-    /* flex-basis: 60%; */
     flex: 3;
-    /* background-color: aqua; */
 }
 
 .fl-left-content {
-    /* display: flex; */
     width: 40%;
 }
 
@@ -48,7 +44,7 @@
 
 .mini-intro span:first-child {
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--primary-color);
     margin-right: 5px;
     
@@ -57,12 +53,11 @@
 .mini-intro span:last-child {
     font-size: 1rem;
     color: var(--secondary-color);
-    /* text-transform: uppercase; */
+    font-weight: 400;
 }
 
 
 .fl-right h1{
-    font-weight: 500;
     font-size: 2.4rem;
     line-height: 3rem;
     hyphens: auto;
@@ -70,6 +65,11 @@
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.first-title {
+    font-weight: 400;
 }
 
 .fl-right img{
@@ -77,39 +77,6 @@
     aspect-ratio: 16/7;
     background-color: var(--light-grey);
 }
-
-
-
-
-
-
-/* .second-line {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    border-top: 1px solid var(--light-grey);
-}
-
-.sl-item {
-    text-align: left;
-    border-left: 1px solid var(--light-grey);
-    padding-left: 0.5rem;
-}
-.sl-item .type {
-    font-size: 1rem;
-    color: var(--medium-grey);
-    margin-top: 0;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-
-}
-
-.sl-item .qty {
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin-bottom: 0px;
-    margin-top: 0rem;
-} */
 
 .second-line {
     display: flex;

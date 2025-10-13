@@ -4,8 +4,6 @@ import './TramLicencias.css';
 function TramLicencias({ t }) {
     return (
         <ServicesLayout
-            // bgImage="/Images/Architecture/services/ejemplo1.jpg"
-            // image="/Images/Architecture/services/ejemplo1.1.jpg"
             bgImage="/Images/Management/services/masgestion4.webp"
             image="/Images/Management/services/masgestion3.webp"
             title={t('tramitacionLicencias')}

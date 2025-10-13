@@ -1,11 +1,8 @@
-/* MngServices.css */
-
 .mng-services-wrapper {
     position: relative;
     width: 100%;
 }
 
-/* Wrapper del TabMenu */
 .tab-menu-wrapper {
     position: absolute;
     top: 0;
@@ -13,17 +10,13 @@
     right: 0;
     z-index: 100;
     width: 100%;
-    /* Transición suave cuando cambia de absolute a fixed */
     transition: top 0.3s ease;
 }
 
 .mng-services-content {
-    /* El contenido empieza desde arriba */
     position: relative;
 }
 
 .service-section {
     height: 100vh;
-    /* Puedes cambiar el color de fondo o quitarlo */
-    /* background-color: aqua; */
 }
