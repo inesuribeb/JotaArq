@@ -66,13 +66,14 @@
 }
 
 .intro-services-home {
-    width: 70%;
+    width: 80%;
     border-left: 1px solid var(--light-grey);
     padding-left: 1rem;
     margin-bottom: 3rem;
     margin-left: 1.5rem;
     margin-top: 0rem;
     font-weight: 400;
+    font-size: 1.1rem;
 }
 
 .layout-intro-services.architecture .intro-services-home {
