@@ -1,0 +1,37 @@
+.tab-menu {
+    position: sticky;
+    background-color: var(--dark-color);
+    border-bottom: 1px solid var(--light-grey);
+    z-index: 100;
+    width: 100%;
+}
+
+.tab-menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.6rem;
+}
+
+.tab-item {
+    background: none;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--light-grey);
+    transition: all 0.3s ease;
+}
+
+.tab-item:hover {
+    color: var(--dark-color);
+    background-color: var(--background-color);
+
+}
+
+.tab-item.active {
+    color: var(--dark-color);
+    background-color: var(--background-color);
+}

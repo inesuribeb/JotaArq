@@ -9,12 +9,22 @@
     z-index: 1000;
     width: 100%;
     height: auto; 
-    /* max-height: 100px;  */
-    /* height: 100svh; */
     box-sizing: border-box;
-    background: transparent; /* Añadir esto para que no interfiera */
-    /* overflow: hidden; */
-    /* background-color: var(--background-color); */
+    background: transparent; 
+    /* background: var(--background-color);  */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.header-content.header-background {
+    background: var(--background-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border-bottom: 1px solid var(--dark-color); */
+}
+
+
+.header-content.header-hidden {
+    transform: translateY(-100%);
 }
 
 .header-top {
@@ -22,7 +32,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* align-items: flex-start; */
 }
 
 .logo-container {
@@ -45,6 +54,5 @@
 .header-right {
     display: flex;
     align-items: center;
-    /* align-items: flex-start;  */
     gap: 1rem;
 }

@@ -1,0 +1,70 @@
+.services-layout {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* .services-layout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+} */
+.services-layout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit; /* Hereda la imagen del elemento padre */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(100%); /* Convierte a blanco y negro */
+    z-index: 0;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+.services-text h3 {
+    font-size: 1rem;
+    color: var(--orange-color);
+    margin-bottom: 1rem;
+}
+
+.services-text h4 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: var(--bold-weight);
+}
+
+.services-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark-grey);
+}
+
+.services-image img {
+    width: 70%;
+    /* height: auto; */
+    aspect-ratio: 4/5;
+    border-radius: 10px;
+}

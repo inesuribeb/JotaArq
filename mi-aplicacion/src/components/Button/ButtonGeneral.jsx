@@ -5,7 +5,13 @@
 //     const navigate = useNavigate();
 
 //     const handleClick = () => {
-//         navigate(route);
+//         if (route.startsWith('http://') || route.startsWith('https://')) {
+//             window.open(route, '_blank', 'noopener,noreferrer');
+//         } else if (route.startsWith('mailto:')) {
+//             window.location.href = route;
+//         } else {
+//             navigate(route);
+//         }
 //     };
 
 //     return (
@@ -32,15 +38,11 @@ function ButtonGeneral({ color, text, route, className }) {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        // Verificar si es un enlace externo o mailto
         if (route.startsWith('http://') || route.startsWith('https://')) {
-            // Abrir en nueva pestaña
             window.open(route, '_blank', 'noopener,noreferrer');
         } else if (route.startsWith('mailto:')) {
-            // Abrir cliente de correo
             window.location.href = route;
         } else {
-            // Navegación interna con React Router
             navigate(route);
         }
     };
@@ -50,12 +52,22 @@ function ButtonGeneral({ color, text, route, className }) {
             className={`button-general ${color} ${className || ''}`}
             onClick={handleClick}
         >
-            {text}
-            <img
-                src="/Icons/FLECHA WEB-09.svg"
-                alt="arrow"
-                className="button-icon"
-            />
+            <span className="button-content">
+                <span className="button-text">{text}</span>
+                <img
+                    src="/Icons/FLECHA WEB-09.svg"
+                    alt="arrow"
+                    className="button-icon"
+                />
+            </span>
+            <span className="button-content-hover">
+                <span className="button-text">{text}</span>
+                <img
+                    src="/Icons/FLECHA WEB-09.svg"
+                    alt="arrow"
+                    className="button-icon"
+                />
+            </span>
         </button>
     );
 }

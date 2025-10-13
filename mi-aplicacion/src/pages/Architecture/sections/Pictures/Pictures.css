@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     padding: 1rem;
-    gap: 2rem;
+    gap: 1.2rem;
     width: 100%;
     min-height: 60vh;
     background-color: var(--transparent-color);

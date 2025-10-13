@@ -1,12 +1,11 @@
-.button-general {
+/* .button-general {
     padding: 11px 50px;
     border: none;
     border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
-    /* max-width: 200px; */
     width: fit-content; 
-    display: inline-flex;  /* AÑADE ESTO */
+    display: inline-flex; 
     align-items: center;  
     gap: 8px; 
     font-family: 'JotaArq';
@@ -24,11 +23,11 @@
 
 .button-general.primary .button-icon,
 .button-general.secondary .button-icon {
-    filter: brightness(0) invert(1); /* Blanco */
+    filter: brightness(0) invert(1);
 }
 
 .button-general.minimal .button-icon {
-    filter: brightness(0); /* Negro */
+    filter: brightness(0); 
 }
 
 .button-general:hover .button-icon {
@@ -53,4 +52,128 @@
     background-color: var(--transparent-color);
     color: var(--dark-color);
     border: 1px solid var(--dark-color);
+} */
+
+
+.button-general {
+    padding: 0;
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+    font-family: 'JotaArq';
+    letter-spacing: 0.05rem;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+}
+
+.button-content,
+.button-content-hover {
+    padding: 11px 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+    /* border-radius: 20px;  */
+}
+
+.button-content {
+    display: flex;
+    /* border-radius: 20px;  */
+}
+
+.button-content-hover {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+        /* border-radius: 20px;  */
+}
+
+/* PRIMARY */
+.button-general.primary {
+    border-color: var(--orange-color);
+}
+
+.button-general.primary .button-content {
+    background-color: var(--orange-color);
+    color: var(--light-color);
+}
+
+.button-general.primary .button-content-hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.button-general.primary .button-content .button-icon {
+    filter: brightness(0) invert(1); /* Blanco */
+}
+
+.button-general.primary .button-content-hover .button-icon {
+    filter: brightness(0); /* Negro */
+}
+
+/* SECONDARY */
+.button-general.secondary {
+    border-color: var(--dark-color);
+}
+
+.button-general.secondary .button-content {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.button-general.secondary .button-content-hover {
+    background-color: var(--orange-color);
+    color: var(--light-color);
+}
+
+.button-general.secondary .button-icon {
+    filter: brightness(0) invert(1); /* Blanco */
+}
+
+/* MINIMAL */
+.button-general.minimal {
+    border-color: var(--dark-color);
+}
+
+.button-general.minimal .button-content {
+    background-color: transparent;
+    color: var(--dark-color);
+}
+
+.button-general.minimal .button-content-hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.button-general.minimal .button-content .button-icon {
+    filter: brightness(0); /* Negro */
+}
+
+.button-general.minimal .button-content-hover .button-icon {
+    filter: brightness(0) invert(1); /* Blanco */
+}
+
+/* Animación hover */
+.button-general:hover .button-content {
+    transform: translateY(-100%);
+}
+
+.button-general:hover .button-content-hover {
+    transform: translateY(-100%);
+}
+
+/* Iconos */
+.button-icon {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.button-general:hover .button-icon {
+    transform: translateX(4px);
 }

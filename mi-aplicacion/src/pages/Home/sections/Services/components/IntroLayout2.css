@@ -5,7 +5,7 @@
     justify-content: center;
     padding-top: 3rem;
     gap: 3rem;
-    position: relative; /* Importante para que black-bg se posicione relativo a esto */
+    position: relative; 
 }
 
 .layout-intro-services.reverse {
@@ -21,7 +21,7 @@
     height: 100vh;
     background-color: transparent;
     position: relative;
-    z-index: 10; /* Contenido sobre el fondo negro */
+    z-index: 10;
 }
 
 .column1 {
@@ -32,7 +32,6 @@
     justify-content: flex-start;
 }
 
-/* Estilos de títulos */
 .column1 h4 {
     font-size: 1.2rem;
     font-weight: 400;
@@ -47,7 +46,6 @@
     padding-bottom: 2.5rem;
 }
 
-/* Fondo negro base */
 .black-bg {
     position: absolute;
     width: 100vw;
@@ -55,27 +53,18 @@
     transform: translateX(-50%);
     background-color: var(--dark-color);
     z-index: 1;
-    /* Las posiciones top/bottom/height se controlan desde JavaScript */
 }
 
-/* Border radius para architecture */
 .layout-intro-services.architecture .black-bg {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-/* Border radius para management */
 .layout-intro-services.management .black-bg {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-/* Marcador invisible */
-/* .position-marker {
-
-} */
-
-/* Contenido */
 .intro-services-home {
     width: 70%;
     border-left: 1px solid var(--light-grey);
@@ -85,11 +74,8 @@
     margin-top: 0rem;
 }
 
-/* Cambiar color del borde cuando está sobre fondo negro */
 .layout-intro-services.architecture .intro-services-home {
     border-left-color: rgba(255, 255, 255, 0.3);
-    /* border-left-color: var(--light-grey); */
-
 }
 
 .button-services-home {
@@ -103,22 +89,20 @@
     border-radius: 15px;
 }
 
-/* Colores para architecture */
 .title-architecture { 
     color: var(--burgundy-color); 
 }
 
 .subtitle-architecture { 
-    color: var(--light-color); /* Blanco sobre fondo negro */
+    color: var(--light-color); 
 }
 
 .text-architecture { 
     color: var(--light-color); 
 }
 
-/* Colores para management */
 .title-management { 
-    color: var(--orange-color); /* Blanco sobre fondo negro */
+    color: var(--orange-color);
 }
 
 .subtitle-management { 
@@ -127,4 +111,89 @@
 
 .text-management { 
     color: var(--dark-color); 
+}
+
+/* Botón explore con blur */
+/* .explore-button {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--dark-color);
+    padding: 1.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.explore-button {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--light-color);
+    /* border-radius: 50%; */
+    border-radius: 50px;
+
+    font-size: 2rem;
+    font-weight: 500;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    /* text-transform: uppercase; */
+    letter-spacing: 0.05rem;
+    /* width: 80px;  */
+    width: 80px;   
+    height: 130px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Importante para ocultar el texto que se desborda */
+    position: fixed;
+    cursor: pointer;
+}
+
+/* Animación del texto */
+.explore-button::before {
+    content: attr(data-text);
+    position: absolute;
+    white-space: nowrap;
+    animation: scrollText 3s linear infinite;
+}
+
+/* Para navegadores que no soportan ::before con content dinámico */
+.explore-button {
+    animation: scrollTextContainer 3s linear infinite;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Alternativa: texto que aparece y desaparece continuamente */
+@keyframes scrollTextContainer {
+    0% {
+        text-indent: 80px;
+    }
+    100% {
+        text-indent: -80px;
+    }
 }

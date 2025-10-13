@@ -24,6 +24,7 @@ export const homeTranslations = {
         contactWithUs: "Contáctanos",
 
         notFound: "Página no encontrada",
+        explore: "Explorar",
     },
     eu: {
         homeIntro: 'Gure hirien etorkizunarekin<br/>konprometituak',
@@ -50,6 +51,8 @@ export const homeTranslations = {
         contactWithUs: "Kontaktatu gurekin",
     
         notFound: "Orria ez da aurkitu",
+        explore: "Esploratu",
+
     },
     en: {
         homeIntro: 'Committed to the future<br/>of our cities',
@@ -76,5 +79,7 @@ export const homeTranslations = {
         contactWithUs: "Get in touch",
     
         notFound: "Page not found",
+        explore: "Explore",
+
     }
 };

@@ -1,5 +1,6 @@
 import { useLanguage } from '../../contexts/LanguageContext';
 import MainTitle from '../../components/Titles/MainTitle';
+import PictureC from './sections/PictureC/PictureC';
 import './Contact.css'
 
 function Contact() {
@@ -12,6 +13,8 @@ function Contact() {
                 subtitle={t('creemosJuntos')}
                 className="custom-class"
             />
+
+            <PictureC />
         </div>
     )
 }
