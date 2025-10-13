@@ -34,10 +34,15 @@
 import { useNavigate } from 'react-router-dom';
 import './ButtonGeneral.css';
 
-function ButtonGeneral({ color, text, route, className }) {
+function ButtonGeneral({ color, text, route, className, onClick }) {
     const navigate = useNavigate();
 
     const handleClick = () => {
+        if (onClick) {
+            onClick();
+            return;
+        }
+        
         if (route.startsWith('http://') || route.startsWith('https://')) {
             window.open(route, '_blank', 'noopener,noreferrer');
         } else if (route.startsWith('mailto:')) {

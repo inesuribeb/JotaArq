@@ -5,6 +5,7 @@
     align-items: flex-end; */
     /* height: 75vh; */
     flex-direction: column;
+    padding-bottom: 3rem;
 }
 
 /* .architecture-content h1 {

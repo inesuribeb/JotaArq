@@ -1,30 +1,3 @@
-// import MiniTitle from '../../../../components/Titles/MiniTitle';
-// import './Form.css';
-
-// function Form({ t }) {
-//     return (
-//         <section className='contact-form'>
-//             <div className='first-line'>
-//                 <div className='fl-left'>
-//                     <div className='fl-left-content'>
-//                         <MiniTitle text={t('services')} />
-
-//                     </div>
-//                 </div>
-
-//                 <div className='fl-right'>
-//                     <form action="">
-
-//                     </form>
-//                 </div>
-//             </div>
-//         </section>
-//     )
-// }
-
-// export default Form;
-
-// Form.jsx
 import { useState } from 'react';
 import MiniTitle from '../../../../components/Titles/MiniTitle';
 import ButtonGeneral from '../../../../components/Button/ButtonGeneral';
@@ -65,77 +38,6 @@ function Form({ t }) {
                 <div className='fl-center'></div>
 
                 <div className='fl-right'>
-                    {/* <form onSubmit={handleSubmit} className="form-container">
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                name="nombre"
-                                placeholder="Nombre"
-                                value={formData.nombre}
-                                onChange={handleInputChange}
-                                required
-                                className="form-input"
-                            />
-                            <span className="required-asterisk">*</span>
-                        </div>
-
-                        <div className="form-group">
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                                required
-                                className="form-input"
-                            />
-                            <span className="required-asterisk">*</span>
-                        </div>
-
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                name="empresa"
-                                placeholder="Empresa"
-                                value={formData.empresa}
-                                onChange={handleInputChange}
-                                required
-                                className="form-input"
-                            />
-                            <span className="required-asterisk">*</span>
-                        </div>
-
-                        <div className="form-group">
-                            <textarea
-                                name="mensaje"
-                                placeholder="Mensaje"
-                                value={formData.mensaje}
-                                onChange={handleInputChange}
-                                required
-                                className="form-input form-textarea"
-                                rows="6"
-                            />
-                            <span className="required-asterisk">*</span>
-                        </div>
-
-                        <div className="form-checkbox">
-                            <input
-                                type="checkbox"
-                                id="terminos"
-                                checked={aceptaTerminos}
-                                onChange={(e) => setAceptaTerminos(e.target.checked)}
-                                required
-                            />
-                            <label htmlFor="terminos">
-                                Acepto los términos y condiciones
-                            </label>
-                        </div>
-
-                        <button type="submit" className="form-submit">
-                            Enviar
-                            <span className="arrow">→</span>
-                        </button>
-                    </form> */}
                     <form onSubmit={handleSubmit} className="form-container">
                         <div className="form-group">
                             <input
@@ -210,10 +112,22 @@ function Form({ t }) {
                             </label>
                         </div>
 
-                        <button type="submit" className="form-submit">
+                        {/* <button type="submit" className="form-submit">
                             Enviar
                             <span className="arrow">→</span>
-                        </button>
+                        </button> */}
+                        <div
+                            onClick={handleSubmit}
+                            className="form-button-wrapper"
+                        >
+                            <ButtonGeneral
+                                color="secondary"
+                                text="Enviar"
+                                route="#"
+                                className="form-submit-button"
+                            />
+                        </div>
+
                     </form>
                 </div>
             </div>

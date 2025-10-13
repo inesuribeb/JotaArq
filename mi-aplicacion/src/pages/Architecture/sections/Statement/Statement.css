@@ -4,7 +4,8 @@
     padding: 1rem;
     background-color: transparent;
     height: 50vh;
-    justify-content: center;
+    padding-top: 3rem;
+    justify-content: flex-start;
 }
 
 .first-line,

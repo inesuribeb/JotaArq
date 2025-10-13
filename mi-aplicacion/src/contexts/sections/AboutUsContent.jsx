@@ -1,11 +1,14 @@
 export const aboutUsTranslations = {
     es: {
-
+        aboutUsText: "JOTA es una oficina multidisciplinar fundada en Bilbao en 2022. Desde entonces ha abordado proyectos muy diversos, desde intervenciones de pequeña escala hasta edificaciones y diseño urbano. Su trabajo se caracteriza por una arquitectura serena, cercana y respetuosa con el entorno natural y construido. JOTA cuida cada fase del proceso, poniendo atención al detalle y al control de la ejecución.  La investigación, la innovación y la optimización de recursos son las herramientas con las que afronta cada proyecto, priorizando la calidad del diseño y la coherencia constructiva.",
+        whoWeAre: "JOTA está dirigido por los arquitectos Juan Bilbao Uriarte y Jokin Tapia Etxeandia, socios fundadores del estudio. Según las necesidades y el desarrollo de cada proyecto el estudio cuenta con colaboradores habituales de distintas disciplinas, con los que se integra en una infraestructura de colaboración profesional.",
     },
     eu: {
-
+        aboutUsText: "JOTA diziplina anitzeko bulego bat da, 2022an Bilbon sortua. Ordutik, eskala txikiko esku-hartzeetatik hasi eta eraikuntza eta hiri-diseinura arteko proiektu ugari garatu ditu. Bere lanak arkitektura lasaia, gertukoa eta ingurune natural zein eraikiaren errespetuzkoa du ezaugarri. JOTAk prozesuaren fase bakoitza zaintzen du, xehetasunari eta exekuzioaren kontrolari arreta berezia eskainiz. Ikerketa, berrikuntza eta baliabideen optimizazioa dira proiektu bakoitzari aurre egiteko erabiltzen dituen tresnak, diseinuaren kalitatea eta eraikuntza-koherentzia lehenetsiz.",
+        whoWeAre: "JOTA Juan Bilbao Uriarte eta Jokin Tapia Etxeandia arkitektoek zuzentzen dute, estudioaren bazkide sortzaileek. Proiektu bakoitzaren behar eta garapenaren arabera, estudioak diziplina desberdinetako ohiko lankideekin egiten du lan, lankidetza profesionaleko azpiegitura batean integratuta.",
     },
     en: {
-        
+        aboutUsText: "JOTA is a multidisciplinary office founded in Bilbao in 2022. Since then, it has undertaken a wide range of projects, from small-scale interventions to building design and urban planning. Its work is defined by a calm, approachable architecture that respects both the natural and built environment. JOTA carefully manages every phase of the process, paying close attention to detail and construction control. Research, innovation, and resource optimization are the tools it uses to approach each project, always prioritizing design quality and constructive coherence.",
+        whoWeAre: "JOTA is led by architects Juan Bilbao Uriarte and Jokin Tapia Etxeandia, founding partners of the studio. Depending on the needs and development of each project, the studio collaborates regularly with professionals from different disciplines, integrating into a network of professional cooperation.",
     }
 };

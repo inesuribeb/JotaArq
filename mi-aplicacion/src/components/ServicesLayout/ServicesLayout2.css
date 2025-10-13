@@ -1,91 +1,3 @@
-/* .services-layout {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0rem;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-}
-
-.services-content.reverse {
-    direction: rtl; 
-}
-
-.services-layout::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: inherit; 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: 0;
-}
-
-.services-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-
-    position: relative;
-    z-index: 2;
-    height: 100%;
-}
-
-.services-image, 
-.services-text {
-    display: flex;
-}
-
-.services-image {
-    flex: 70%;
-}
-
-.services-text {
-    flex: 30%;
-}
-
-
-.services-text {
-    flex-direction: column;
-    height: 100%;
-    background-color: var(--background-color);
-    width: 100%;
-}
-
-.services-text h3 {
-    font-size: 1rem;
-    color: var(--orange-color);
-    margin-bottom: 1rem;
-}
-
-.services-text h4 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    font-weight: var(--bold-weight);
-}
-
-.services-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--dark-grey);
-}
-
-.services-image img {
-    
-    width: 80%;
-    aspect-ratio: 4/5;
-    
-    border-radius: 10px;
-    filter: grayscale(100%);
-} */
-
-
 /* ServicesLayout.css - Corregido */
 
 .services-layout {
@@ -144,6 +56,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .services-text {
@@ -154,18 +67,50 @@
     height: 100%;
     background-color: var(--background-color);
     padding-left: 3rem;
+    position: relative; 
+}
+
+.services-image h1 {
+    position: absolute;
+    bottom: 0rem;  /* Distancia desde abajo */
+    left: 1rem;    /* Distancia desde la izquierda */
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    z-index: 10;
+    text-transform: uppercase;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+    margin: 0;
+}
+.services-content.reverse .services-image h1 {
+    right: 1rem;  /* Mantiene la misma posición izquierda */
+    left: auto; /* Asegura que no use right */
 }
 
 .services-text h3 {
-    font-size: 1rem;
-    color: var(--orange-color);
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--burgundy-color);
+    margin-bottom: 0rem;
+
+     
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    z-index: 10;
+    /* text-transform: uppercase; */
+    margin: 0;
+    line-height: 3.5rem;
+
 }
 
 .services-text h4 {
     font-size: 2rem;
     margin-bottom: 2rem;
     font-weight: 300;
+    width: 90%;
+    margin-top: 1rem;
+    line-height: 2.5rem;
 }
 
 /* .services-text p {
@@ -179,11 +124,11 @@
     color: var(--dark-color);
     padding-left: 1rem;
     margin-left: 1.5rem;
-    width: 70%;
+    width: 55%;
 }
 
 .services-image img {
-    width: 50%;
+    width: 45%;
     height: auto;
     aspect-ratio: 4/5;
     border-radius: 15px;

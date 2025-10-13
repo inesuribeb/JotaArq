@@ -248,7 +248,7 @@
     cursor: pointer;
 }
 
-.form-submit {
+/* .form-submit {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -276,4 +276,4 @@
 
 .form-submit:hover .arrow {
     transform: translateX(5px);
-}
+} */

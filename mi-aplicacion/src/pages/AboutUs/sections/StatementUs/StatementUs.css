@@ -1,0 +1,26 @@
+.statement-about-us {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.col-statement-1,
+.col-statement-2 {
+    flex: 1;
+    display: flex;
+}
+
+.col-statement-1 {
+    background-color: var(--dark-grey);
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.col-statement-2 {
+    padding-top: 3rem;
+    padding-right: 1rem;
+    background-color: transparent;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+}
