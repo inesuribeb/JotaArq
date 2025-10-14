@@ -83,12 +83,20 @@
 .button-services-home {
     margin-left: 2.5rem;
 }
+/* 
+.column2 {
+    position: relative;
+    z-index: 10; 
+} */
 
 .column2 img {
     background-color: var(--light-grey);
     width: 90%;
     aspect-ratio: 4/5;
     border-radius: 15px;
+    cursor: pointer; /* Añade esto para indicar que es clickable */
+    position: relative;
+    /* z-index: 11; */
 }
 
 .title-architecture { 
@@ -116,7 +124,7 @@
 }
 
 .explore-button {
-    position: fixed;
+    /* position: fixed;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -126,7 +134,7 @@
     font-size: 2rem;
     font-weight: 400;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 10;
     transform: translate(-50%, -50%);
     letter-spacing: 0.05rem;
     width: 80px;   
@@ -136,7 +144,23 @@
     justify-content: center;
     overflow: hidden;
     position: fixed;
-    cursor: pointer;
+    cursor: pointer; */
+    position: fixed;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--light-color);
+    border-radius: 50px;
+    font-size: 2rem;
+    font-weight: 400;
+    pointer-events: none; /* Correcto - es decorativo */
+    z-index: 9999; /* Por DEBAJO de la imagen */
+    transform: translate(-50%, -50%);
+    width: 80px;   
+    height: 130px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .explore-button::before {

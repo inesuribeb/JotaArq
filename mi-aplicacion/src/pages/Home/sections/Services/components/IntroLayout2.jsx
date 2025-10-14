@@ -48,11 +48,21 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
         setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
+    // const handleMouseEnter = () => {
+    //     setIsHovering(true);
+    // };
+
+    // const handleMouseLeave = () => {
+    //     setIsHovering(false);
+    // };
+
     const handleMouseEnter = () => {
+        console.log('Mouse entered!'); // AÑADE ESTO
         setIsHovering(true);
     };
-
+    
     const handleMouseLeave = () => {
+        console.log('Mouse left!'); // AÑADE ESTO
         setIsHovering(false);
     };
 
