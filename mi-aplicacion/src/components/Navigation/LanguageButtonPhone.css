@@ -1,0 +1,25 @@
+.language-phone-container {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 0rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+
+.language-phone-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'JotaArq';
+    font-weight: 300;
+    color: var(--medium-grey);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.language-phone-button.language-phone-active {
+    color: var(--dark-color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px; /* Grosor del subrayado */
+    text-underline-offset: 4px; /* Separación del texto */
+}

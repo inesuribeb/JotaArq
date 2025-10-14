@@ -1,0 +1,78 @@
+.portadaPhone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('/Images/Home/WelcomeHome.png'); */
+    /* background-image: url('/Images/Home/render.jpg'); */
+    background-color: var(--background-color);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 0.75rem;
+}
+
+.one-portada,
+.two-portada {
+    /* flex: 1; */
+    display: flex;
+}
+
+.one-portada {
+    flex: 35%;
+}
+.two-portada {
+    flex: 65%;
+}
+
+.one-portada {
+    flex-direction: row;
+    align-items: flex-end;
+}
+.one-one{
+    flex: 1;
+}
+
+.one-one h1 {
+    font-size: 1.2rem;
+    width: 100%;
+    font-weight: 400;
+    /* margin-left: 6rem; */
+}
+
+.two-portada {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.two-portada h2 {
+    font-size: 8rem;
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    margin: 0;
+
+}
+
+
+
+
+
+/* .portadaPhone h1 {
+    font-size: 1.2rem;
+    width: 50%;
+    font-weight: 300;
+    margin-left: 6rem;
+}
+
+.portadaPhone h2 {
+    font-size: 6rem;
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    margin: 0;
+
+} */

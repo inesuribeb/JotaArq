@@ -1,0 +1,86 @@
+.navigation-phone-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    z-index: 9999;
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-phone-content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 0rem 0rem;
+}
+
+.navigation-phone-logo {
+    width: 80px;
+    margin-bottom: 0rem;
+    display: flex;
+    padding-top: 19.5rem;
+    align-items: flex-start; /* Alinea el círculo al inicio */
+    justify-content: center;
+}
+
+/* Crea el contenedor circular igual que en header */
+.navigation-phone-logo::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.navigation-phone-logo img {
+    width: 40px; /* Mismo tamaño que el header */
+    height: 40px;
+    object-fit: contain;
+    filter: invert();
+    padding: 7px; /* Para que la imagen tenga el mismo tamaño relativo */
+    position: relative;
+    z-index: 1;
+}
+
+.nav-and-lng {
+    display: flex;
+    flex-direction: column;
+    border-left: 1.4px solid var(--light-grey);
+    padding-top: 12rem;
+}
+
+.navigation-phone-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-left: 1.5rem; */
+    padding-left: 0rem;
+
+    gap: 0rem;
+    margin-bottom: 0rem;
+    flex: 1;
+}
+
+.navigation-phone-link {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--medium-grey);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-transform: lowercase;
+    border-left: 1.4px solid transparent;
+
+    padding-left: 1.4rem; /* Padding en el link */
+    margin-left: -1px;
+}
+
+.navigation-phone-link.active-phone {
+    color: var(--dark-color);
+    border-left: 1.4px solid var(--dark-color);
+}

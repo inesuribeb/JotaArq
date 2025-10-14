@@ -1,6 +1,9 @@
 export const homeTranslations = {
     es: {
+        close: "Cerrar",
         homeIntro: 'Comprometidos con el futuro<br/>de nuestras ciudades',
+        homeIntroPhone: 'Comprometidos con el futuro de nuestras ciudades',
+
         introText: 'Contamos con una amplia variedad de encargos, desarrollados en múltiples localizaciones y contextos.',
         us: "Sobre<br/>Nosotros",
         projects: "proyectos",
@@ -27,7 +30,9 @@ export const homeTranslations = {
         explore: "Explorar",
     },
     eu: {
+        close: "Itxi",
         homeIntro: 'Gure hirien etorkizunarekin<br/>konprometituak',
+        homeIntroPhone: 'Gure hirien etorkizunarekin konprometituak',
         introText: 'Eskari anitz ditugu, toki eta testuinguru askotan garatuak.',
         us: "Guri buruz",
         projects: "proiektuak",
@@ -55,7 +60,9 @@ export const homeTranslations = {
 
     },
     en: {
+        close: "Close",
         homeIntro: 'Committed to the future<br/>of our cities',
+        homeIntroPhone: 'Committed to the future of our cities',
         introText: 'We have a wide variety of projects developed in multiple locations and contexts.',
         us: "About us",
         projects: "projects",
