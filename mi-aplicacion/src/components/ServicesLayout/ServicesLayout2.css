@@ -4,13 +4,13 @@
     align-items: center;
     padding: 0;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: center center;
+    /* background-attachment: fixed; */
     position: relative;
     overflow: hidden;
 }
 
-.services-layout::before {
+/* .services-layout::before {
     content: '';
     position: absolute;
     top: 0;
@@ -20,9 +20,8 @@
     background-image: inherit; 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     z-index: 0;
-}
+} */
 
 .services-content {
     display: grid;

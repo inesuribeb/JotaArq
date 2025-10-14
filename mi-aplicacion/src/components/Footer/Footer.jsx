@@ -22,15 +22,22 @@ function Footer() {
         { key: 'contact', route: 'contact' }
     ];
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <section className={`footer-container ${isDarkFooter ? 'footer-dark' : 'footer-light'}`}>
 
             <div className='footer-f1'>
                 <div className='col'>
                     <h1>{t('oficina')}</h1>
-                    <p>C/ GRAN VIA 53, 5 Izq.</p>
-                    <p>48011 Bilbao •</p>
-                    <p>País Vasco</p>
+                    <p>{t('address1')}</p>
+                    <p>{t('address2')} •</p>
+                    <p>{t('address3')}</p>
                 </div>
                 <div className='col'>
                     <h1>{t('contacto')}</h1>
@@ -84,7 +91,7 @@ function Footer() {
 
             <div className='footer-f3'>
                 <div className='col3'>
-                    <h1>Cookies y Privacidad</h1>
+                    <h1>{t('cookiesAndPrivacy')}</h1>
                 </div>
 
                 <div className='col3'>
@@ -92,7 +99,13 @@ function Footer() {
                 </div>
 
                 <div className='col3'>
-                    <h1>Arriba</h1>
+                    <h1
+                        onClick={scrollToTop}
+                        style={{ cursor: 'pointer' }}
+                        className='up-button'
+                    >
+                        {t('up')}
+                    </h1>
                 </div>
             </div>
         </section>

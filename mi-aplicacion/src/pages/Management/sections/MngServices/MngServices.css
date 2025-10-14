@@ -1,4 +1,4 @@
-.mng-services-wrapper {
+/* .mng-services-wrapper {
     position: relative;
     width: 100%;
 }
@@ -9,6 +9,34 @@
     left: 0;
     right: 0;
     z-index: 100;
+    width: 100%;
+    transition: top 0.3s ease;
+}
+
+.mng-services-content {
+    position: relative;
+}
+
+.service-section {
+    height: 100vh;
+} */
+
+.mng-services-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.tab-menu-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.tab-menu-fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
     width: 100%;
     transition: top 0.3s ease;
 }

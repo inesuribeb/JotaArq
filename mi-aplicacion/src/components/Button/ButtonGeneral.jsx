@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import './ButtonGeneral.css';
 
-function ButtonGeneral({ color, text, route, className, onClick }) {
+function ButtonGeneral({ color, text, route, className, onClick, type = "button" }) {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -9,7 +9,9 @@ function ButtonGeneral({ color, text, route, className, onClick }) {
             onClick();
             return;
         }
-        
+
+        if (!route) return;
+
         if (route.startsWith('http://') || route.startsWith('https://')) {
             window.open(route, '_blank', 'noopener,noreferrer');
         } else if (route.startsWith('mailto:')) {
@@ -21,6 +23,7 @@ function ButtonGeneral({ color, text, route, className, onClick }) {
 
     return (
         <button
+            type={type}
             className={`button-general ${color} ${className || ''}`}
             onClick={handleClick}
         >

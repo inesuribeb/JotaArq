@@ -17,7 +17,8 @@ function Contact({ t }) {
     return (
         <section className='home-contact'>
             <div className='img-contact'>
-                <img src="/Images/Home/prueba.png" alt="" />
+                {/* <img src="/Images/Management/services/masgestion4.webp" alt="" /> */}
+                <img src="/Images/Home/oficinas.jpg" alt="" />
             </div>
 
             <div className='contact-refs'>

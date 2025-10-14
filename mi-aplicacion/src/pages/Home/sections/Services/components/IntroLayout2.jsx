@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom'; // AÑADE ESTO
 import { useNavigate } from 'react-router-dom';
 import Texts from '../../../../../components/Texts/Texts';
 import ButtonGeneral from '../../../../../components/Button/ButtonGeneral';
@@ -11,20 +12,20 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
     const navigate = useNavigate();
-    
+
     useEffect(() => {
         if (!blackBgRef.current || !markerRef.current || !column1Ref.current) return;
-        
+
         const updatePosition = () => {
             const marker = markerRef.current;
             const blackBg = blackBgRef.current;
             const column1 = column1Ref.current;
             const section = column1.closest('.layout-intro-services');
-            
+
             const markerOffsetInColumn = marker.offsetTop;
             const column1OffsetInSection = column1.offsetTop;
             const markerTotalOffset = column1OffsetInSection + markerOffsetInColumn;
-            
+
             if (variant === 'architecture') {
                 blackBg.style.top = `${markerTotalOffset}px`;
                 blackBg.style.bottom = '0';
@@ -35,12 +36,12 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
                 blackBg.style.bottom = 'auto';
             }
         };
-        
+
         updatePosition();
         window.addEventListener('resize', updatePosition);
-        
+
         setTimeout(updatePosition, 100);
-        
+
         return () => window.removeEventListener('resize', updatePosition);
     }, [variant]);
 
@@ -48,23 +49,23 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
         setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
+    const handleMouseEnter = () => {
+        setIsHovering(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovering(false);
+    };
+
     // const handleMouseEnter = () => {
+    //     console.log('Mouse entered!');
     //     setIsHovering(true);
     // };
 
     // const handleMouseLeave = () => {
+    //     console.log('Mouse left!'); 
     //     setIsHovering(false);
     // };
-
-    const handleMouseEnter = () => {
-        console.log('Mouse entered!'); // AÑADE ESTO
-        setIsHovering(true);
-    };
-    
-    const handleMouseLeave = () => {
-        console.log('Mouse left!'); // AÑADE ESTO
-        setIsHovering(false);
-    };
 
     const handleImageClick = () => {
         if (buttonRoute) {
@@ -77,41 +78,41 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
             }
         }
     };
-    
+
     return (
         <section className={`layout-intro-services ${reverse ? 'reverse' : ''} ${variant || ''}`}>
             <div className='black-bg' ref={blackBgRef}></div>
             <div className='column1' ref={column1Ref}>
                 <h4 className={`title-${variant}`}>{t(titleKey)}</h4>
-                
-                <span 
-                    ref={markerRef} 
+
+                <span
+                    ref={markerRef}
                     className='position-marker'
                     style={{ position: 'relative', display: 'block', height: 0 }}
                 ></span>
-                
+
                 <h5 className={`subtitle-${variant}`}>{t(subtitleKey)}</h5>
-                
+
                 <Texts className={`intro-services-home text-${variant}`} text={t(textKey)} />
-                
-                <ButtonGeneral 
+
+                <ButtonGeneral
                     className='button-services-home'
-                    color={buttonColor} 
-                    text={t(buttonTextKey)} 
-                    route={buttonRoute} 
+                    color={buttonColor}
+                    text={t(buttonTextKey)}
+                    route={buttonRoute}
                 />
             </div>
 
             <div className='column2'>
-                <img 
-                    src={imageSrc} 
+                <img
+                    src={imageSrc}
                     alt={imageAlt}
                     onMouseMove={handleMouseMove}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     onClick={handleImageClick}
                 />
-                {isHovering && (
+                {/* {isHovering && (
                     <span 
                         className='explore-button'
                         style={{
@@ -121,6 +122,19 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
                     >
                         {t('explore')}
                     </span>
+                )} */}
+                {/* MUEVE el explore-button FUERA y usa createPortal */}
+                {isHovering && createPortal(
+                    <span
+                        className='explore-button'
+                        style={{
+                            left: mousePosition.x,
+                            top: mousePosition.y,
+                        }}
+                    >
+                        {t('explore')}
+                    </span>,
+                    document.body // Lo renderiza directamente en el body
                 )}
             </div>
         </section>

@@ -119,3 +119,9 @@
     color: #666;
     cursor: pointer;
 }
+
+
+
+.form-submit-button .button-icon {
+    filter: brightness(0) invert(1) !important; /* Fuerza blanco */
+}

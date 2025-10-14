@@ -1,4 +1,79 @@
-import { useEffect, useRef } from 'react';
+// import { useEffect, useRef } from 'react';
+// import { useHeader } from '../../../../contexts/HeaderContext';
+// import TabMenu from "../../../../components/TabMenu/TabMenu";
+// import UrbanDesign from "./components/UrbanDesign/UrbanDesign";
+// import Edification from "./components/Edification/Edification";
+// import Licenses from "./components/Licenses/Licenses";
+// import Sostenibility from "./components/Sostenibility/Sostenibility";
+// import './ArqServices.css';
+
+// function ArqServices({ t }) {
+//     const { headerVisible, headerHeight } = useHeader(); 
+//     const wrapperRef = useRef(null);
+//     const menuRef = useRef(null);
+
+//     const services = [
+//         { id: 1, nameKey: 'diseñoUrbano', sectionId: 'section-urbanDesign' },
+//         { id: 2, nameKey: 'edificacion', sectionId: 'section-edification' },
+//         { id: 3, nameKey: 'tramitacionLicencias', sectionId: 'section-tramitation' },
+//         { id: 4, nameKey: 'sostenibilidad', sectionId: 'section-sostenibility' }
+//     ];
+
+//     useEffect(() => {
+//         const handleScroll = () => {
+//             if (wrapperRef.current && menuRef.current) {
+//                 const wrapperTop = wrapperRef.current.getBoundingClientRect().top;
+//                 const menu = menuRef.current;
+
+//                 const topPosition = headerVisible ? `${headerHeight}px` : '0';
+
+//                 if (wrapperTop <= (headerVisible ? headerHeight : 0)) {
+//                     menu.style.position = 'fixed';
+//                     menu.style.top = topPosition;
+//                 } else {
+//                     menu.style.position = 'absolute';
+//                     menu.style.top = '0';
+//                 }
+//             }
+//         };
+
+//         window.addEventListener('scroll', handleScroll);
+//         handleScroll(); 
+
+//         return () => window.removeEventListener('scroll', handleScroll);
+//     }, [headerVisible, headerHeight]); 
+
+//     return (
+//         <div ref={wrapperRef} className="arq-services-wrapper">
+//             <div ref={menuRef} className="tab-menu-wrapper">
+//                 <TabMenu services={services} t={t}/>
+//             </div>
+
+//             <div className="arq-services-content">
+//                 <section id="section-urbanDesign" className="service-section">
+//                     <UrbanDesign t={t} />
+//                 </section>
+
+//                 <section id="section-edification" className="service-section">
+//                     <Edification t={t} />
+//                 </section>
+
+//                 <section id="section-tramitation" className="service-section">
+//                     <Licenses t={t} />
+//                 </section>
+
+//                 <section id="section-sostenibility" className="service-section">
+//                     <Sostenibility t={t} />
+//                 </section>
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default ArqServices;
+
+import { createPortal } from 'react-dom';
+import { useState, useEffect, useRef } from 'react';
 import { useHeader } from '../../../../contexts/HeaderContext';
 import TabMenu from "../../../../components/TabMenu/TabMenu";
 import UrbanDesign from "./components/UrbanDesign/UrbanDesign";
@@ -8,9 +83,9 @@ import Sostenibility from "./components/Sostenibility/Sostenibility";
 import './ArqServices.css';
 
 function ArqServices({ t }) {
-    const { headerVisible, headerHeight } = useHeader(); 
+    const { headerVisible, headerHeight } = useHeader();
+    const [showFixedMenu, setShowFixedMenu] = useState(false);
     const wrapperRef = useRef(null);
-    const menuRef = useRef(null);
 
     const services = [
         { id: 1, nameKey: 'diseñoUrbano', sectionId: 'section-urbanDesign' },
@@ -21,52 +96,62 @@ function ArqServices({ t }) {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (wrapperRef.current && menuRef.current) {
+            if (wrapperRef.current) {
                 const wrapperTop = wrapperRef.current.getBoundingClientRect().top;
-                const menu = menuRef.current;
+                const wrapperBottom = wrapperRef.current.getBoundingClientRect().bottom;
+                const threshold = headerVisible ? headerHeight : 0;
                 
-                const topPosition = headerVisible ? `${headerHeight}px` : '0';
-                
-                if (wrapperTop <= (headerVisible ? headerHeight : 0)) {
-                    menu.style.position = 'fixed';
-                    menu.style.top = topPosition;
-                } else {
-                    menu.style.position = 'absolute';
-                    menu.style.top = '0';
-                }
+                // Mostrar menú fijo cuando el wrapper pase el threshold y aún esté visible
+                setShowFixedMenu(wrapperTop <= threshold && wrapperBottom > 100);
             }
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); 
+        handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [headerVisible, headerHeight]); 
+    }, [headerVisible, headerHeight]);
+
+    const topPosition = headerVisible ? headerHeight : 0;
 
     return (
-        <div ref={wrapperRef} className="arq-services-wrapper">
-            <div ref={menuRef} className="tab-menu-wrapper">
-                <TabMenu services={services} t={t}/>
+        <>
+            {/* Menú fijo renderizado fuera del main-content */}
+            {showFixedMenu && createPortal(
+                <div 
+                    className="tab-menu-fixed"
+                    style={{ top: `${topPosition}px` }}
+                >
+                    <TabMenu services={services} t={t}/>
+                </div>,
+                document.body
+            )}
+
+            <div ref={wrapperRef} className="arq-services-wrapper">
+                {/* Menú estático inicial */}
+                <div className="tab-menu-wrapper">
+                    <TabMenu services={services} t={t}/>
+                </div>
+
+                <div className="arq-services-content">
+                    <section id="section-urbanDesign" className="service-section">
+                        <UrbanDesign t={t} />
+                    </section>
+
+                    <section id="section-edification" className="service-section">
+                        <Edification t={t} />
+                    </section>
+
+                    <section id="section-tramitation" className="service-section">
+                        <Licenses t={t} />
+                    </section>
+
+                    <section id="section-sostenibility" className="service-section">
+                        <Sostenibility t={t} />
+                    </section>
+                </div>
             </div>
-
-            <div className="arq-services-content">
-                <section id="section-urbanDesign" className="service-section">
-                    <UrbanDesign t={t} />
-                </section>
-
-                <section id="section-edification" className="service-section">
-                    <Edification t={t} />
-                </section>
-
-                <section id="section-tramitation" className="service-section">
-                    <Licenses t={t} />
-                </section>
-
-                <section id="section-sostenibility" className="service-section">
-                    <Sostenibility t={t} />
-                </section>
-            </div>
-        </div>
+        </>
     );
 }
 

@@ -50,7 +50,7 @@ function Form({ t }) {
                                 placeholder=" "
                             />
                             <label className="form-label">
-                                Nombre <span className="required-asterisk">*</span>
+                                {t('name')} <span className="required-asterisk">*</span>
                             </label>
                         </div>
 
@@ -65,7 +65,7 @@ function Form({ t }) {
                                 placeholder=" "
                             />
                             <label className="form-label">
-                                Email <span className="required-asterisk">*</span>
+                                {t('email')} <span className="required-asterisk">*</span>
                             </label>
                         </div>
 
@@ -80,7 +80,7 @@ function Form({ t }) {
                                 placeholder=" "
                             />
                             <label className="form-label">
-                                Empresa <span className="required-asterisk">*</span>
+                                {t('empresa')} <span className="required-asterisk">*</span>
                             </label>
                         </div>
 
@@ -95,7 +95,7 @@ function Form({ t }) {
                                 placeholder=" "
                             />
                             <label className="form-label">
-                                Mensaje <span className="required-asterisk">*</span>
+                                {t('mensaje')} <span className="required-asterisk">*</span>
                             </label>
                         </div>
 
@@ -108,22 +108,29 @@ function Form({ t }) {
                                 required
                             />
                             <label htmlFor="terminos">
-                                Acepto los términos y condiciones
+                                {t('terminos')}
                             </label>
                         </div>
 
-                        <div
+                        {/* <div
                             onClick={handleSubmit}
                             className="form-button-wrapper"
                         >
                             <ButtonGeneral
                                 color="secondary"
-                                text="Enviar"
+                                text={t('send')}
                                 route="#"
                                 className="form-submit-button"
                             />
+                        </div> */}
+                        <div className="form-button-wrapper">
+                            <ButtonGeneral
+                                type="submit"
+                                color="secondary"
+                                text={t('send')}
+                                className="form-submit-button"
+                            />
                         </div>
-
                     </form>
                 </div>
             </div>
