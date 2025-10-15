@@ -1,0 +1,114 @@
+.contact-phone {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0.75rem;
+}
+
+.img-contact-phone {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.img-contact-phone img{
+    width: 100%;
+    aspect-ratio: 5/4;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    object-fit: cover; 
+}
+
+
+
+
+/* .second-line-contact-phone {
+    display: flex;
+    align-items: stretch;
+    margin-top: 20px;
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+    gap: 1rem;
+    height: 20vh;
+}
+
+.button-container-large-phone {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    padding-bottom: 1rem;
+}
+
+.button-container-small-phone {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-end;
+    padding-left: 1rem;
+    border-left: 1px solid var(--light-grey);
+    padding-bottom: 1rem;
+} */
+
+.second-line-contact-phone {
+    display: flex;
+    align-items: stretch;
+    margin-top: 20px;
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+    gap: 0; /* Cambiado de 1rem a 0 para usar borders */
+    height: 20vh;
+    overflow-x: auto; /* Habilita scroll horizontal */
+    overflow-y: hidden;
+    
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Para iOS */
+}
+
+/* Estilos del scrollbar (opcional) */
+.second-line-contact-phone::-webkit-scrollbar {
+    height: 4px;
+}
+
+.second-line-contact-phone::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.second-line-contact-phone::-webkit-scrollbar-thumb {
+    background: var(--light-grey);
+    border-radius: 10px;
+}
+
+/* O esconder completamente el scrollbar */
+.second-line-contact-phone::-webkit-scrollbar {
+    display: none;
+}
+
+.second-line-contact-phone {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.button-container-large-phone {
+    flex: 0 0 auto; /* No crece ni encoge */
+    min-width: 55%; /* Ancho mínimo (ajusta según necesites) */
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    padding-bottom: 1rem;
+    padding-right: 1rem; /* Espaciado a la derecha */
+}
+
+.button-container-small-phone {
+    flex: 0 0 auto; /* No crece ni encoge */
+    min-width: 40%; /* Ancho mínimo (ajusta según necesites) */
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-end;
+    padding-left: 1rem;
+    border-left: 1px solid var(--light-grey);
+    padding-bottom: 1rem;
+    padding-right: 1rem; /* Espaciado a la derecha */
+}

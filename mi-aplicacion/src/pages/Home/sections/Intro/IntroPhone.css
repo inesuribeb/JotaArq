@@ -66,7 +66,7 @@
     padding-left: 1rem;
     font-weight: 400;
     margin-left: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 
@@ -81,12 +81,15 @@
     gap: 0; /* Sin gap, usamos borders */
     
     /* Estilos para el scrollbar */
-    scrollbar-width: thin;
+
+-ms-overflow-style: none;
+    scrollbar-width: none;
+    /* scrollbar-width: thin; */
     scrollbar-color: var(--medium-grey) transparent;
     
     /* Smooth scrolling */
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Para iOS */
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Ocultar scrollbar pero mantener funcionalidad */
