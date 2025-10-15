@@ -17,33 +17,45 @@
     display: flex;
     flex-direction: row;
     padding: 0rem 0rem;
+
+    position: relative;
+}
+
+/* Contenedor del carousel en posición absoluta */
+.carousel-header-imported {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 3;
+    pointer-events: none; /* Para que no interfiera con los clicks en la navegación */
 }
 
 .navigation-phone-logo {
     width: 80px;
     margin-bottom: 0rem;
     display: flex;
-    padding-top: 19.5rem;
-    align-items: flex-start; /* Alinea el círculo al inicio */
+    padding-top: 19rem;
+    align-items: flex-start; 
     justify-content: center;
+
+    z-index: 2; 
 }
 
-/* Crea el contenedor circular igual que en header */
 .navigation-phone-logo::before {
     content: '';
     width: 40px;
     height: 40px;
-    background-color: var(--dark-color);
     border-radius: 50%;
     position: absolute;
 }
 
 .navigation-phone-logo img {
-    width: 40px; /* Mismo tamaño que el header */
-    height: 40px;
+    width: 60px; 
+    height: 60px;
     object-fit: contain;
-    filter: invert();
-    padding: 7px; /* Para que la imagen tenga el mismo tamaño relativo */
+    padding: 7px; 
     position: relative;
     z-index: 1;
 }
@@ -53,15 +65,16 @@
     flex-direction: column;
     border-left: 1.4px solid var(--light-grey);
     padding-top: 12rem;
+
+    position: relative;
+    z-index: 2;
 }
 
 .navigation-phone-nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding-left: 1.5rem; */
     padding-left: 0rem;
-
     gap: 0rem;
     margin-bottom: 0rem;
     flex: 1;
@@ -76,7 +89,7 @@
     text-transform: lowercase;
     border-left: 1.4px solid transparent;
 
-    padding-left: 1.4rem; /* Padding en el link */
+    padding-left: 1.4rem; 
     margin-left: -1px;
 }
 

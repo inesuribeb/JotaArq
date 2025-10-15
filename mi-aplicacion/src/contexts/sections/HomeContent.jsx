@@ -6,6 +6,7 @@ export const homeTranslations = {
 
         introText: 'Contamos con una amplia variedad de encargos, desarrollados en múltiples localizaciones y contextos.',
         us: "Sobre<br/>Nosotros",
+        usPhone: "Sobre Nosotros",
         projects: "proyectos",
         miniIntro: "Lorem ipsum dolor sit a met, consectetur adipisc ing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
 
@@ -35,6 +36,7 @@ export const homeTranslations = {
         homeIntroPhone: 'Gure hirien etorkizunarekin konprometituak',
         introText: 'Eskari anitz ditugu, toki eta testuinguru askotan garatuak.',
         us: "Guri buruz",
+        usPhone: "Guri buruz",
         projects: "proiektuak",
         miniIntro: "Lorem ipsum dolor sit a met, consectetur adipisc ing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
 
@@ -65,6 +67,7 @@ export const homeTranslations = {
         homeIntroPhone: 'Committed to the future of our cities',
         introText: 'We have a wide variety of projects developed in multiple locations and contexts.',
         us: "About us",
+        usPhone: "About us",
         projects: "projects",
         miniIntro: "Lorem ipsum dolor sit a met, consectetur adipisc ing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
 

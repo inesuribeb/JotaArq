@@ -1,5 +1,6 @@
 import { useLocation, Link } from 'react-router-dom';
 import LanguageButtonPhone from './LanguageButtonPhone';
+import CarouselHeader from '../Header/CarouselHeader/CarouselHeader';
 import './NavigationPhone.css';
 
 function NavigationPhone({ t, getRoute, changeLanguage, language, availableLanguages, onClose }) {
@@ -15,8 +16,14 @@ function NavigationPhone({ t, getRoute, changeLanguage, language, availableLangu
     return (
         <div className="navigation-phone-overlay">
             <div className="navigation-phone-content">
-                <div className="navigation-phone-logo">
-                    <img src="/Logos/LogoPrueba.png" alt="Jota Logo" />
+                <Link to={getRoute('home')} onClick={onClose}>
+                    <div className="navigation-phone-logo">
+                        <img src="/Logos/LogoPrueba.png" alt="Jota Logo" />
+                    </div>
+                </Link>
+
+                <div className='carousel-header-imported'>
+                    <CarouselHeader />
                 </div>
 
                 <div className='nav-and-lng'>

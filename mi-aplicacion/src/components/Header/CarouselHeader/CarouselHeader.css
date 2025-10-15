@@ -1,0 +1,60 @@
+/* .carousel-header-container {
+    display: flex;
+    flex-direction: row;
+} */
+
+.carousel-header-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 40px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 40px;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    width: 300px;
+    height: 200px;
+    border-radius: 60px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pausar animación al hacer hover */
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 160px;
+        height: 100px;
+    }
+    
+    .carousel-track {
+        animation: scroll 25s linear infinite;
+    }
+}
