@@ -118,3 +118,42 @@
 .button-general:hover .button-icon {
     transform: translateX(4px);
 }
+
+
+/* MEDIA QUERY PARA MÓVILES */
+@media (max-width: 768px) {
+    .button-general {
+        font-size: 14px; /* Letra más pequeña */
+        border-radius: 16px; /* Border radius proporcional */
+    }
+
+    .button-content,
+    .button-content-hover {
+        padding: 8px 20px; /* Padding más pequeño */
+        gap: 6px; /* Gap más pequeño */
+    }
+
+    .button-icon {
+        width: 14px; /* Icono más pequeño */
+        height: 14px;
+    }
+}
+
+/* OPCIONAL: Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .button-general {
+        font-size: 13px;
+        border-radius: 14px;
+    }
+
+    .button-content,
+    .button-content-hover {
+        padding: 7px 18px;
+        gap: 5px;
+    }
+
+    .button-icon {
+        width: 13px;
+        height: 13px;
+    }
+}
