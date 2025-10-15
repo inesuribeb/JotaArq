@@ -1,12 +1,17 @@
 import { useLanguage } from '../../contexts/LanguageContext';
+import useIsMobile from '../../hooks/useMobile';
 import MainTitle from '../../components/Titles/MainTitle';
 import Pictures from './sections/Pictures/Pictures';
 import './Architecture.css'
 import Statement from './sections/Statement/Statement';
+import StatementPhone from './sections/Statement/StatementPhone';
 import ArqServices from './sections/ArqServices/ArqServices';
+import ArqServicesPhone from './sections/ArqServices/ArqServicesPhone';
 
 function Architecture() {
     const { t, getRoute, changeLanguage, language, availableLanguages } = useLanguage();
+    const isMobile = useIsMobile(768);
+
     return (
         <div className="architecture-content">
             <MainTitle
@@ -21,13 +26,14 @@ function Architecture() {
 
             <Pictures />
 
-            <Statement
-                t={t}
-            />
+            {isMobile ? <StatementPhone t={t} /> : <Statement t={t} />}
 
-            <ArqServices
+            {/* <ArqServices
                 t={t}
-            />
+            /> */}
+
+            {isMobile ? <ArqServicesPhone t={t} /> : <ArqServices t={t} />}
+
         </div>
     )
 }

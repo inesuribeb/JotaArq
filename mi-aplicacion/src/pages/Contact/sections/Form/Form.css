@@ -125,3 +125,153 @@
 .form-submit-button .button-icon {
     filter: brightness(0) invert(1) !important; /* Fuerza blanco */
 }
+
+
+
+
+
+/* TABLETS (1024px y menos) */
+@media (max-width: 1024px) {
+    .form-container {
+        gap: 3rem;
+    }
+
+    .form-input {
+        font-size: 1.1rem;
+        padding: 0.65rem;
+        padding-bottom: 1.3rem;
+    }
+
+    .form-label {
+        font-size: 1.2rem;
+    }
+
+    .required-asterisk {
+        font-size: 1.3rem;
+    }
+}
+
+/* TABLETS PEQUEÑAS Y MÓVILES (768px y menos) */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 0.75rem;
+    }
+
+    .first-line {
+        flex-direction: column; /* Columnas en móvil */
+        gap: 1rem;
+    }
+
+    .fl-left,
+    .fl-right {
+        flex: 1;
+    }
+
+    .form-container {
+        gap: 2.5rem;
+        padding-top: 0.75rem;
+    }
+
+    .form-input {
+        font-size: 1rem;
+        padding: 0.6rem;
+        padding-bottom: 1.2rem;
+    }
+
+    .form-label {
+        font-size: 1.1rem;
+        top: 0.6rem;
+    }
+
+    .required-asterisk {
+        font-size: 1.2rem;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:not(:placeholder-shown) ~ .form-label {
+        top: -1.3rem;
+        font-size: 0.8rem;
+    }
+
+    .form-group:has(.form-textarea) .form-label {
+        top: 0.6rem;
+    }
+
+    .form-group:has(.form-textarea) .form-input:focus ~ .form-label,
+    .form-group:has(.form-textarea) .form-input:not(:placeholder-shown) ~ .form-label {
+        top: -1.3rem;
+        font-size: 0.8rem;
+    }
+
+    .form-textarea {
+        min-height: 100px;
+    }
+
+    .form-checkbox {
+        gap: 0.4rem;
+    }
+
+    .form-checkbox input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    .form-checkbox label {
+        font-size: 0.9rem;
+    }
+}
+
+/* MÓVILES (480px y menos) */
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 0.75rem;
+    }
+
+    .form-container {
+        gap: 2.5rem;
+    }
+
+    .form-input {
+        font-size: 0.95rem;
+        padding: 0.75rem;
+        padding-bottom: 1rem;
+    }
+
+    .form-label {
+        font-size: 1.2rem;
+        top: 0.5rem;
+    }
+
+    .required-asterisk {
+        font-size: 1.1rem;
+    }
+
+    .form-input:focus ~ .form-label,
+    .form-input:not(:placeholder-shown) ~ .form-label {
+        top: -1.2rem;
+        font-size: 0.75rem;
+    }
+
+    .form-group:has(.form-textarea) .form-label {
+        top: 0.5rem;
+    }
+
+    .form-group:has(.form-textarea) .form-input:focus ~ .form-label,
+    .form-group:has(.form-textarea) .form-input:not(:placeholder-shown) ~ .form-label {
+        top: -1.2rem;
+        font-size: 0.75rem;
+    }
+
+    .form-textarea {
+        min-height: 80px;
+    }
+
+    .form-checkbox input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    .form-checkbox label {
+        font-size: 0.85rem;
+    }
+}
