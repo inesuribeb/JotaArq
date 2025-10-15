@@ -1,0 +1,62 @@
+.intro-layout-phone {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    padding: 0.75rem;
+}
+
+.intro-line1-phone,
+.intro-line2-phone {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.intro-line1-phone h4,
+.intro-line1-phone h5 {
+    font-weight: 400;
+}
+
+.intro-line1-phone h4 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+.intro-line1-phone h5 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.intro-layout-phone-text {
+    /* display: flex; */
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    width: 90%;
+    border-left: 1px solid var(--light-grey);
+    padding-left: 1rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+
+.intro-line2-phone {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+    padding-top: 1rem;
+    justify-content: flex-start;
+}
+
+.intro-line2-phone img {
+    background-color: var(--light-grey);
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 10px;
+    cursor: pointer; /* Añade esto para indicar que es clickable */
+    position: relative;
+    /* z-index: 11; */
+}

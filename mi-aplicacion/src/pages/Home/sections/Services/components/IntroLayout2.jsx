@@ -57,16 +57,6 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
         setIsHovering(false);
     };
 
-    // const handleMouseEnter = () => {
-    //     console.log('Mouse entered!');
-    //     setIsHovering(true);
-    // };
-
-    // const handleMouseLeave = () => {
-    //     console.log('Mouse left!'); 
-    //     setIsHovering(false);
-    // };
-
     const handleImageClick = () => {
         if (buttonRoute) {
             if (buttonRoute.startsWith('http://') || buttonRoute.startsWith('https://')) {
@@ -112,18 +102,7 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
                     onMouseLeave={handleMouseLeave}
                     onClick={handleImageClick}
                 />
-                {/* {isHovering && (
-                    <span 
-                        className='explore-button'
-                        style={{
-                            left: mousePosition.x,
-                            top: mousePosition.y,
-                        }}
-                    >
-                        {t('explore')}
-                    </span>
-                )} */}
-                {/* MUEVE el explore-button FUERA y usa createPortal */}
+                
                 {isHovering && createPortal(
                     <span
                         className='explore-button'
@@ -134,7 +113,7 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
                     >
                         {t('explore')}
                     </span>,
-                    document.body // Lo renderiza directamente en el body
+                    document.body 
                 )}
             </div>
         </section>
