@@ -37,17 +37,20 @@
     display: block;
     color: var(--dark-color);
     text-decoration: none;
-    padding: 0.25rem 0;
+    /* margin: 0; */
+    padding: -0.25rem 0;
     transition: color 0.3s ease;
-    text-transform: uppercase;
-}
-
-.footer-nav .footer-nav-link:hover {
-    color: var(--orange-color);
+    text-transform: capitalize;
+    border-left: 1px solid var(--light-grey);
+    margin-left: 1rem;
+    padding-left: 1rem;
+    font-size: 1.35rem;
 }
 
 .footer-nav-link.active {
     color: var(--orange-color);
+    border-left: 1px solid var(--orange-color);
+
 }
 
 .footer-f2 {
@@ -184,4 +187,147 @@
 
 .footer-dark .col img {
     filter: invert(1);
+}
+
+
+
+
+
+/* TABLETS (1024px y menos) */
+@media (max-width: 1024px) {
+    .jota-name {
+        font-size: 12rem;
+    }
+
+    .arqAndgest {
+        font-size: 2.5rem;
+    }
+
+    .footer-nav .footer-nav-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* MÓVILES (768px y menos) */
+@media (max-width: 768px) {
+    .footer-container {
+        height: 80vh;
+        padding: 1rem;
+        padding-top: 2rem;
+        gap: 1.5rem;
+    }
+
+    /* Línea 1: Oficina */
+    .footer-f1 .col:nth-child(1) {
+        order: 1;
+        flex: 0 0 100%;
+    }
+
+    /* Línea 2: Contacto y RRSS en row */
+    .footer-f1 .col:nth-child(2),
+    .footer-f1 .col:nth-child(3) {
+        order: 2;
+        flex: 1;
+    }
+
+    /* Línea 3: Menú */
+    .footer-f1 .col:nth-child(5) {
+        order: 3;
+        flex: 0 0 100%;
+    }
+
+    /* Ocultar columnas vacías */
+    .footer-f1 .col:nth-child(4) {
+        display: none;
+    }
+
+    .footer-f1 {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .col h1 {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+        margin-top: 0;
+    }
+
+    .col p {
+        font-size: 0.85rem;
+        margin-bottom: -0.75rem;
+    }
+
+    .footer-nav .footer-nav-link {
+        font-size: 1rem;
+        margin-left: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    /* Línea 4: Solo Jota */
+    .footer-f2 .col:first-child,
+    .footer-f2 .col:nth-child(3),
+    .footer-f2 .col:last-child {
+        display: none;
+    }
+
+    .footer-f2 .col:nth-child(4) {
+        display: none;
+    }
+
+    .jota-name {
+        font-size: 6rem;
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .arqAndgest {
+        font-size: 1.8rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    /* Línea 5: Footer f3 en row */
+    .footer-f3 {
+        gap: 0.5rem;
+    }
+
+    .col3 h1 {
+        font-size: 0.75rem;
+    }
+}
+
+/* MÓVILES PEQUEÑOS (480px y menos) */
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 0.75rem;
+        padding-top: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .col h1 {
+        font-size: 0.8rem;
+    }
+
+    .col p {
+        font-size: 0.8rem;
+    }
+
+    .footer-nav .footer-nav-link {
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .jota-name {
+        font-size: 4.5rem;
+    }
+
+    .arqAndgest {
+        font-size: 1.5rem;
+    }
+
+    .col3 h1 {
+        font-size: 0.7rem;
+    }
 }
