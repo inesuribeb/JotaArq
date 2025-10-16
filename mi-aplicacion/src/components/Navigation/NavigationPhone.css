@@ -142,7 +142,7 @@
     }
     to {
         transform: translateX(100%);
-        background-color: #afaeae; 
+        background-color: var(--light-grey); 
     }
 }
 
@@ -362,7 +362,7 @@
     background-color: var(--dark-color);
     transform: scaleY(0);
     transform-origin: top;
-    animation: drawLineDown 0.5s ease-out 0.9s forwards;
+    animation: drawLineDown 0.5s ease-out 0.87s forwards;
 }
 
 @keyframes drawLineDown {
