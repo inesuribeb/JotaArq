@@ -211,9 +211,9 @@
 /* MÓVILES (768px y menos) */
 @media (max-width: 768px) {
     .footer-container {
-        height: 80vh;
+        height: 80dvh;
         padding: 1rem;
-        padding-top: 2rem;
+        padding-top: 3rem;
         gap: 1.5rem;
     }
 
@@ -301,7 +301,7 @@
 @media (max-width: 480px) {
     .footer-container {
         padding: 0.75rem;
-        padding-top: 1.5rem;
+        padding-top: 5.5rem;
         gap: 1.25rem;
     }
 
