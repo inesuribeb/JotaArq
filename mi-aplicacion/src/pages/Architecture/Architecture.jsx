@@ -2,6 +2,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import useIsMobile from '../../hooks/useMobile';
 import MainTitle from '../../components/Titles/MainTitle';
 import Pictures from './sections/Pictures/Pictures';
+import PictureS from '../Management/sections/Picture/PictureS';
 import './Architecture.css'
 import Statement from './sections/Statement/Statement';
 import StatementPhone from './sections/Statement/StatementPhone';
@@ -24,7 +25,8 @@ function Architecture() {
                 className="custom-class"
             />
 
-            <Pictures />
+            {/* <Pictures /> */}
+            <PictureS />
 
             {isMobile ? <StatementPhone t={t} /> : <Statement t={t} />}
 

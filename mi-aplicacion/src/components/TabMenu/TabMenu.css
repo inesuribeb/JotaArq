@@ -1,4 +1,4 @@
-.tab-menu {
+/* .tab-menu {
     position: sticky;
     background-color: transparent;
     z-index: 100;
@@ -40,4 +40,78 @@
 .tab-item.active {
     color: var(--burgundy-color);
     background-color: var(--background-color);
+} */
+
+
+
+
+.tab-menu {
+    position: sticky;
+    background-color: transparent;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    transition: top 0.3s ease, bottom 0.3s ease;
+}
+
+.tab-menu-top {
+    top: 0;
+    bottom: auto;
+}
+
+.tab-menu-bottom {
+    top: auto;
+    bottom: 2rem;
+}
+
+.tab-menu-container {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.7rem 1rem;
+    background-color: var(--light-color);
+    border: 1px solid var(--light-grey);
+    border-radius: 35px;
+    position: relative; 
+}
+
+/* Fondo deslizante */
+.tab-menu-container::before {
+    content: '';
+    position: absolute;
+    background-color: var(--background-color);
+    border-radius: 18px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+    pointer-events: none;
+    left: var(--bg-left, 0);
+    top: var(--bg-top, 0);
+    width: var(--bg-width, 0);
+    height: var(--bg-height, 0);
+}
+
+.tab-item {
+    background: none;
+    border: none;
+    border-radius: 18px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--dark-color);
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    position: relative; 
+    z-index: 1;
+}
+
+.tab-item:hover {
+    color: var(--dark-color);
+}
+
+.tab-item.active {
+    color: var(--orange-color);
+    font-weight: 400;
 }

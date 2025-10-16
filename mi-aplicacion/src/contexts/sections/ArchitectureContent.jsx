@@ -1,9 +1,9 @@
 export const architectureTranslations = {
     es: {
         serviciosDe: "servicios",
-        serviciosDeArq: "servicios de Arquitectura",
-        deArquitectura: "de Arquitectura",
-        deGestion: "de Gestión",
+        serviciosDeArq: "servicios de arquitectura",
+        deArquitectura: "de arquitectura",
+        deGestion: "de gestión",
         historiaVision: "Historia y Visión",
         creemosJuntos: "Creemos juntos",
 
@@ -65,7 +65,7 @@ export const architectureTranslations = {
     },
     en: {
         serviciosDe: "services",
-        serviciosDeArq: "sArchitecture Services",
+        serviciosDeArq: "Architecture Services",
         deArquitectura: "Architecture",
         deGestion: "Management",
         historiaVision: "History & Vision",
