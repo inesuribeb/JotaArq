@@ -1,3 +1,5 @@
+// Version tabmenu arriba
+
 // import { createPortal } from 'react-dom';
 // import { useState, useEffect, useRef } from 'react';
 // import { useHeader } from '../../../../contexts/HeaderContext';
@@ -84,7 +86,7 @@
 
 
 
-
+/* Version tabmenu abajo sin referencia footer */
 
 // import { createPortal } from 'react-dom';
 // import { useState, useEffect, useRef } from 'react';
@@ -168,6 +170,8 @@
 // export default ArqServices;
 
 
+
+/* Version tabmenu abajo con referencia footer: Revisar */
 
 import { createPortal } from 'react-dom';
 import { useState, useEffect, useRef } from 'react';

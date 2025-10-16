@@ -1,4 +1,4 @@
-.header-content {
+/* .header-content {
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
@@ -53,4 +53,64 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+} */
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0rem;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    height: auto; 
+    box-sizing: border-box;
+    background: transparent; 
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header-content.header-background {
+    background: var(--background-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    aspect-ratio: 1;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+}
+
+.logo-container img {
+    max-width: 65%;
+    max-height: 65%;
+    object-fit: contain;
+    filter: invert();
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Solo header-right desaparece hacia arriba */
+.header-content.header-hidden .header-right {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
 }

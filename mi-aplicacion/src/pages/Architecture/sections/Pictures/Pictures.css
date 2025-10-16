@@ -26,6 +26,7 @@
     aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 15px;
+    display: none;
 }
 
 .picture-right img {
@@ -52,7 +53,7 @@
 
     .picture-right {
         flex: none;
-        width: 80%; /* Segunda foto ocupa 80% */
+        width: 100%; /* Segunda foto ocupa 80% */
         align-self: flex-end; /* Pegada a la derecha */
     }
 
@@ -75,7 +76,7 @@
     }
 
     .picture-right {
-        width: 90%; /* Ajuste opcional para pantallas muy pequeñas */
+        width: 100%; /* Ajuste opcional para pantallas muy pequeñas */
     }
 
     .picture-left img,

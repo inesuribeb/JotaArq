@@ -1,0 +1,44 @@
+.home-content {
+    position: relative;
+    width: 100%;
+}
+
+.portada-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1; /* Por debajo del main-content que tiene z-index: 2 */
+}
+
+.parallax {
+    position: relative;
+    z-index: 2;
+    margin-top: 100vh; /* Empieza después de la portada */
+    background-color: var(--background-color);
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+    border-radius: 20px;
+    min-height: 100vh;
+    padding-top: 5vh;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    /* background: linear-gradient(to bottom, transparent, var(--background-color)); */
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}

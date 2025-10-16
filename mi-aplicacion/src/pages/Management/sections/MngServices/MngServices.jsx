@@ -1,3 +1,5 @@
+/* Version tabmenu arriba */
+
 // import { createPortal } from 'react-dom';
 // import { useState, useEffect, useRef } from 'react';
 // import { useHeader } from '../../../../contexts/HeaderContext';
@@ -80,6 +82,94 @@
 
 // export default MngServices;
 
+
+/* Version tabmenu abajo sin referencia footer */
+
+// import { createPortal } from 'react-dom';
+// import { useState, useEffect, useRef } from 'react';
+// import { useHeader } from '../../../../contexts/HeaderContext';
+// import TabMenu from "../../../../components/TabMenu/TabMenu";
+// import Certificados from "./components/Certificados/Certificados";
+// import AsesoramientoUrb from "./components/AsesoramientoUrb/AsesoramientoUrb";
+// import TramLicencias from "./components/TramLicencias/TramLicencias";
+// import DireccionObra from "./components/DireccionObra/DireccionObra";
+// import './MngServices.css';
+
+// function MngServices({ t }) {
+//     const { headerVisible, headerHeight } = useHeader();
+//     const [showFixedMenu, setShowFixedMenu] = useState(false);
+//     const wrapperRef = useRef(null);
+
+//     const services = [
+//         { id: 1, nameKey: 'certificados', sectionId: 'section-cerf' },
+//         { id: 2, nameKey: 'asesoramientoUrbanistico', sectionId: 'section-asesoramiento' },
+//         { id: 3, nameKey: 'tramitacionLicencias', sectionId: 'section-tramitation' },
+//         { id: 4, nameKey: 'direccionObra', sectionId: 'section-direction' }
+//     ];
+
+//     useEffect(() => {
+//         const handleScroll = () => {
+//             if (wrapperRef.current) {
+//                 const wrapperTop = wrapperRef.current.getBoundingClientRect().top;
+//                 const wrapperBottom = wrapperRef.current.getBoundingClientRect().bottom;
+                
+//                 const menuBottomThreshold = 0;
+//                 setShowFixedMenu(
+//                     wrapperTop <= window.innerHeight - menuBottomThreshold && 
+//                     wrapperBottom > menuBottomThreshold
+//                 );
+//             }
+//         };
+
+//         window.addEventListener('scroll', handleScroll);
+//         handleScroll();
+
+//         return () => window.removeEventListener('scroll', handleScroll);
+//     }, [headerVisible, headerHeight]);
+
+//     return (
+//         <>
+//             {showFixedMenu && createPortal(
+//                 <div className="tab-menu-fixed">
+//                     <TabMenu services={services} t={t}/>
+//                 </div>,
+//                 document.body
+//             )}
+
+//             <div ref={wrapperRef} className="mng-services-wrapper">
+//                 <div className={`tab-menu-wrapper ${showFixedMenu ? 'hidden' : ''}`}>
+//                     <TabMenu services={services} t={t}/>
+//                 </div>
+
+//                 <div className="mng-services-content">
+//                     <section id="section-cerf" className="service-section">
+//                         <Certificados t={t} />
+//                     </section>
+
+//                     <section id="section-asesoramiento" className="service-section">
+//                         <AsesoramientoUrb t={t} />
+//                     </section>
+
+//                     <section id="section-tramitation" className="service-section">
+//                         <TramLicencias t={t} />
+//                     </section>
+
+//                     <section id="section-direction" className="service-section">
+//                         <DireccionObra t={t} />
+//                     </section>
+//                 </div>
+//             </div>
+//         </>
+//     );
+// }
+
+// export default MngServices;
+
+
+
+
+/* Version tabmenu abajo con referencia footer: Revisar */
+
 import { createPortal } from 'react-dom';
 import { useState, useEffect, useRef } from 'react';
 import { useHeader } from '../../../../contexts/HeaderContext';
@@ -94,6 +184,7 @@ function MngServices({ t }) {
     const { headerVisible, headerHeight } = useHeader();
     const [showFixedMenu, setShowFixedMenu] = useState(false);
     const wrapperRef = useRef(null);
+    const endRef = useRef(null); // REF al final del componente
 
     const services = [
         { id: 1, nameKey: 'certificados', sectionId: 'section-cerf' },
@@ -104,15 +195,33 @@ function MngServices({ t }) {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (wrapperRef.current) {
+            if (wrapperRef.current && endRef.current) {
                 const wrapperTop = wrapperRef.current.getBoundingClientRect().top;
                 const wrapperBottom = wrapperRef.current.getBoundingClientRect().bottom;
-                
+                const endTop = endRef.current.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
                 const menuBottomThreshold = 0;
-                setShowFixedMenu(
-                    wrapperTop <= window.innerHeight - menuBottomThreshold && 
-                    wrapperBottom > menuBottomThreshold
-                );
+                const shouldShowMenu = wrapperTop <= windowHeight - menuBottomThreshold && 
+                                      wrapperBottom > menuBottomThreshold;
+                
+                setShowFixedMenu(shouldShowMenu);
+
+                // Controlar posición del menú según el endRef
+                const fixedMenu = document.querySelector('.tab-menu-fixed');
+                
+                if (fixedMenu && shouldShowMenu) {
+                    const menuHeight = 80; // Altura aproximada del menú + margin
+                    const stopPoint = windowHeight - menuHeight;
+                    
+                    // Si endRef está entrando en la zona donde debería estar el menú
+                    if (endTop <= stopPoint) {
+                        const offset = stopPoint - endTop;
+                        fixedMenu.style.transform = `translateY(-${offset}px)`;
+                    } else {
+                        fixedMenu.style.transform = 'translateY(0)';
+                    }
+                }
             }
         };
 
@@ -120,7 +229,7 @@ function MngServices({ t }) {
         handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [headerVisible, headerHeight]);
+    }, [headerVisible, headerHeight, showFixedMenu]);
 
     return (
         <>
@@ -153,6 +262,9 @@ function MngServices({ t }) {
                         <DireccionObra t={t} />
                     </section>
                 </div>
+
+                {/* Referencia invisible al final - aquí se detiene el menú */}
+                <div ref={endRef} className="mng-services-end" />
             </div>
         </>
     );
