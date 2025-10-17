@@ -31,7 +31,7 @@ function Form({ t }) {
             <div className='first-line'>
                 <div className='fl-left'>
                     <div className='fl-left-content'>
-                        <MiniTitle text={t('services')} />
+                        <MiniTitle text={t('contact')} />
                     </div>
                 </div>
 
@@ -112,25 +112,11 @@ function Form({ t }) {
                             </label>
                         </div>
 
-                        {/* <div
-                            onClick={handleSubmit}
-                            className="form-button-wrapper"
-                        >
-                            <ButtonGeneral
-                                color="secondary"
-                                text={t('send')}
-                                route="#"
-                                className="form-submit-button"
-                            />
-                        </div> */}
-                        <div className="form-button-wrapper">
-                            <ButtonGeneral
-                                type="submit"
-                                color="secondary"
-                                text={t('send')}
-                                className="form-submit-button"
-                            />
-                        </div>
+                        <button type="submit" className="form-submit-button">
+                            <span className="button-content">{t('send')}</span>
+                            <span className="button-content-hover">{t('send')}</span>
+                        </button>
+
                     </form>
                 </div>
             </div>

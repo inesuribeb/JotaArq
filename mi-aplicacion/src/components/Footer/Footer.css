@@ -38,12 +38,14 @@
     color: var(--dark-color);
     text-decoration: none;
     /* margin: 0; */
-    padding: -0.25rem 0;
+    /* padding: -0.25rem 0; */
     transition: color 0.3s ease;
     text-transform: capitalize;
     border-left: 1px solid var(--light-grey);
-    margin-left: 1rem;
-    padding-left: 1rem;
+    /* margin-left: 1rem;
+    padding-left: 1rem; */
+    padding: 0rem 0 0.25rem 1rem; /* Más específico: top right bottom left */
+    margin: 0 0 0 1rem; /* Más específico también */
     font-size: 1.35rem;
 }
 

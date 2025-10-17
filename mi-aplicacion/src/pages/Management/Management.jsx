@@ -7,6 +7,7 @@ import StatementM from './sections/Statement/StatementM';
 import StatementMphone from './sections/Statement/StatementMphone';
 import MngServices from './sections/MngServices/MngServices';
 import MngServicesPhone from './sections/MngServices/MngServicesPhone';
+import Worker from '../../components/Worker/Worker';
 import './Management.css'
 
 function Management() {
@@ -28,6 +29,11 @@ function Management() {
 
             {isMobile ? <MngServicesPhone t={t} /> : <MngServices t={t} />}
 
+            <Worker 
+                t={t}
+                workerName="Juan Bilbao"
+                workerRole={t('juanRole')}
+            />
         </div>
     )
 }

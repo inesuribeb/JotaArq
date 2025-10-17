@@ -30,6 +30,9 @@ export const architectureTranslations = {
         sostenibilitySubtitle: "Planes especiales para campos solares ",
         sostenibilityText: "Creemos en la urgencia de actuar frente a la emergencia climática. Acciones que garantizan la sostenibilidad económica, social, cultural y ambiental.",
 
+        ourExperts: "Nuestros expertos",
+        juanRole: "Director Senior de Gestión de Proyectos y Desarrollo de Negocios",
+        jokinRole: "Director de Proyectos de Arquitectura y Desarrollo Empresarial",
     },
     eu: {
         serviciosDe: "zerbitzuak",
@@ -62,6 +65,9 @@ export const architectureTranslations = {
         sostenibilitySubtitle: "Eguzki-parkeetarako plan bereziak",
         sostenibilityText: "Larrialdi klimatikoaren aurrean jarduteko premia sinesten dugu. Gure ekintzek iraunkortasun ekonomikoa, soziala, kulturala eta ingurumenekoa bermatzen dute.",
         
+        ourExperts: "Gure Adituak",
+        juanRole: "Proiektu Kudeaketa eta Negozio Garapeneko Zuzendari Nagusia",
+        jokinRole: "Arkitektura Proiektuen eta Garapen Enpresarialeko Zuzendaria",
     },
     en: {
         serviciosDe: "services",
@@ -93,5 +99,9 @@ export const architectureTranslations = {
 
         sostenibilitySubtitle: "Special plans for solar fields",
         sostenibilityText: "We believe in the urgency of acting against the climate emergency. Our actions ensure economic, social, cultural, and environmental sustainability.",
+    
+        ourExperts: "Our Leadership Team",
+        juanRole: "Senior Director Project Management Business Development",
+        jokinRole: "Director of Architectural Projects and Business Development",
     }
 };

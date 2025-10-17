@@ -29,7 +29,7 @@
     margin-top: -2rem;
     letter-spacing: 0.5rem;
     transition: opacity 0.5s ease, transform 0.5s ease;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .main-subtitle.fade-in {
@@ -111,26 +111,31 @@
 /* MÓVILES (480px y menos) */
 @media (max-width: 480px) {
     .main-title-container {
-        padding-top: 8rem;
+        padding-top: 13rem;
         justify-content: flex-start;
-        height: 39vh;
-        padding-bottom: 1rem;
+        height: 51.5vh;
+        /* padding-bottom: 0.5rem; */
+    }
+
+    /* Si solo hay un subtítulo, reducir la altura */
+    .main-title-container.single-subtitle {
+        height: 45vh; /* Ajusta este valor según necesites */
     }
 
     .main-title-heading {
         font-size: 1.2rem !important;
         line-height: 2.5rem;
-        letter-spacing: 0.01rem;
+        letter-spacing: 0.05rem;
         margin-left: 0.75rem;
     }
 
     .main-subtitle {
-        font-size: 2rem;
-        margin-left: 2rem;
-        letter-spacing: 0.2rem;
+        font-size: 3.2rem;
+        margin-left: 0.75rem;
+        letter-spacing: 0rem;
         margin-top: 0rem;
         font-weight: 400;
-        line-height: 2.4rem;
+        line-height: 2.8rem;
         /* text-transform:capitalize; */
     }
 }

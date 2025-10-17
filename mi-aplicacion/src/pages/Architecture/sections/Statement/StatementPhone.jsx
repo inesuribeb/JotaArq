@@ -17,7 +17,7 @@ function StatementPhone({ t }) {
                 </div> */}
 
                 <MiniTitle text={t('contact')} />
-                <h1 className='first-title-phone' dangerouslySetInnerHTML={{ __html: t('archStatement') }}></h1>
+                <h1 className='first-title-phone2' dangerouslySetInnerHTML={{ __html: t('archStatement') }}></h1>
             </div>
     )
 }

@@ -20,6 +20,6 @@
 .language-phone-button.language-phone-active {
     color: var(--dark-color);
     text-decoration: underline;
-    text-decoration-thickness: 1px; /* Grosor del subrayado */
+    text-decoration-thickness: 1.3px; /* Grosor del subrayado */
     text-underline-offset: 4px; /* Separación del texto */
 }

@@ -2,12 +2,19 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 0.75rem;
+    /* padding: 0.75rem; */
     padding-bottom: 3rem;
     padding-top: 3rem;
 }
 
+.intro-phone-mini {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
 .first-title-phone {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     font-size: 1.6rem;
     line-height: 2rem;
     /* hyphens: auto;
@@ -23,6 +30,8 @@
     align-items: baseline;
     margin-bottom: 2rem;
     margin-top: 0rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 }
 
 .mini-intro-phone span:first-child {
@@ -48,6 +57,8 @@
     justify-content: flex-end;
     align-items: center;
     border-radius: 10px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 }
 
 .intro-image-container img {
@@ -65,8 +76,10 @@
     border-left: 1px solid var(--light-grey);
     padding-left: 1rem;
     font-weight: 400;
-    margin-left: 1rem;
+    margin-left: 1.75rem;
     font-size: 1rem;
+    /* padding-left: 0.75rem; */
+    /* padding-right: 0.75rem; */
 }
 
 
@@ -79,7 +92,8 @@
     overflow-x: auto; /* Habilita scroll horizontal */
     overflow-y: hidden;
     gap: 0; /* Sin gap, usamos borders */
-    
+    margin-left: 0.75rem;
+
     /* Estilos para el scrollbar */
 
 -ms-overflow-style: none;

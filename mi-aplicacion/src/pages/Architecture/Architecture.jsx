@@ -8,6 +8,7 @@ import Statement from './sections/Statement/Statement';
 import StatementPhone from './sections/Statement/StatementPhone';
 import ArqServices from './sections/ArqServices/ArqServices';
 import ArqServicesPhone from './sections/ArqServices/ArqServicesPhone';
+import Worker from '../../components/Worker/Worker';
 
 function Architecture() {
     const { t, getRoute, changeLanguage, language, availableLanguages } = useLanguage();
@@ -35,6 +36,12 @@ function Architecture() {
             /> */}
 
             {isMobile ? <ArqServicesPhone t={t} /> : <ArqServices t={t} />}
+
+            <Worker 
+                t={t}
+                workerName="Jokin Tapia"
+                workerRole={t('jokinRole')}
+            />
 
         </div>
     )

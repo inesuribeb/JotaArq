@@ -47,7 +47,7 @@
     background-color: transparent;
     position: relative;
     z-index: 10;
-    padding-top: 1rem;
+    padding-top: 2rem;
     justify-content: flex-start;
 }
 
@@ -59,4 +59,8 @@
     cursor: pointer; /* Añade esto para indicar que es clickable */
     position: relative;
     /* z-index: 11; */
+}
+
+.button-services-home-phone {
+    margin-left: 1rem;
 }

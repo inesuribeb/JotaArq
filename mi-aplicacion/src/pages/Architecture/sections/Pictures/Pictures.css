@@ -26,7 +26,7 @@
     aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 15px;
-    display: none;
+    /* display: none; */
 }
 
 .picture-right img {
@@ -49,6 +49,7 @@
         flex: none;
         width: 50%; /* Primera foto ocupa 50% */
         align-self: flex-start; /* Pegada a la izquierda */
+        display: none;
     }
 
     .picture-right {

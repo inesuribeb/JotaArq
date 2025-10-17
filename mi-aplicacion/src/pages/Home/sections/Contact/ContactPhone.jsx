@@ -16,7 +16,7 @@ function ContactPhone({ t }) {
 
     return (
         <section className='contact-phone'>
-            <MiniTitle text={t('contact')} />
+            <MiniTitle className='intro-phone-mini' text={t('contact')} />
             <h1 className='first-title-phone' dangerouslySetInnerHTML={{ __html: t('contactUs') }}></h1>
 
 

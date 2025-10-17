@@ -16,7 +16,7 @@ function IntroPhone({ t }) {
 
     return (
         <section className='intro-phone-container'>
-            <MiniTitle text={t('usPhone')} />
+            <MiniTitle className='intro-phone-mini' text={t('usPhone')} />
             <h1 className='first-title-phone' dangerouslySetInnerHTML={{ __html: t('introText') }}></h1>
             <p className='mini-intro-phone'>
                 <span>105 +</span>
