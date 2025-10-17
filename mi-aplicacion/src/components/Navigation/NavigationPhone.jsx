@@ -99,6 +99,7 @@ function NavigationPhone({ t, getRoute, changeLanguage, language, availableLangu
                         changeLanguage={changeLanguage}
                         language={language}
                         availableLanguages={availableLanguages}
+                        onClose={onClose}
                     />
                 </div>
             </div>
