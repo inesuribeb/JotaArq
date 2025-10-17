@@ -1,3 +1,11 @@
+.button-icon-mui {
+    width: 18px !important;
+    height: 18px !important;
+    /* font-size: 16px !important; */
+    /* font-weight: 100 !important; */
+    stroke-width: 0.1;
+}
+
 .button-general {
     padding: 0;
     border: 1px solid;
@@ -15,7 +23,7 @@
 
 .button-content,
 .button-content-hover {
-    padding: 10px 30px;
+    padding: 10px 25px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -115,9 +123,9 @@
     transition: transform 0.3s ease;
 }
 
-.button-general:hover .button-icon {
+/* .button-general:hover .button-icon-mui {
     transform: translateX(4px);
-}
+} */
 
 
 /* MEDIA QUERY PARA MÓVILES */
@@ -137,6 +145,12 @@
         width: 14px; /* Icono más pequeño */
         height: 14px;
     }
+
+    .button-icon-mui {
+        width: 14px !important;
+        height: 14px !important;
+        font-size: 14px !important;
+    }
 }
 
 /* OPCIONAL: Para pantallas muy pequeñas */
@@ -155,5 +169,11 @@
     .button-icon {
         width: 13px;
         height: 13px;
+    }
+
+    .button-icon-mui {
+        width: 13px !important;
+        height: 13px !important;
+        font-size: 13px !important;
     }
 }

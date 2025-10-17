@@ -85,7 +85,7 @@
 
 /* Version tabmenu abajo con referencia footer: Revisar */
 
-.mng-services-wrapper {
+/* .mng-services-wrapper {
     position: relative;
     width: 100%;
 }
@@ -134,10 +134,139 @@
     align-items: flex-start;
 }
 
-/* Marcador invisible al final del componente */
 .mng-services-end {
     height: 1px;
     width: 100%;
     visibility: hidden;
-    margin-bottom: 6rem; /* Espacio para que el menú no quede pegado al borde */
+    margin-bottom: 6rem;
+} */
+
+.mng-services-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.tab-menu-fixed {
+    position: fixed;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    pointer-events: none;
+}
+
+.tab-menu-fixed .tab-menu,
+.tab-menu-fixed .tab-menu-container,
+.tab-menu-fixed .tab-item {
+    pointer-events: auto; 
+}
+
+.tab-menu-fixed .tab-menu-container {
+    max-width: 0;
+    width: max-content;
+    overflow: hidden;
+    animation: expandWidth 0.8s ease-out forwards;
+    white-space: nowrap;
+}
+
+@keyframes expandWidth {
+    from {
+        max-width: 0;
+    }
+    to {
+        max-width: 1000px; 
+    }
+}
+
+.tab-menu-fixed .tab-item {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-menu-fixed .tab-menu-container::before {
+    opacity: 0;
+    animation: showBackground 0.1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes showBackground {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animaciones de salida */
+.tab-menu-fixed.closing .tab-menu-container {
+    animation: collapseWidth 0.4s ease-in forwards;
+}
+
+@keyframes collapseWidth {
+    from {
+        max-width: 1000px;
+    }
+    to {
+        max-width: 0;
+    }
+}
+
+.tab-menu-fixed.closing .tab-item {
+    animation: fadeOutStatic 0.3s ease-in forwards;
+}
+
+@keyframes fadeOutStatic {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+.tab-menu-fixed.closing .tab-menu-container::before {
+    animation: fadeOut 0.2s ease-in forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.mng-services-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.service-section {
+    height: 100vh;
+    display: flex;
+    background-color: var(--background-color);
+    align-items: flex-start;
+}
+
+.mng-services-end {
+    height: 1px;
+    width: 100%;
+    visibility: hidden;
+    margin-bottom: 6rem;
 }

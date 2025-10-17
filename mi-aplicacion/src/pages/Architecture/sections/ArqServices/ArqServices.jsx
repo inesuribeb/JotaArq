@@ -84,95 +84,6 @@
 // export default ArqServices;
 
 
-
-
-/* Version tabmenu abajo sin referencia footer */
-
-// import { createPortal } from 'react-dom';
-// import { useState, useEffect, useRef } from 'react';
-// import { useHeader } from '../../../../contexts/HeaderContext';
-// import TabMenu from "../../../../components/TabMenu/TabMenu";
-// import UrbanDesign from "./components/UrbanDesign/UrbanDesign";
-// import Edification from "./components/Edification/Edification";
-// import Licenses from "./components/Licenses/Licenses";
-// import Sostenibility from "./components/Sostenibility/Sostenibility";
-// import './ArqServices.css';
-
-// function ArqServices({ t }) {
-//     const { headerVisible, headerHeight } = useHeader();
-//     const [showFixedMenu, setShowFixedMenu] = useState(false);
-//     const wrapperRef = useRef(null);
-
-//     const services = [
-//         { id: 1, nameKey: 'diseñoUrbano', sectionId: 'section-urbanDesign' },
-//         { id: 2, nameKey: 'edificacion', sectionId: 'section-edification' },
-//         { id: 3, nameKey: 'tramitacionLicencias', sectionId: 'section-tramitation' },
-//         { id: 4, nameKey: 'sostenibilidad', sectionId: 'section-sostenibility' }
-//     ];
-
-//     useEffect(() => {
-//         const handleScroll = () => {
-//             if (wrapperRef.current) {
-//                 const wrapperTop = wrapperRef.current.getBoundingClientRect().top;
-//                 const wrapperBottom = wrapperRef.current.getBoundingClientRect().bottom;
-                
-
-//                 const menuBottomThreshold = 0;
-//                 setShowFixedMenu(
-//                     wrapperTop <= window.innerHeight - menuBottomThreshold && 
-//                     wrapperBottom > menuBottomThreshold
-//                 );
-//             }
-//         };
-
-//         window.addEventListener('scroll', handleScroll);
-//         handleScroll();
-
-//         return () => window.removeEventListener('scroll', handleScroll);
-//     }, [headerVisible, headerHeight]);
-
-//     return (
-//         <>
-//             {showFixedMenu && createPortal(
-//                 <div className="tab-menu-fixed">
-//                     <TabMenu services={services} t={t}/>
-//                 </div>,
-//                 document.body
-//             )}
-
-//             <div ref={wrapperRef} className="arq-services-wrapper">
-//                 <div className={`tab-menu-wrapper ${showFixedMenu ? 'hidden' : ''}`}>
-//                     <TabMenu services={services} t={t}/>
-//                 </div>
-
-//                 <div className="arq-services-content">
-//                     <section id="section-urbanDesign" className="service-section">
-//                         <UrbanDesign t={t} />
-//                     </section>
-
-//                     <section id="section-edification" className="service-section">
-//                         <Edification t={t} />
-//                     </section>
-
-//                     <section id="section-tramitation" className="service-section">
-//                         <Licenses t={t} />
-//                     </section>
-
-//                     <section id="section-sostenibility" className="service-section">
-//                         <Sostenibility t={t} />
-//                     </section>
-//                 </div>
-//             </div>
-//         </>
-//     );
-// }
-
-// export default ArqServices;
-
-
-
-/* Version tabmenu abajo con referencia footer: Revisar */
-
 import { createPortal } from 'react-dom';
 import { useState, useEffect, useRef } from 'react';
 import { useHeader } from '../../../../contexts/HeaderContext';
@@ -183,11 +94,14 @@ import Licenses from "./components/Licenses/Licenses";
 import Sostenibility from "./components/Sostenibility/Sostenibility";
 import './ArqServices.css';
 
-function ArqServices({ t }) {
+
+function ArqServices({ t, hideTabMenu }) {
     const { headerVisible, headerHeight } = useHeader();
     const [showFixedMenu, setShowFixedMenu] = useState(false);
+    const [isClosing, setIsClosing] = useState(false); // Nuevo estado
+    const [menuKey, setMenuKey] = useState(0);
     const wrapperRef = useRef(null);
-    const endRef = useRef(null); 
+    const endRef = useRef(null);
 
     const services = [
         { id: 1, nameKey: 'diseñoUrbano', sectionId: 'section-urbanDesign' },
@@ -198,30 +112,28 @@ function ArqServices({ t }) {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (wrapperRef.current && endRef.current) {
+            if (wrapperRef.current) {
                 const wrapperTop = wrapperRef.current.getBoundingClientRect().top;
                 const wrapperBottom = wrapperRef.current.getBoundingClientRect().bottom;
-                const endTop = endRef.current.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
 
-                const menuBottomThreshold = 0;
-                const shouldShowMenu = wrapperTop <= windowHeight - menuBottomThreshold && 
-                                      wrapperBottom > menuBottomThreshold;
-                
-                setShowFixedMenu(shouldShowMenu);
+                const shouldShowMenu = wrapperTop <= windowHeight && wrapperBottom > 0;
 
-                const fixedMenu = document.querySelector('.tab-menu-fixed');
-                
-                if (fixedMenu && shouldShowMenu) {
-                    const menuHeight = 80; // Altura aproximada del menú + margin
-                    const stopPoint = windowHeight - menuHeight;
-                    
-                    if (endTop <= stopPoint) {
-                        const offset = stopPoint - endTop;
-                        fixedMenu.style.transform = `translateY(-${offset}px)`;
-                    } else {
-                        fixedMenu.style.transform = 'translateY(0)';
-                    }
+                // Si el menú está oculto y debería mostrarse, incrementar la key
+                if (!showFixedMenu && shouldShowMenu && !hideTabMenu) {
+                    setMenuKey(prev => prev + 1);
+                    setIsClosing(false);
+                }
+
+                // Si debe ocultarse, activar animación de cierre
+                if (showFixedMenu && (!shouldShowMenu || hideTabMenu)) {
+                    setIsClosing(true);
+                    setTimeout(() => {
+                        setShowFixedMenu(false);
+                        setIsClosing(false);
+                    }, 400); // Duración de la animación de salida
+                } else if (shouldShowMenu && !hideTabMenu) {
+                    setShowFixedMenu(true);
                 }
             }
         };
@@ -230,22 +142,21 @@ function ArqServices({ t }) {
         handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [headerVisible, headerHeight, showFixedMenu]);
+    }, [hideTabMenu, showFixedMenu]);
 
     return (
         <>
-            {showFixedMenu && createPortal(
-                <div className="tab-menu-fixed">
-                    <TabMenu services={services} t={t}/>
+            {(showFixedMenu || isClosing) && createPortal(
+                <div
+                    key={menuKey}
+                    className={`tab-menu-fixed ${isClosing ? 'closing' : ''}`}
+                >
+                    <TabMenu services={services} t={t} />
                 </div>,
                 document.body
             )}
 
             <div ref={wrapperRef} className="arq-services-wrapper">
-                <div className={`tab-menu-wrapper ${showFixedMenu ? 'hidden' : ''}`}>
-                    <TabMenu services={services} t={t}/>
-                </div>
-
                 <div className="arq-services-content">
                     <section id="section-urbanDesign" className="service-section">
                         <UrbanDesign t={t} />

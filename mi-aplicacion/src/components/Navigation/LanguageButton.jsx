@@ -5,6 +5,11 @@ import './LanguageButton.css'
 const LanguageButton = ({ changeLanguage, language, availableLanguages }) => {
     const [showAllLanguages, setShowAllLanguages] = useState(false);
     
+    const handleLanguageChange = (lang) => {
+        changeLanguage(lang);
+        setShowAllLanguages(false);
+    };
+    
     return (
         <div
             className='header-language'
@@ -14,7 +19,7 @@ const LanguageButton = ({ changeLanguage, language, availableLanguages }) => {
             <ButtonJota
                 variant="primary"
                 className={`language-main ${showAllLanguages ? 'active' : ''}`}
-                onClick={() => changeLanguage(language)}
+                onClick={() => handleLanguageChange(language)}
             >
                 {language.toUpperCase()}
             </ButtonJota>
@@ -27,7 +32,7 @@ const LanguageButton = ({ changeLanguage, language, availableLanguages }) => {
                             <ButtonJota
                                 key={lang}
                                 variant="secondary"
-                                onClick={() => changeLanguage(lang)}
+                                onClick={() => handleLanguageChange(lang)}
                                 className={`language-item language-item-${index + 1}`}
                             >
                                 {lang.toUpperCase()}

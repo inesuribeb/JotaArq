@@ -215,6 +215,17 @@ function TabMenu({ services, t }) {
         return () => window.removeEventListener('scroll', scrollHandler);
     }, [services, headerVisible, headerHeight]);
 
+    useEffect(() => {
+        updateBackgroundPosition();
+        
+        // Forzar recálculo después de las animaciones
+        const timer = setTimeout(() => {
+            updateBackgroundPosition();
+        }, 1000);
+        
+        return () => clearTimeout(timer);
+    }, [activeTab, hoveredTab]);
+    
     return (
         <nav ref={menuRef} className="tab-menu">
             <div 

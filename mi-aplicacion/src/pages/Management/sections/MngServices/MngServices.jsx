@@ -83,22 +83,24 @@
 // export default MngServices;
 
 
-/* Version tabmenu abajo sin referencia footer */
 
-// import { createPortal } from 'react-dom';
-// import { useState, useEffect, useRef } from 'react';
-// import { useHeader } from '../../../../contexts/HeaderContext';
-// import TabMenu from "../../../../components/TabMenu/TabMenu";
-// import Certificados from "./components/Certificados/Certificados";
-// import AsesoramientoUrb from "./components/AsesoramientoUrb/AsesoramientoUrb";
-// import TramLicencias from "./components/TramLicencias/TramLicencias";
-// import DireccionObra from "./components/DireccionObra/DireccionObra";
-// import './MngServices.css';
+/* Version tabmenu abajo con referencia footer: Revisar */
+
+import { createPortal } from 'react-dom';
+import { useState, useEffect, useRef } from 'react';
+import { useHeader } from '../../../../contexts/HeaderContext';
+import TabMenu from "../../../../components/TabMenu/TabMenu";
+import Certificados from "./components/Certificados/Certificados";
+import AsesoramientoUrb from "./components/AsesoramientoUrb/AsesoramientoUrb";
+import TramLicencias from "./components/TramLicencias/TramLicencias";
+import DireccionObra from "./components/DireccionObra/DireccionObra";
+import './MngServices.css';
 
 // function MngServices({ t }) {
 //     const { headerVisible, headerHeight } = useHeader();
 //     const [showFixedMenu, setShowFixedMenu] = useState(false);
 //     const wrapperRef = useRef(null);
+//     const endRef = useRef(null); 
 
 //     const services = [
 //         { id: 1, nameKey: 'certificados', sectionId: 'section-cerf' },
@@ -109,15 +111,31 @@
 
 //     useEffect(() => {
 //         const handleScroll = () => {
-//             if (wrapperRef.current) {
+//             if (wrapperRef.current && endRef.current) {
 //                 const wrapperTop = wrapperRef.current.getBoundingClientRect().top;
 //                 const wrapperBottom = wrapperRef.current.getBoundingClientRect().bottom;
-                
+//                 const endTop = endRef.current.getBoundingClientRect().top;
+//                 const windowHeight = window.innerHeight;
+
 //                 const menuBottomThreshold = 0;
-//                 setShowFixedMenu(
-//                     wrapperTop <= window.innerHeight - menuBottomThreshold && 
-//                     wrapperBottom > menuBottomThreshold
-//                 );
+//                 const shouldShowMenu = wrapperTop <= windowHeight - menuBottomThreshold && 
+//                                       wrapperBottom > menuBottomThreshold;
+                
+//                 setShowFixedMenu(shouldShowMenu);
+
+//                 const fixedMenu = document.querySelector('.tab-menu-fixed');
+                
+//                 if (fixedMenu && shouldShowMenu) {
+//                     const menuHeight = 80; 
+//                     const stopPoint = windowHeight - menuHeight;
+                    
+//                     if (endTop <= stopPoint) {
+//                         const offset = stopPoint - endTop;
+//                         fixedMenu.style.transform = `translateY(-${offset}px)`;
+//                     } else {
+//                         fixedMenu.style.transform = 'translateY(0)';
+//                     }
+//                 }
 //             }
 //         };
 
@@ -125,7 +143,7 @@
 //         handleScroll();
 
 //         return () => window.removeEventListener('scroll', handleScroll);
-//     }, [headerVisible, headerHeight]);
+//     }, [headerVisible, headerHeight, showFixedMenu]);
 
 //     return (
 //         <>
@@ -158,6 +176,8 @@
 //                         <DireccionObra t={t} />
 //                     </section>
 //                 </div>
+
+//                 <div ref={endRef} className="mng-services-end" />
 //             </div>
 //         </>
 //     );
@@ -165,26 +185,13 @@
 
 // export default MngServices;
 
-
-
-
-/* Version tabmenu abajo con referencia footer: Revisar */
-
-import { createPortal } from 'react-dom';
-import { useState, useEffect, useRef } from 'react';
-import { useHeader } from '../../../../contexts/HeaderContext';
-import TabMenu from "../../../../components/TabMenu/TabMenu";
-import Certificados from "./components/Certificados/Certificados";
-import AsesoramientoUrb from "./components/AsesoramientoUrb/AsesoramientoUrb";
-import TramLicencias from "./components/TramLicencias/TramLicencias";
-import DireccionObra from "./components/DireccionObra/DireccionObra";
-import './MngServices.css';
-
-function MngServices({ t }) {
+function MngServices({ t, hideTabMenu }) {
     const { headerVisible, headerHeight } = useHeader();
     const [showFixedMenu, setShowFixedMenu] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
+    const [menuKey, setMenuKey] = useState(0);
     const wrapperRef = useRef(null);
-    const endRef = useRef(null); // REF al final del componente
+    const endRef = useRef(null);
 
     const services = [
         { id: 1, nameKey: 'certificados', sectionId: 'section-cerf' },
@@ -195,32 +202,26 @@ function MngServices({ t }) {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (wrapperRef.current && endRef.current) {
+            if (wrapperRef.current) {
                 const wrapperTop = wrapperRef.current.getBoundingClientRect().top;
                 const wrapperBottom = wrapperRef.current.getBoundingClientRect().bottom;
-                const endTop = endRef.current.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
 
-                const menuBottomThreshold = 0;
-                const shouldShowMenu = wrapperTop <= windowHeight - menuBottomThreshold && 
-                                      wrapperBottom > menuBottomThreshold;
-                
-                setShowFixedMenu(shouldShowMenu);
+                const shouldShowMenu = wrapperTop <= windowHeight && wrapperBottom > 0;
 
-                // Controlar posición del menú según el endRef
-                const fixedMenu = document.querySelector('.tab-menu-fixed');
-                
-                if (fixedMenu && shouldShowMenu) {
-                    const menuHeight = 80; // Altura aproximada del menú + margin
-                    const stopPoint = windowHeight - menuHeight;
-                    
-                    // Si endRef está entrando en la zona donde debería estar el menú
-                    if (endTop <= stopPoint) {
-                        const offset = stopPoint - endTop;
-                        fixedMenu.style.transform = `translateY(-${offset}px)`;
-                    } else {
-                        fixedMenu.style.transform = 'translateY(0)';
-                    }
+                if (!showFixedMenu && shouldShowMenu && !hideTabMenu) {
+                    setMenuKey(prev => prev + 1);
+                    setIsClosing(false);
+                }
+
+                if (showFixedMenu && (!shouldShowMenu || hideTabMenu)) {
+                    setIsClosing(true);
+                    setTimeout(() => {
+                        setShowFixedMenu(false);
+                        setIsClosing(false);
+                    }, 400);
+                } else if (shouldShowMenu && !hideTabMenu) {
+                    setShowFixedMenu(true);
                 }
             }
         };
@@ -229,22 +230,21 @@ function MngServices({ t }) {
         handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [headerVisible, headerHeight, showFixedMenu]);
+    }, [hideTabMenu, showFixedMenu]);
 
     return (
         <>
-            {showFixedMenu && createPortal(
-                <div className="tab-menu-fixed">
+            {(showFixedMenu || isClosing) && createPortal(
+                <div
+                    key={menuKey}
+                    className={`tab-menu-fixed ${isClosing ? 'closing' : ''}`}
+                >
                     <TabMenu services={services} t={t}/>
                 </div>,
                 document.body
             )}
 
             <div ref={wrapperRef} className="mng-services-wrapper">
-                <div className={`tab-menu-wrapper ${showFixedMenu ? 'hidden' : ''}`}>
-                    <TabMenu services={services} t={t}/>
-                </div>
-
                 <div className="mng-services-content">
                     <section id="section-cerf" className="service-section">
                         <Certificados t={t} />
@@ -263,7 +263,6 @@ function MngServices({ t }) {
                     </section>
                 </div>
 
-                {/* Referencia invisible al final - aquí se detiene el menú */}
                 <div ref={endRef} className="mng-services-end" />
             </div>
         </>

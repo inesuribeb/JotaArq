@@ -83,20 +83,35 @@
 .button-services-home {
     margin-left: 2.5rem;
 }
-/* 
-.column2 {
+
+/* sin efecto parallax */
+/* .column2 img {
+    background-color: var(--light-grey);
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 15px;
+    cursor: pointer; 
     position: relative;
-    z-index: 10; 
 } */
+
+.column2 {
+    justify-content: flex-start;
+    overflow: hidden; 
+    border-radius: 15px; 
+    max-height: calc(100vh * 0.8 ); 
+}
 
 .column2 img {
     background-color: var(--light-grey);
     width: 100%;
     aspect-ratio: 4/5;
+    min-height: 105%; 
     border-radius: 15px;
-    cursor: pointer; /* Añade esto para indicar que es clickable */
+    cursor: pointer; 
     position: relative;
-    /* z-index: 11; */
+    object-fit: cover;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
 }
 
 .title-architecture { 
@@ -145,22 +160,6 @@
     overflow: hidden;
     position: fixed;
     cursor: pointer;
-    /* position: fixed;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--light-color);
-    border-radius: 50px;
-    font-size: 2rem;
-    font-weight: 400;
-    pointer-events: none;
-    z-index: 9999; 
-    transform: translate(-50%, -50%);
-    width: 80px;   
-    height: 130px; 
-    display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 .explore-button::before {
