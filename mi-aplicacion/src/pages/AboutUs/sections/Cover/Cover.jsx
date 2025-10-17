@@ -12,7 +12,7 @@ function Cover({ t }) {
             />
             <div className='bg-aboutUs'>
                 <div className='col-aboutUs'>
-                    <Texts className='aboutUsText' text={t('aboutUsText')} />
+                    {/* <Texts className='aboutUsText' text={t('aboutUsText')} /> */}
 
                 </div>
                 <div className='col-aboutUs'>

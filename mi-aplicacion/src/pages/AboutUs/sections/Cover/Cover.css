@@ -51,3 +51,72 @@
     object-fit: cover;
     object-position: center 70%;
 }
+
+
+/* TABLETS (1024px y menos) */
+@media (max-width: 1024px) {
+    .bg-aboutUs {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 100vh;
+    }
+
+    .aboutUsText {
+        width: 90%;
+        columns: 1;
+        font-size: 0.95rem;
+    }
+}
+
+/* TABLETS PEQUEÑAS (768px y menos) */
+@media (max-width: 768px) {
+    .bg-aboutUs {
+        height: 100vh;
+    }
+
+    .col-aboutUs {
+        flex-direction: column;
+    }
+
+    .cover-aboutUs .aboutUs-class {
+        height: 50vh;
+    }
+
+    .aboutUsText {
+        width: 95%;
+        padding: 0.75rem;
+        margin-left: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* MÓVILES (480px y menos) */
+@media (max-width: 480px) {
+    .bg-aboutUs {
+        height: 100vh;
+    }
+
+    .col-aboutUs {
+        flex-direction: column;
+    }
+
+    .cover-aboutUs .aboutUs-class {
+        height: 40vh;
+    }
+
+    .aboutUsText {
+        width: 100%;
+        padding: 1rem;
+        margin-left: 0;
+        border-left: none;
+        border-top: 1px solid var(--light-grey);
+        padding-top: 1rem;
+    }
+}
+
+/* MÓVILES PEQUEÑOS (360px y menos) */
+@media (max-width: 360px) {
+    .aboutUsText {
+        font-size: 0.85rem;
+    }
+}

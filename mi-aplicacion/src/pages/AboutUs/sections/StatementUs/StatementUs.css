@@ -2,25 +2,209 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
+    width: 100%;
+    
 }
 
 .col-statement-1,
 .col-statement-2 {
     flex: 1;
     display: flex;
+    padding: 1.75rem;
+    width: 100%;
 }
 
 .col-statement-1 {
     background-color: var(--dark-grey);
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: column;
+}
+
+.col-statement-1 img {
+    width: 70%;
+    aspect-ratio: 4/5;
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
 .col-statement-2 {
     padding-top: 3rem;
     background-color: transparent;
     justify-content: flex-start;
-    align-items: flex-end;
-    flex-direction: column;
+    align-items: flex-start;
+    flex-direction: row;
     font-weight: 400;
+}
+
+.rw1,
+.rw2 {
+    display: flex;
+}
+
+.rw1 {
+    flex: 1;
+}
+
+.rw2 {
+    flex: 3;
+    flex-direction: column;
+}
+
+.jotaarq {
+line-height: 1.5rem;
+}
+
+.mini-title.jotaarq span:last-child:before {
+    width: 80px;
+}
+
+.first-title3 {
+    font-size: 1.65rem;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.rw1,
+.rw2 {
+    display: flex;
+}
+
+
+.aboutUsText2 {
+    width: 100%;
+    padding: 0rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    margin-left: 0rem;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+/* TABLETS (1024px y menos) */
+@media (max-width: 1024px) {
+    .col-statement-1 img {
+        width: 80%;
+    }
+
+    .first-title3 {
+        font-size: 1.5rem;
+        line-height: 1.85rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .aboutUsText2 {
+        font-size: 0.95rem;
+    }
+}
+
+/* TABLETS PEQUEÑAS (768px y menos) */
+@media (max-width: 768px) {
+    .statement-about-us {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column-reverse; /* Cambio aquí */
+    }
+
+    .col-statement-1,
+    .col-statement-2 {
+        padding: 1.5rem;
+    }
+
+    .col-statement-1 {
+        justify-content: flex-end;
+        align-items: flex-star;
+        min-height: 60vh;
+    }
+
+    .col-statement-1 img {
+        width: 60%;
+    }
+
+    .col-statement-2 {
+        padding-top: 2rem;
+        flex-direction: column;
+    }
+
+    .rw1 {
+        display: none; /* Ocultar el espacio vacío en móvil */
+    }
+
+    .rw2 {
+        flex: 1;
+    }
+
+    .first-title3 {
+        font-size: 1.4rem;
+        line-height: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .aboutUsText2 {
+        font-size: 0.9rem;
+    }
+}
+
+/* MÓVILES (480px y menos) */
+@media (max-width: 480px) {
+    .statement-about-us {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .col-statement-1,
+    .col-statement-2 {
+        padding: 1rem;
+    }
+
+    .col-statement-1 {
+        min-height: 55vh;
+        background-color: transparent;
+    }
+
+    .col-statement-1 img {
+        width: 80%;
+    }
+
+    .col-statement-2 {
+        padding-top: 1.5rem;
+    }
+
+    .first-title3 {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .aboutUsText2 {
+        font-size: 0.85rem;
+        width: 80%;
+    }
+
+    .jotaarq {
+        line-height: 1.3rem;
+        font-size: 1rem;
+    }
+
+    .mini-title.jotaarq span:last-child:before {
+        width: 60px;
+    }
+}
+
+/* MÓVILES PEQUEÑOS (360px y menos) */
+@media (max-width: 360px) {
+    .col-statement-1 img {
+        width: 80%;
+    }
+
+    .first-title3 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .aboutUsText2 {
+        font-size: 0.8rem;
+    }
 }

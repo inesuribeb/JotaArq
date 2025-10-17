@@ -98,14 +98,14 @@
     justify-content: flex-start;
     overflow: hidden; 
     border-radius: 15px; 
-    max-height: calc(100vh * 0.8 ); 
+    max-height: calc(100vh * 0.73 ); 
 }
 
 .column2 img {
     background-color: var(--light-grey);
     width: 100%;
     aspect-ratio: 4/5;
-    min-height: 105%; 
+    min-height: 102%; 
     border-radius: 15px;
     cursor: pointer; 
     position: relative;

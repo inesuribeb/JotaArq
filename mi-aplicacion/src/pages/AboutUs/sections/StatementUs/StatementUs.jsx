@@ -1,17 +1,22 @@
 import Texts from '../../../../components/Texts/Texts';
+import MiniTitle from '../../../../components/Titles/MiniTitle';
 import './StatementUs.css';
 
 function StatementUs({ t }) {
     return (
         <section className='statement-about-us'>
             <div className='col-statement-1'>
-                <h1>hola</h1>
-                <h1>hola</h1>
+                <img src="/Images/AboutUs/materiales.jpg" alt="" />
             </div>
 
             <div className='col-statement-2'>
-            <Texts className='aboutUsText' text={t('whoWeAre')} />
+                <div className='rw1'>
+                </div>
+                <div className='rw2'>
+                    <h1 className='first-title3' dangerouslySetInnerHTML={{ __html: t('whoWeAre') }}></h1>
+                    <Texts className='aboutUsText2' text={t('aboutUsText')} />
 
+                </div>
             </div>
 
         </section>
