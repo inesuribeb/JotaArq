@@ -40,14 +40,11 @@ function ServicesLayout({ bgImage, image, title, subtitle, text, reverse, t }) {
         >
             <div className={`services-content ${reverse ? 'reverse' : ''}`}>
                 <div className='services-image'>
-                    {/* <img src={image} alt={title} /> */}
-                    {/* <h1>{title}</h1> */}
                 </div>
 
                 <div className='services-text'>
                     <h3>{title}</h3>
                     <h4>{subtitle}</h4>
-                    {/* <p>{text}</p> */}
                     <Texts className='services-text-desc' text={text} />
 
                 </div>

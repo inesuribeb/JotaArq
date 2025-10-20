@@ -5,3 +5,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.mng-services-content-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem
+}

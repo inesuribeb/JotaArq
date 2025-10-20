@@ -2,6 +2,12 @@
     display: flex;
     min-height: 50vh;
     padding: 0.75rem;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.arq-services-content-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem
 }

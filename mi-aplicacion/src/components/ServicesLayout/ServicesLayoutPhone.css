@@ -1,0 +1,107 @@
+.services-layout-phone {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-image-phone {
+    width: 100%;
+    min-height: 50vh;
+    /* min-height: 400px; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-image-phone img {
+    width: 100%;
+    /* height: 100%; */
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.services-text-phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* padding: 2rem 1.5rem 3rem 1.5rem; */
+    padding: 0rem;
+    background-color: var(--background-color);
+    flex: 1;
+}
+
+.services-text-phone h3 {
+    color: var(--burgundy-color);
+    margin-bottom: 0rem;   
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 2.5rem;
+}
+
+.services-text-phone h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+    margin-top: 0.5rem;
+    line-height: 1.8rem;
+}
+
+.services-text-desc-phone {
+    /* border-left: 1px solid var(--light-grey);
+    color: var(--dark-color);
+    padding-left: 0.8rem;
+    margin-left: 0.5rem;
+    width: 90%;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6rem; */
+
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    width: 90%;
+    border-left: 1px solid var(--light-grey);
+    padding-left: 1rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+/* Móviles pequeños */
+/* @media (max-width: 480px) {
+    .services-image-phone {
+        height: 45vh;
+        min-height: 350px;
+    }
+    
+    .services-text-phone {
+        padding: 1.5rem 1rem 2rem 1rem;
+    }
+    
+    .services-text-phone h3 {
+        font-size: 0.85rem;
+        line-height: 2rem;
+    }
+    
+    .services-text-phone h4 {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .services-text-desc-phone {
+        width: 95%;
+        font-size: 0.95rem;
+        margin-left: 0;
+        padding-left: 0.75rem;
+    }
+} */
