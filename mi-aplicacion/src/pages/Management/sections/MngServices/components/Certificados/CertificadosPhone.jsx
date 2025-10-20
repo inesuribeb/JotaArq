@@ -11,6 +11,7 @@ function CertificadosPhone({ t }) {
             text={t('sostenibilityText')}
             t={t}
             reverse={true} 
+            dark={true}
         />
     )
 }

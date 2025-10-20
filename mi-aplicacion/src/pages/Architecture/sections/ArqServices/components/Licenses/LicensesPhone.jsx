@@ -10,6 +10,7 @@ function LicensesPhone({ t }) {
             subtitle={t('licensesSubtitle')}
             text={t('licensesText')}
             t={t}
+            dark={true}
         />
     )
 }

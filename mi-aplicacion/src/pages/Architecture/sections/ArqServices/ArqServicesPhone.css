@@ -1,13 +1,12 @@
 .arqservicesPhone-container {
     display: flex;
     min-height: 50vh;
-    padding: 0.75rem;
-    /* justify-content: center;
-    align-items: center; */
+    padding: 0rem;
+    flex-direction: column;
 }
 
 .arq-services-content-phone {
     display: flex;
     flex-direction: column;
-    gap: 8rem
+    gap: 2rem
 }

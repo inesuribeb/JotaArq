@@ -2,6 +2,7 @@ import UrbanDesignPhone from "./components/UrbanDesign/UrbanDesignPhone";
 import EdificationPhone from "./components/Edification/EdificationPhone";
 import LicensesPhone from "./components/Licenses/LicensesPhone";
 import SostenibilityPhone from "./components/Sostenibility/SostenibilityPhone";
+import TabMenuPhone from "../../../../components/TabMenu/TabMenuPhone";
 import './ArqServicesPhone.css';
 
 function ArqServicesPhone({ t }) {
@@ -15,21 +16,22 @@ function ArqServicesPhone({ t }) {
 
     return (
         <section className='arqservicesPhone-container'>
-            {/* <h1>Under Construction</h1> */}
+            <TabMenuPhone servicesPhone={servicesPhone} t={t} />
+
             <div className="arq-services-content-phone">
-                <section id="section-urbanDesign-phone" className="service-section">
+                <section id="section-urbanDesign-phone" className="service-section-phone">
                     <UrbanDesignPhone t={t} />
                 </section>
 
-                <section id="section-edification-phone" className="service-section">
+                <section id="section-edification-phone" className="service-section-phone">
                     <EdificationPhone t={t} />
                 </section>
 
-                <section id="section-tramitation-phone" className="service-section">
+                <section id="section-tramitation-phone" className="service-section-phone">
                     <LicensesPhone t={t} />
                 </section>
 
-                <section id="section-sostenibility-phone" className="service-section">
+                <section id="section-sostenibility-phone" className="service-section-phone">
                     <SostenibilityPhone t={t} />
                 </section>
             </div>

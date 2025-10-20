@@ -156,7 +156,7 @@ line-height: 1.5rem;
 
     .col-statement-1,
     .col-statement-2 {
-        padding: 1rem;
+        padding: 0.75rem;
     }
 
     .col-statement-1 {
@@ -165,7 +165,7 @@ line-height: 1.5rem;
     }
 
     .col-statement-1 img {
-        width: 80%;
+        width: 100%;
     }
 
     .col-statement-2 {
@@ -173,14 +173,23 @@ line-height: 1.5rem;
     }
 
     .first-title3 {
-        font-size: 1.3rem;
-        line-height: 1.6rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        margin-bottom: 3.5rem;
     }
 
     .aboutUsText2 {
-        font-size: 0.85rem;
-        width: 80%;
+        /* font-size: 0.85rem;
+        width: 80%; */
+
+        display: flex;
+    margin-top: 0rem;
+    width: 90%;
+    /* border-left: 1px solid var(--light-grey); */
+    /* padding-left: 1rem; */
+    font-weight: 400;
+    /* margin-left: 1.75rem; */
+    font-size: 1rem;
     }
 
     .jotaarq {

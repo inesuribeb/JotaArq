@@ -1,13 +1,14 @@
 .MngServicesPhone-container {
     display: flex;
     min-height: 50vh;
-    padding: 0.75rem;
+    padding: 0rem;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .mng-services-content-phone {
     display: flex;
     flex-direction: column;
-    gap: 3rem
+    gap: 2rem;
 }

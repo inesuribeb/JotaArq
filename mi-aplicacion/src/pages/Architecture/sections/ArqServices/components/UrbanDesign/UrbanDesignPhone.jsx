@@ -10,6 +10,8 @@ function UrbanDesignPhone({ t }) {
             subtitle={t('urbanDesignSubtitle')}
             text={t('urbanDesignText')}
             t={t}
+            dark={true}
+
         />
     )
 }

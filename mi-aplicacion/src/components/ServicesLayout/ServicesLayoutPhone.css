@@ -1,4 +1,4 @@
-.services-layout-phone {
+/* .services-layout-phone {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,6 @@
 .services-image-phone {
     width: 100%;
     min-height: 50vh;
-    /* min-height: 400px; */
     overflow: hidden;
     position: relative;
     display: flex;
@@ -20,7 +19,6 @@
 
 .services-image-phone img {
     width: 100%;
-    /* height: 100%; */
     aspect-ratio: 4/5;
     object-fit: cover;
     object-position: center;
@@ -31,7 +29,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* padding: 2rem 1.5rem 3rem 1.5rem; */
     padding: 0rem;
     background-color: var(--background-color);
     flex: 1;
@@ -45,11 +42,12 @@
     font-weight: 400;
     margin: 0;
     line-height: 2.5rem;
+    margin-top: 0.5rem;
 }
 
 .services-text-phone h4 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-weight: 400;
     width: 100%;
     margin-top: 0.5rem;
@@ -57,18 +55,78 @@
 }
 
 .services-text-desc-phone {
-    /* border-left: 1px solid var(--light-grey);
-    color: var(--dark-color);
-    padding-left: 0.8rem;
-    margin-left: 0.5rem;
-    width: 90%;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.6rem; */
-
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    width: 90%;
+    width: 85%;
+    border-left: 1px solid var(--light-grey);
+    padding-left: 1rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    font-size: 1rem;
+} */
+
+
+.services-layout-phone {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--background-color);
+    /* padding-bottom: rem; */
+}
+
+.services-image-phone {
+    padding: 0.5rem 0.75rem 1.5rem 0.75rem; /* top right bottom left */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-image-phone img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.services-text-phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0rem 0.75rem;
+    flex: 1;
+}
+
+.services-text-phone h3 {
+    color: var(--dark-color);
+    /* margin-bottom: 0rem;    */
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    /* margin: 0; */
+    line-height: 2.5rem;
+    padding-top: 0rem;
+}
+
+.services-text-phone h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    width: 100%;
+    margin-top: 0.5rem;
+    line-height: 1.8rem;
+}
+
+.services-text-desc-phone {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    width: 85%;
     border-left: 1px solid var(--light-grey);
     padding-left: 1rem;
     font-weight: 400;
@@ -76,15 +134,29 @@
     font-size: 1rem;
 }
 
+/* Variante Dark */
+.services-layout-phone.dark {
+    background-color: var(--dark-color);
+}
+
+.services-layout-phone.dark .services-text-phone h3,
+.services-layout-phone.dark .services-text-phone h4,
+.services-layout-phone.dark .services-text-desc-phone {
+    color: var(--light-color);
+}
+
+.services-layout-phone.dark .services-text-desc-phone {
+    border-left-color: rgba(255, 255, 255, 0.2);
+}
+
 /* Móviles pequeños */
 /* @media (max-width: 480px) {
     .services-image-phone {
-        height: 45vh;
-        min-height: 350px;
+        padding: 0.5rem;
     }
     
     .services-text-phone {
-        padding: 1.5rem 1rem 2rem 1rem;
+        padding: 0 0.5rem;
     }
     
     .services-text-phone h3 {
@@ -99,9 +171,9 @@
     }
     
     .services-text-desc-phone {
-        width: 95%;
+        width: 90%;
         font-size: 0.95rem;
-        margin-left: 0;
+        margin-left: 0.5rem;
         padding-left: 0.75rem;
     }
 } */
