@@ -92,6 +92,14 @@
     aspect-ratio: 1;
     background-color: var(--dark-color);
     border-radius: 50%;
+    transition: all 0.3s ease;;
+    border: 1px solid transparent;
+}
+
+.logo-container:hover {
+    background-color: var(--background-color);
+    border: 1px solid var(--dark-color);
+
 }
 
 .logo-container img {
@@ -99,6 +107,11 @@
     max-height: 65%;
     object-fit: contain;
     filter: invert();
+    transition: filter 0.3s ease;
+}
+
+.logo-container:hover img {
+    filter: none;
 }
 
 .header-right {
