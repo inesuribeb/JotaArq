@@ -29,8 +29,8 @@
 }
 
 .logo-container-phone img {
-    max-width: 65%;
-    max-height: 65%;
+    max-width: 55%;
+    max-height: 55%;
     object-fit: contain;
     filter: invert();
 }

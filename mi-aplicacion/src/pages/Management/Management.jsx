@@ -83,7 +83,7 @@ function Management() {
     return (
         <div className="management-content">
             <MainTitle
-                title={t('serviciosDe')}
+                title={t('serviciosDeGest')}
                 subtitle={t('deGestion')}
                 className="custom-class"
             />

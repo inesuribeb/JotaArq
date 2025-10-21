@@ -1,7 +1,8 @@
 export const architectureTranslations = {
     es: {
         serviciosDe: "servicios",
-        serviciosDeArq: "servicios de arquitectura",
+        serviciosDeGest: "jota › gestión",
+        serviciosDeArq: "jota › arquitectura",
         deArquitectura: "de arquitectura",
         deGestion: "de gestión",
         historiaVision: "Historia y Visión",
@@ -36,7 +37,8 @@ export const architectureTranslations = {
     },
     eu: {
         serviciosDe: "zerbitzuak",
-        serviciosDeArq: "Arkitekturako zerbitzuak",
+        serviciosDeGest: "jota › kudeaketa",
+        serviciosDeArq: "jota › arkitektura",
         deArquitectura: "Arkitektura",
         deGestion: "Kudeaketa",
         historiaVision: "Historia eta Ikuspegia",
@@ -71,7 +73,8 @@ export const architectureTranslations = {
     },
     en: {
         serviciosDe: "services",
-        serviciosDeArq: "Architecture Services",
+        serviciosDeGest: "jota › management",
+        serviciosDeArq: "Architecture › Services",
         deArquitectura: "Architecture",
         deGestion: "Management",
         historiaVision: "History & Vision",

@@ -76,7 +76,7 @@ function HeaderPhone() {
                 <div className='header-phone-viewed'>
                     <Link to={getRoute('home')} style={{ visibility: isMenuOpen ? 'hidden' : 'visible' }}>
                         <div className='logo-container-phone'>
-                            <img src="/Logos/LogoPrueba.png" alt="Jota-Arquitectura-logo" />
+                            <img src="/Logos/irregular.png" alt="Jota-Arquitectura-logo" />
                         </div>
                     </Link>
 

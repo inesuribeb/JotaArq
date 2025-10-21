@@ -145,7 +145,7 @@ function Header() {
             <div className='header-top'>
                 <Link to={getRoute('home')}>
                     <div className='logo-container'>
-                        <img src="/Logos/LogoPrueba.png" alt="Jota-Arquitectura-logo" />
+                        <img src="/Logos/irregular.png" alt="Jota-Arquitectura-logo" />
                     </div>
                 </Link>
 
