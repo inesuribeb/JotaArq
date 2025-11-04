@@ -1,4 +1,5 @@
 import MiniTitle from '../../../../components/Titles/MiniTitle';
+import IntroTitle from '../../../../components/Titles/IntroTitle';
 import './StatementM.css';
 
 function StatementM({ t }) {
@@ -13,8 +14,11 @@ function StatementM({ t }) {
                 </div>
 
                 <div className='fl-right'>
-                    <h1 dangerouslySetInnerHTML={{ __html: t('mngStatement') }}></h1>
-
+                    {/* <h1 dangerouslySetInnerHTML={{ __html: t('mngStatement') }}></h1> */}
+                    <IntroTitle
+                        title={t('mngStatement')}
+                        // className="first-title"
+                    />
                 </div>
             </div>
 

@@ -1,9 +1,10 @@
 import MiniTitle from '../../../../components/Titles/MiniTitle';
 import Texts from '../../../../components/Texts/Texts';
+import IntroTitle from '../../../../components/Titles/IntroTitle';
 import './Intro.css';
 
 function Intro({ t }) {
-    
+
     const datos = [
         { id: 1, type: "viviendas", qty: 34 },
         { id: 2, type: "diseñoUrbano", qty: 1 },
@@ -12,7 +13,7 @@ function Intro({ t }) {
         { id: 5, type: "accesibilidad", qty: 26 },
         { id: 6, type: "projectMonitoring", qty: 26 },
     ];
-    
+
     return (
         <section className='intro-section'>
             <div className='first-line'>
@@ -28,7 +29,11 @@ function Intro({ t }) {
                 </div>
 
                 <div className='fl-right'>
-                    <h1 className='first-title' dangerouslySetInnerHTML={{ __html: t('introText') }}></h1>
+                    {/* <h1 className='first-title' dangerouslySetInnerHTML={{ __html: t('introText') }}></h1> */}
+                    <IntroTitle
+                        title={t('introText')}
+                        className="first-title"
+                    />
                     <img src="/Images/Home/spain 1.png" alt="" />
                 </div>
             </div>

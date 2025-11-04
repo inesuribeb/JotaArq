@@ -1,7 +1,7 @@
 .statement-about-us {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     
 }
@@ -42,7 +42,7 @@
 }
 
 .rw1 {
-    flex: 1;
+    flex: 0.75;
 }
 
 .rw2 {
@@ -59,8 +59,10 @@ line-height: 1.5rem;
 }
 
 .first-title3 {
-    font-size: 1.65rem;
-    line-height: 2rem;
+    /* font-size: 1.65rem; */
+    font-size: clamp(1.1rem, 1.75vw + 0.1rem, 2.5rem);
+    /* line-height: 2rem; */
+    line-height: clamp(2rem, 1.7vw + 0.3rem, 2.6rem);
     margin-bottom: 3rem;
     font-weight: 400;
 }
@@ -79,6 +81,9 @@ line-height: 1.5rem;
     margin-left: 0rem;
     font-weight: 400;
     font-size: 1rem;
+    font-size: clamp(1rem, 1vw + 0.05rem, 1.5rem);
+    width: 95%;
+
 }
 
 

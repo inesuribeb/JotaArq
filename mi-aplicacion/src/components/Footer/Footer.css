@@ -24,7 +24,7 @@
 }
 
 .footer-logos a {
-    color: var(--light-color); /* o var(--light-color) */
+    color: var(--light-color); 
     transition: color 0.3s ease;
 }
 

@@ -78,6 +78,8 @@
     color: var(--burgundy-color);
     margin-bottom: 0rem;   
     font-size: 1rem;
+    font-size: clamp(1rem, 1.1vw, 1.8rem);
+
     letter-spacing: 0.1rem;
     font-weight: 400;
     z-index: 10;
@@ -87,11 +89,14 @@
 
 .services-text h4 {
     font-size: 2rem;
+    font-size: clamp(2rem, 2.3vw, 3rem);
+
     margin-bottom: 2rem;
     font-weight: 400;
     width: 90%;
     margin-top: 1rem;
     line-height: 2.5rem;
+    line-height: clamp(2rem, 2.5vw, 3rem);
 }
 
 .services-text-desc {
@@ -102,6 +107,8 @@
     width: 60%;
     font-weight: 400;
     font-size: 1.2rem;
+    font-size: clamp(1.2rem, 1.15vw, 1.8rem);
+
 }
 
 .services-image img {
@@ -238,6 +245,8 @@
     
     .services-text h4 {
         font-size: 1.5rem;
+        /* font-size: clamp(1rem, 1.8vw + 0.1rem, 2.5rem); */
+
         line-height: 1.8rem;
         margin-bottom: 1.5rem;
         width: 100%;
@@ -246,6 +255,8 @@
     .services-text-desc {
         width: 90%;
         font-size: 1rem;
+        /* font-size: clamp(1.1rem, 1vw, 1.8rem); */
+
         margin-left: 0.5rem;
         padding-left: 0.8rem;
     }

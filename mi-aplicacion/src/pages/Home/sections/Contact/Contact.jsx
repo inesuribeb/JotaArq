@@ -1,5 +1,6 @@
 import { useLanguage } from '../../../../contexts/LanguageContext';
 import MiniTitle from '../../../../components/Titles/MiniTitle';
+import IntroTitle from '../../../../components/Titles/IntroTitle';
 import Texts from '../../../../components/Texts/Texts';
 import ButtonGeneral from '../../../../components/Button/ButtonGeneral';
 import './Contact.css';
@@ -31,8 +32,11 @@ function Contact({ t }) {
                     </div>
 
                     <div className='fl-right'>
-                        <h1 dangerouslySetInnerHTML={{ __html: t('contactUs') }}></h1>
-
+                        {/* <h1 dangerouslySetInnerHTML={{ __html: t('contactUs') }}></h1> */}
+                        <IntroTitle
+                        title={t('contactUs')}
+                        // className="first-title"
+                    />
                     </div>
                 </div>
 
