@@ -11,63 +11,6 @@
     height: auto; 
     box-sizing: border-box;
     background: transparent; 
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.header-content.header-background {
-    background: var(--background-color);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-
-.header-content.header-hidden {
-    transform: translateY(-100%);
-}
-
-.header-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    aspect-ratio: 1;
-    background-color: var(--dark-color);
-    border-radius: 50%;
-}
-
-.logo-container img {
-    max-width: 65%;
-    max-height: 65%;
-    object-fit: contain;
-    filter: invert();
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-} */
-
-.header-content {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 2rem;
-    position: fixed;
-    top: 0rem;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    width: 100%;
-    height: auto; 
-    box-sizing: border-box;
-    background: transparent; 
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -112,6 +55,101 @@
 
 .logo-container:hover img {
     filter: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.header-content.header-hidden .header-right {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+} */
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0rem;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    height: auto; 
+    box-sizing: border-box;
+    background: transparent; 
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header-content.header-background {
+    background: var(--background-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--medium-grey);
+}
+
+/* Contenido principal del logo */
+.logo-content,
+.logo-content-hover {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-content {
+    background-color: var(--medium-grey);
+    z-index: 1;
+}
+
+.logo-content-hover {
+    background-color: var(--dark-color);
+    z-index: 2;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.logo-content img,
+.logo-content-hover img {
+    max-width: 65%;
+    max-height: 65%;
+    object-fit: contain;
+    filter: invert();
+}
+
+/* Animación hover - el hover sube y se hace visible */
+.logo-container:hover .logo-content-hover {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .header-right {

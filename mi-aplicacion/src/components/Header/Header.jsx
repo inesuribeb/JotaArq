@@ -54,12 +54,12 @@
 //     return (
 //         <div 
 //             ref={headerRef}
-//             className={`header-content ${!isVisible ? 'header-hidden' : ''} ${hasBackground ? 'header-background' : ''}`}
+//             className={`header-content ${!isVisible ? 'header-hidden' : ''} ${hasBackground && isVisible ? 'header-background' : ''}`}
 //         >
 //             <div className='header-top'>
 //                 <Link to={getRoute('home')}>
 //                     <div className='logo-container'>
-//                         <img src="/Logos/LogoPrueba.png" alt="Jota-Arquitectura-logo" />
+//                         <img src="/Logos/irregular.png" alt="Jota-Arquitectura-logo" />
 //                     </div>
 //                 </Link>
 
@@ -82,7 +82,6 @@
 // }
 
 // export default Header;
-
 
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
@@ -145,7 +144,12 @@ function Header() {
             <div className='header-top'>
                 <Link to={getRoute('home')}>
                     <div className='logo-container'>
-                        <img src="/Logos/irregular.png" alt="Jota-Arquitectura-logo" />
+                        <div className='logo-content'>
+                            <img src="/Logos/irregular.png" alt="Jota-Arquitectura-logo" />
+                        </div>
+                        <div className='logo-content-hover'>
+                            <img src="/Logos/irregular.png" alt="Jota-Arquitectura-logo" />
+                        </div>
                     </div>
                 </Link>
 
