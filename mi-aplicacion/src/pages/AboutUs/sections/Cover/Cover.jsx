@@ -16,7 +16,7 @@ function Cover({ t }) {
 
                 </div>
                 <div className='col-aboutUs'>
-                    <img src="/Images/AboutUs/Rectangle 13.png" alt="" />
+                    <img src="/Images/AboutUs/01.NOSOTROS.jpg" alt="" />
                 </div>
             </div>
         </section>

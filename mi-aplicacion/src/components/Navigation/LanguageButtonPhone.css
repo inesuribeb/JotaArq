@@ -17,6 +17,10 @@
     transition: color 0.3s ease;
 }
 
+.language-phone-button:HOVER {
+    color: var(--dark-color);
+}
+
 .language-phone-button.language-phone-active {
     color: var(--dark-color);
     text-decoration: underline;

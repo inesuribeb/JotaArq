@@ -1,0 +1,233 @@
+.navigation-home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    /* animation: fadeIn 0.3s ease-in-out; */
+}
+
+.navigation-home.closing {
+    animation: fadeOut 0.3s ease-in-out;
+}
+
+.home-h-col-left,
+.home-h-col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.home-h-col-left {
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+.home-h-col-left img{
+    width: 15%;
+}
+
+.home-h-col-left h1{
+    font-size: clamp(1.3rem, 1.75vw + 2.2rem, 1.8rem);
+    font-weight: 400;
+    margin: 0;
+    /* line-height: 1.5rem; */
+}
+
+.statement-general {
+    line-height: 2rem;
+}
+
+.home-h-col-right {
+    padding-right: 2rem;
+    /* padding-bottom: 0rem; */
+    border-left: 1.5px solid var(--super-light-grey);
+    justify-content: space-between;
+    
+}
+
+.header-home-nav {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+
+
+/* .header-home-nav a {
+    flex: 1;
+    text-align: left;
+    padding: 0rem 1.5rem;
+    text-decoration: none;
+    color: var(--dark-color);
+    text-transform: lowercase;
+    font-size: clamp(2.8rem, 3.25vw + 2.9rem, 3.3rem);
+    font-weight: 400;
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.nav-line-indicator {
+    position: absolute;
+    left: -1.3px;
+    top: 0;
+    width: 1.5px;
+    height: calc(100% / 4);
+    background-color: var(--dark-color);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+} */
+
+
+
+
+
+
+
+/* .header-home-nav a {
+    flex: 1;
+    text-align: left;
+    padding: 0rem 1.5rem;
+    text-decoration: none;
+    color: var(--dark-color);
+    text-transform: lowercase;
+    font-size: clamp(3rem, 3.45vw + 3.9rem, 3.5rem);
+    font-weight: 400;
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.nav-line-indicator {
+    position: absolute;
+    left: -1.3px;
+    top: 0;
+    width: 1.5px;
+    height: calc(100% / 5); 
+    background-color: var(--dark-color);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.nav-line-indicator.first-hover {
+    animation: drawLineDown 0.4s ease-out forwards;
+}
+
+@keyframes drawLineDown {
+    from {
+        transform: translateY(var(--hover-position, 0)) scaleY(0);
+        transform-origin: top;
+    }
+    to {
+        transform: translateY(var(--hover-position, 0)) scaleY(1);
+        transform-origin: top;
+    }
+} */
+
+
+
+
+.header-home-nav a {
+    flex: 1;
+    width: fit-content;
+    text-align: left;
+    padding: 0rem 1.5rem;
+    text-decoration: none;
+    color: var(--dark-color);
+    text-transform: lowercase;
+    font-size: clamp(3rem, 3.45vw + 3.9rem, 3.5rem);
+    font-weight: 400;
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+/* Línea animada que se mueve */
+.nav-line-indicator {
+    position: absolute;
+    left: -1.5px;
+    top: 0;
+    width: 1.5px;
+    height: calc(100% / 4);
+    background-color: var(--dark-color);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(calc(var(--hover-index, 0) * 100%)) scaleY(0);
+}
+
+.nav-line-indicator.visible {
+    opacity: 1;
+    transform: translateY(calc(var(--hover-index, 0) * 100%)) scaleY(1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+/* Primera vez que aparece - se dibuja de arriba a abajo */
+.nav-line-indicator.first-hover {
+    transform: translateY(calc(var(--hover-index, 0) * 100%)) scaleY(0);
+    animation: drawLineDown 0.4s ease-out forwards;
+}
+
+@keyframes drawLineDown {
+    from {
+        transform: translateY(calc(var(--hover-index, 0) * 100%)) scaleY(0);
+        transform-origin: top;
+    }
+    to {
+        transform: translateY(calc(var(--hover-index, 0) * 100%)) scaleY(1);
+        transform-origin: top;
+    }
+}
+
+
+.home-header-contact {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-left: 1.5rem;
+    font-weight: 300;
+}
+
+.home-header-contact h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.grey a {
+    text-decoration: none;
+    color: var(--medium-grey);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.grey a:hover {
+    color: var(--dark-color)
+}
+
+
+
+
+
+
+.carousel-home-imported {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out 0.3s forwards;
+    overflow: hidden; /* Asegura que no se desborde */
+}

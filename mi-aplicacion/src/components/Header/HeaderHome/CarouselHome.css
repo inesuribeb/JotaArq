@@ -1,0 +1,57 @@
+.carousel-home-container {
+    width: 100%;
+    height: 100vh; /* Altura definida para el scroll vertical */
+    overflow: hidden;
+    position: relative;
+    /* padding: 0 0px; */
+}
+
+.carousel-home-track {
+    display: flex;
+    flex-direction: column; /* Cambio a columna */
+    gap: 40px;
+    animation: scrollVertical 30s linear infinite;
+    height: fit-content;
+}
+
+.carousel-home-item {
+    flex-shrink: 0;
+    width: 150px;
+    height: 250px;
+    border-radius: 70px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-home-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes scrollVertical {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%); /* Mueve hacia arriba */
+    }
+}
+
+/* Pausar animación al hacer hover */
+.carousel-home-track:hover {
+    animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-home-item {
+        width: 160px;
+        height: 100px;
+    }
+    
+    .carousel-home-track {
+        animation: scrollVertical 25s linear infinite;
+    }
+}

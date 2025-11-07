@@ -16,6 +16,8 @@
 
 .col-statement-1 {
     background-color: var(--dark-grey);
+    background-color: var(--dark-color);
+
     justify-content: flex-end;
     flex-direction: column;
 }
@@ -25,6 +27,8 @@
     aspect-ratio: 4/5;
     object-fit: cover; 
     border-radius: 5px; 
+    /* filter: grayscale(100%); */
+
 }
 
 .col-statement-2 {
