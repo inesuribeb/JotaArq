@@ -145,10 +145,10 @@ function Header() {
                 <Link to={getRoute('home')}>
                     <div className='logo-container'>
                         <div className='logo-content'>
-                            <img src="/Logos/irregular.png" alt="Jota-Arquitectura-logo" />
+                            <img src="/Logos/original.png" alt="Jota-Arquitectura-logo" />
                         </div>
                         <div className='logo-content-hover'>
-                            <img src="/Logos/irregular.png" alt="Jota-Arquitectura-logo" />
+                            <img src="/Logos/original.png" alt="Jota-Arquitectura-logo" />
                         </div>
                     </div>
                 </Link>

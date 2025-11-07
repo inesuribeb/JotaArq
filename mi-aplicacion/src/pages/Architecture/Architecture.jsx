@@ -103,14 +103,30 @@ function Architecture() {
 
             {isMobile ? <StatementPhone t={t} /> : <Statement t={t} />}
 
+            {!isMobile && (
+                <div className='black-gap'>
+                    {/* <h1>{t('services')}</h1> */}
+                </div>
+            )}
+
             {isMobile ? (
                 <ArqServicesPhone t={t} />
             ) : (
-                <ArqServices t={t} hideTabMenu={hideTabMenu} />
+                <div className='arq-services-principal'>
+                    <ArqServices t={t} hideTabMenu={hideTabMenu} />
+                </div>
             )}
 
+
+            {!isMobile && (
+                <div className='black-gap-2'>
+                    {/* <h1>{t('services')}</h1> */}
+                </div>
+            )}
+
+
             <div ref={workerRef}>
-                <Worker 
+                <Worker
                     t={t}
                     workerName="Jokin Tapia"
                     workerRole={t('jokinRole')}

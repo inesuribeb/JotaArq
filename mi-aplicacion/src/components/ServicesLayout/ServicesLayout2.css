@@ -1,4 +1,4 @@
-.services-layout {
+/* .services-layout {
     height: 90vh;
     display: flex;
     align-items: center;
@@ -128,7 +128,6 @@
 
 
 
-/* Tablets grandes y pantallas medianas */
 @media (max-width: 1200px) {
     .services-content {
         grid-template-columns: 1fr 1fr;
@@ -158,7 +157,6 @@
     }
 }
 
-/* Tablets */
 @media (max-width: 992px) {
     .services-layout {
         height: auto;
@@ -191,7 +189,6 @@
     }
 }
 
-/* Móviles grandes y tablets pequeñas */
 @media (max-width: 768px) {
     .services-layout {
         height: auto;
@@ -245,8 +242,6 @@
     
     .services-text h4 {
         font-size: 1.5rem;
-        /* font-size: clamp(1rem, 1.8vw + 0.1rem, 2.5rem); */
-
         line-height: 1.8rem;
         margin-bottom: 1.5rem;
         width: 100%;
@@ -255,8 +250,6 @@
     .services-text-desc {
         width: 90%;
         font-size: 1rem;
-        /* font-size: clamp(1.1rem, 1vw, 1.8rem); */
-
         margin-left: 0.5rem;
         padding-left: 0.8rem;
     }
@@ -267,7 +260,6 @@
     }
 }
 
-/* Móviles pequeños */
 @media (max-width: 480px) {
     .services-image {
         min-height: 40vh;
@@ -304,6 +296,5 @@
     
     .services-image img {
         width: 100%;
-        /* max-width: 280px; */
     }
-}
+} */

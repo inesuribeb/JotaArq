@@ -4,7 +4,7 @@ import { Instagram, Linkedin } from 'lucide-react'; // Importa los iconos
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { RiInstagramLine, RiLinkedinLine } from 'react-icons/ri';
 import { AiOutlineInstagram, AiOutlineLinkedin } from 'react-icons/ai';
-
+import { HiChevronUp } from 'react-icons/hi2'; // Importa el ícono de flecha hacia arriba
 
 import './Footer.css';
 
@@ -46,43 +46,11 @@ function Footer() {
 
 
             <div className='footer-f2'>
-                <img src="/Logos/jotaBlanco.png" alt="" />
+                <img src="/Logos/logoNegroCompleto2.png" alt="" />
             </div>
 
-            {/* <div className='footer-logos'>
-                <a href="https://instagram.com/jota.arquitectura_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <FaInstagram size={24} />
-                </a>
-                <a href="https://linkedin.com/company/jota-arquitectura" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <FaLinkedin size={24} />
-                </a>
-            </div> */}
-
             <div className='footer-f1'>
-                {/* <div className='col'>
-                    <h1>{t('oficina')}</h1>
-                    <p>{t('address1')}</p>
-                    <p>{t('address2')} •</p>
-                    <p>{t('address3')}</p>
-                    <p></p>
-                    <p>jota@arquitectura.es</p>
-                    <p>+34 666 66 66 66</p>
-                    
-                </div> */}
-                {/* <div className='col'>
-                    <h1>{t('contacto')}</h1>
-                    <p>+34 666 66 66 66</p>
-                    <p>jota@arquitectura.es</p>
-                </div> */}
-                {/* <div className='col'>
-                    <h1>{t('rrss')}</h1>
-                    <p>Instagram</p>
-                    <p>Linkedin</p>
-                </div> */}
-                {/* <div className='col'>
-                </div> */}
                 <div className='col'>
-                    {/* <h1>{t('menu')}</h1> */}
                     <nav className='footer-nav'>
                         {navigationLinks.map(link => (
                             <NavLink
@@ -111,10 +79,6 @@ function Footer() {
                 </a>
             </div>
 
-            {/* <div className='footer-f2'>
-                <img src="/Logos/jotaBlanco.png" alt="" />
-            </div> */}
-
             <div className='footer-f3'>
                 <div className='col3'>
                     <h1>{t('cookiesAndPrivacy')}</h1>
@@ -125,12 +89,18 @@ function Footer() {
                 </div>
 
                 <div className='col3'>
-                    <h1
+                    {/* <h1
                         onClick={scrollToTop}
                         style={{ cursor: 'pointer' }}
                         className='up-button'
                     >
                         {t('up')}
+                    </h1> */}
+                    <h1
+                        onClick={scrollToTop}
+                        className='up-button'
+                    >
+                        {t('up')} <HiChevronUp className="up-arrow-icon" size={20} strokeWidth={3} />
                     </h1>
                 </div>
             </div>

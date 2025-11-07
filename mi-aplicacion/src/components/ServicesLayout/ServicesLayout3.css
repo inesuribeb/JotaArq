@@ -1,0 +1,210 @@
+.services-layout {
+    height: 137vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    /* background-color: var(--dark-color); */
+    border-top: 1.5px solid var(--dark-color);
+}
+
+
+
+
+
+/* Capas de fondo superpuestas */
+.services-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.services-bg-current {
+    z-index: 1;
+}
+
+.services-bg-next {
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.services-bg-next.services-bg-visible {
+    opacity: 1;
+}
+
+
+
+
+
+
+.services-content {
+    gap: 0; 
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+}
+
+.services-content.reverse {
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.services-content.reverse .services-image {
+    order: 2; 
+}
+
+.services-content.reverse .services-text {
+    order: 1;
+}
+
+.services-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+   
+    padding: 0rem;
+    height: 37vh;
+    width: 100%;
+    background-color: var(--background-color);
+    /* background-color: transparent; */
+    padding-left: 0rem;
+    position: relative;  
+    padding: 0rem;
+    padding-top: 2.5rem;
+}
+
+
+.services-text h3 {
+    color: var(--dark-color);
+    margin-bottom: 0rem;   
+    font-size: 1rem;
+    /* font-size: clamp(1rem, 1.1vw, 1.8rem); */
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    z-index: 10;
+    margin: 0;
+    /* margin-left: 5rem; */
+
+    line-height: 3.5rem;
+
+    flex: 2;
+}
+
+.services-text h4 {
+    font-size: 2rem;
+    font-size: clamp(2rem, 2.3vw, 3rem);
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    width: 90%;
+    margin-top: 1rem;
+    line-height: 2.5rem;
+    line-height: clamp(2rem, 2.5vw, 3rem);
+    padding-left: 0rem;
+    /* max-width: 70%; */
+    flex: 3;
+}
+
+
+
+
+
+/* Indicadores del carrusel de servicios */
+/* .services-carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.8rem;
+    z-index: 100;
+}
+
+.services-carousel-dot {
+    width: 120px;
+    height: 5px;
+    border-radius: 5px;
+    border: 1.5px solid transparent;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.services-carousel-dot:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+}
+
+.services-carousel-dot-active {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 120px;
+    border-radius: 5px;
+} */
+
+/* Indicadores del carrusel de servicios */
+.services-carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 100;
+}
+
+.services-carousel-dot {
+    position: relative;
+    width: 120px;
+    height: 5px;
+    border-radius: 5px;
+    border: 0px solid transparent;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* .services-carousel-dot:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+} */
+
+.services-carousel-dot-active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.services-carousel-dot-active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    animation: fillProgress 3s linear forwards;
+}
+
+@keyframes fillProgress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}

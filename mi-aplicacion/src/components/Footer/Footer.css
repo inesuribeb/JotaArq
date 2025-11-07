@@ -4,7 +4,7 @@
     flex-direction: column;
     width: 100%;
     padding: 1rem;
-    padding-top: 9rem;
+    padding-top: 6rem;
     padding-bottom: 0;
     justify-content: space-between;
 }
@@ -29,7 +29,6 @@
 }
 
 .footer-logos a:hover {
-    /* opacity: 0.7; */
     color: var(--orange-color)
 }
 
@@ -38,17 +37,6 @@
     padding: 0rem;
 }
 
-.col h1 {
-    font-size: 1rem;
-    color: var(--medium-grey);
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    font-weight: 400;
-}
-.col p {
-    margin-bottom: -1rem;
-    font-weight: 400;
-}
 .footer-nav {
     display: flex;
     justify-content: center;
@@ -58,34 +46,18 @@
     display: flex;
     color: var(--dark-color);
     text-decoration: none;
-    /* margin: 0; */
-    /* padding: -0.25rem 0; */
     transition: color 0.3s ease;
     text-transform: capitalize;
     border-left: 1px solid var(--light-grey);
-    /* border-bottom: 1px solid var(--light-grey); */
-    /* margin-left: 1rem;
-    padding-left: 1rem; */
-    padding: 0rem 0 0.25rem 1rem; /* Más específico: top right bottom left */
-    margin: 0 0 0 1rem; /* Más específico también */
+    padding: 0rem 0 0.25rem 1rem;
+    margin: 0 0 0 1rem;
     font-size: 1.35rem;
 }
 
 .footer-nav-link.active {
     color: var(--orange-color);
     border-left: 1px solid var(--orange-color);
-    /* border-bottom: 1px solid var(--orange-color); */
-
 }
-
-/* .footer-f2 {
-    align-items: flex-end;
-} */
-
-/* .footer-f2 .col {
-    flex: 1; 
-    padding: 0rem;
-} */
 
 .footer-f2 {
     justify-content: center;
@@ -94,28 +66,8 @@
 
 .footer-f2 img {
     background-color: transparent;
-    width: 60%;
-    /* height: 80%; */
-    /* aspect-ratio: 1/1; */
-}
-
-.jota-name {
-    font-size: 17rem;
-    margin: 0;
-    font-weight: 300;
-    line-height: 0.8;
-    padding-left: 1.5rem;
-    text-align: right;
-    align-self: flex-end; 
-}
-
-.arqAndgest {
-    font-size: 3rem;
-    margin: 0;
-    font-weight: 300;
-    line-height: 0.8;
-    padding-left: 1.5rem;
-    white-space: nowrap; 
+    width: 30%;
+    padding-bottom: 1rem;
 }
 
 .footer-f3 {
@@ -148,13 +100,37 @@
     font-weight: 400;
 }
 
-.up-button {
+/* .up-button {
     cursor: pointer;
     transition: opacity 0.3s ease;
 }
 
 .up-button:hover {
     opacity: 0.7;
+} */
+
+.up-button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.up-button:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+.up-arrow-icon {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    stroke-width: 0.1;
+}
+
+.up-button:hover .up-arrow-icon {
+    transform: translateY(-3px);
 }
 
 
