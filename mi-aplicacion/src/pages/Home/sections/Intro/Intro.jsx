@@ -6,12 +6,12 @@ import './Intro.css';
 function Intro({ t }) {
 
     const datos = [
-        { id: 1, type: "viviendas", qty: 34 },
-        { id: 2, type: "diseñoUrbano", qty: 1 },
-        { id: 3, type: "terciarios", qty: 28 },
+        { id: 1, type: "diseñoUrbano", qty: 1 },
+        { id: 2, type: "terciarios", qty: 28 },
+        { id: 3, type: "viviendas", qty: 34 },
         { id: 4, type: "eficienciaEnergetica", qty: 70 },
-        { id: 5, type: "accesibilidad", qty: 26 },
-        { id: 6, type: "projectMonitoring", qty: 26 },
+        // { id: 5, type: "accesibilidad", qty: 26 },
+        { id: 5, type: "projectMonitoring", qty: 26 },
     ];
 
     return (

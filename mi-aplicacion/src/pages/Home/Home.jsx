@@ -93,8 +93,9 @@ function Home() {
 
             <div className="home-content">
                 <div className='parallax'>
-                    {isMobile ? <IntroPhone t={t} /> : <Intro t={t} />}
+                    {/* {isMobile ? <IntroPhone t={t} /> : <Intro t={t} />} */}
                     {isMobile ? <ServicesIntroPhone t={t} /> : <ServicesIntro t={t} />}
+                    {isMobile ? <IntroPhone t={t} /> : <Intro t={t} />}
                     {isMobile ? <ContactPhone t={t} /> : <Contact t={t} />}
                 </div>
             </div>

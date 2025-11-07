@@ -14,7 +14,7 @@ function MgmntIntro({ t }) {
                 textKey="mngIntro"
                 buttonTextKey="knowMore"
                 buttonRoute={getRoute('management')} 
-                imageSrc="/Images/Home/Parke.png"
+                imageSrc="/Images/Home/SERVICIOGEST.JPG"
                 imageAlt="Descripción de la imagen"
                 reverse={true}  
                 variant="management"

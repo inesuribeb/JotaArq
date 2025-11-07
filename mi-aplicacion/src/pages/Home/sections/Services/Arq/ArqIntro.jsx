@@ -14,7 +14,7 @@ function ArqIntro({ t }) {
                 textKey="arqIntro"
                 buttonTextKey="knowMore"
                 buttonRoute={getRoute('architecture')} 
-                imageSrc="/Images/Home/MANTILLA 2.png"
+                imageSrc="/Images/Home/Parke.png"
                 imageAlt="Descripción de la imagen"
                 variant="architecture"
                 buttonColor="primary"

@@ -8,27 +8,27 @@ export const architectureTranslations = {
         historiaVision: "Historia y Visión",
         creemosJuntos: "Creemos juntos",
 
-        sloganArq1: "desarrollamos proyectos",
-        sloganArq2: "diseñamos edificios",
-        sloganArq3: "actualizamos ciudades",
+        sloganArq1: "Desarrollando proyectos",
+        sloganArq2: "Diseñando edificios",
+        sloganArq3: "Actualizando ciudades",
 
         archStatement: "Creemos que la arquitectura debe estar guiada por la singularidad de su entorno, de modo que el edificio resalte el lugar y el lugar habite en el edificio.",
 
         diseñoUrbano: "Diseño Urbano",
-        edificacion: "Edificación",
-        tramitacionLicencias: "Tramitación de licencias",
+        edificacion: "Corporativo",
+        tramitacionLicencias: "Residencial",
         sostenibilidad: "Sostenibilidad",
 
-        urbanDesignSubtitle: "Planificamos entornos que conectan personas y espacios",
+        urbanDesignSubtitle: "Comprometidos con el futuro de nuestras ciudades, desarrollamos soluciones urbanas que mejoran la funcionalidad, sostenibilidad y calidad de vida.",
         urbanDesignText: "El diseño urbano es una herramienta para mejorar la calidad de vida y fortalecer la identidad de nuestras ciudades. Creamos soluciones que integran sostenibilidad, movilidad y bienestar social, transformando los espacios públicos en lugares vivos y funcionales.",
 
-        edificationSubtitle: "Diseñamos espacios que perduran en el tiempo",
+        edificationSubtitle: "Diseñamos el espacio donde tu negocio crece.",
         edificationText: "Entendemos la edificación como el equilibrio entre funcionalidad, sostenibilidad y belleza. Cada proyecto se desarrolla desde una mirada integral, optimizando recursos y garantizando la calidad constructiva para crear edificios eficientes, confortables y duraderos.",
 
-        licensesSubtitle: "Agilizamos procesos, garantizamos resultados",
+        licensesSubtitle: "Lugares que crecen con quienes los habitan.",
         licensesText: "Gestionamos la tramitación de licencias y permisos con eficacia y rigor técnico. Acompañamos a nuestros clientes durante todo el proceso administrativo, asegurando el cumplimiento normativo y reduciendo los plazos para que cada proyecto avance sin obstáculos.",
 
-        sostenibilitySubtitle: "Planes especiales para campos solares ",
+        sostenibilitySubtitle: "Creemos en la urgencia de actuar frente a la emergencia climática. Acciones que garantizan la sostenibilidad económica, social, cultural y ambiental.",
         sostenibilityText: "Creemos en la urgencia de actuar frente a la emergencia climática. Acciones que garantizan la sostenibilidad económica, social, cultural y ambiental.",
 
         ourExperts: "Nuestros expertos",
@@ -44,27 +44,27 @@ export const architectureTranslations = {
         historiaVision: "Historia eta Ikuspegia",
         creemosJuntos: "Elkarrekin Sortu",
 
-        sloganArq1: "proiektuak garatzen ditugu",
-        sloganArq2: "eraikinak diseinatzen ditugu",
-        sloganArq3: "hiriak berritzen ditugu",
+        sloganArq1: "Proiektuak garatuz",
+        sloganArq2: "Eraikinak diseinatuz",
+        sloganArq3: "Hiriak berrituz",
 
         archStatement: "Uste dugu arkitektura ingurumenaren berezitasunak gidatu behar duela, eraikinak lekua nabarmentzeko eta lekua eraikinean bizitzeko.",
 
         diseñoUrbano: "Hiri-diseinua",
-        edificacion: "Eraikuntza",
-        tramitacionLicencias: "Lizentzien izapidetzea",
+        edificacion: "Korporatiboa",
+        tramitacionLicencias: "Etxebizitza",
         sostenibilidad: "Iraunkortasuna",
 
-        urbanDesignSubtitle: "Planificamos entornos que conectan personas y espacios",
+        urbanDesignSubtitle: "Gure hirien etorkizunarekin konprometuta, funtzionaltasuna, iraunkortasuna eta bizi-kalitatea hobetzen dituzten hiri-irtenbideak garatzen ditugu.",
         urbanDesignText: "El diseño urbano es una herramienta para mejorar la calidad de vida y fortalecer la identidad de nuestras ciudades. Creamos soluciones que integran sostenibilidad, movilidad y bienestar social, transformando los espacios públicos en lugares vivos y funcionales.",
 
-        edificationSubtitle: "Diseñamos espacios que perduran en el tiempo",
+        edificationSubtitle: "Zure negozioa hazten den espazioa diseinatzen dugu.",
         edificationText: "Entendemos la edificación como el equilibrio entre funcionalidad, sostenibilidad y belleza. Cada proyecto se desarrolla desde una mirada integral, optimizando recursos y garantizando la calidad constructiva para crear edificios eficientes, confortables y duraderos.",
 
-        licensesSubtitle: "Agilizamos procesos, garantizamos resultados",
+        licensesSubtitle: "Bertan bizi direnekin batera hazten diren lekuak.",
         licensesText: "Gestionamos la tramitación de licencias y permisos con eficacia y rigor técnico. Acompañamos a nuestros clientes durante todo el proceso administrativo, asegurando el cumplimiento normativo y reduciendo los plazos para que cada proyecto avance sin obstáculos.",
 
-        sostenibilitySubtitle: "Eguzki-parkeetarako plan bereziak",
+        sostenibilitySubtitle: "Larrialdi klimatikoaren aurrean jarduteko premian sinesten dugu. Iraunkortasun ekonomikoa, soziala, kulturala eta ingurumenekoa bermatzen duten ekintzak.",
         sostenibilityText: "Larrialdi klimatikoaren aurrean jarduteko premia sinesten dugu. Gure ekintzek iraunkortasun ekonomikoa, soziala, kulturala eta ingurumenekoa bermatzen dute.",
         
         ourExperts: "Gure Adituak",
@@ -80,27 +80,27 @@ export const architectureTranslations = {
         historiaVision: "History & Vision",
         creemosJuntos: "Let's Create Together",
 
-        sloganArq1: "we develop projects",
-        sloganArq2: "we design buildings",
-        sloganArq3: "we renew cities",
+        sloganArq1: "Developing projects",
+        sloganArq2: "Designing buildings",
+        sloganArq3: "Updating cities",
 
         archStatement: "We believe that architecture should be guided by the uniqueness of its environment, so that the building highlights the place and the place lives within the building.",
 
         diseñoUrbano: "Urban Design",
-        edificacion: "Building Design",
-        tramitacionLicencias: "Permit Processing",
+        edificacion: "Corporative",
+        tramitacionLicencias: "Housing",
         sostenibilidad: "Sustainability",
 
-        urbanDesignSubtitle: "Planificamos entornos que conectan personas y espacios",
+        urbanDesignSubtitle: "Committed to the future of our cities, we develop urban solutions that enhance functionality, sustainability, and quality of life.",
         urbanDesignText: "El diseño urbano es una herramienta para mejorar la calidad de vida y fortalecer la identidad de nuestras ciudades. Creamos soluciones que integran sostenibilidad, movilidad y bienestar social, transformando los espacios públicos en lugares vivos y funcionales.",
 
-        edificationSubtitle: "Diseñamos espacios que perduran en el tiempo",
+        edificationSubtitle: "We design the space where your business grows.",
         edificationText: "Entendemos la edificación como el equilibrio entre funcionalidad, sostenibilidad y belleza. Cada proyecto se desarrolla desde una mirada integral, optimizando recursos y garantizando la calidad constructiva para crear edificios eficientes, confortables y duraderos.",
 
-        licensesSubtitle: "Agilizamos procesos, garantizamos resultados",
+        licensesSubtitle: "Places that grow with those who inhabit them.",
         licensesText: "Gestionamos la tramitación de licencias y permisos con eficacia y rigor técnico. Acompañamos a nuestros clientes durante todo el proceso administrativo, asegurando el cumplimiento normativo y reduciendo los plazos para que cada proyecto avance sin obstáculos.",
 
-        sostenibilitySubtitle: "Special plans for solar fields",
+        sostenibilitySubtitle: "We believe in the urgency of taking action in the face of the climate emergency. Actions that ensure economic, social, cultural, and environmental sustainability.",
         sostenibilityText: "We believe in the urgency of acting against the climate emergency. Our actions ensure economic, social, cultural, and environmental sustainability.",
     
         ourExperts: "Our Leadership Team",

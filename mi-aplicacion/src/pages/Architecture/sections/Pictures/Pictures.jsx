@@ -3,14 +3,13 @@ import './Pictures.css';
 function Pictures() {
     return (
         <section className='pictures-arch'>
-            <div className='picture-left'>
-                {/* <img src="/Images/Architecture/Randstand.png" alt="" /> */}
+            {/* <div className='picture-left'>
                 <img src="/Images/Management/1.jpg" alt="" />
-            </div>
+            </div> */}
 
             <div className='picture-right'>
                 {/* <img src="/Images/Home/MANTILLA 2.png" alt="" /> */}
-                <img src="/Images/Management/services/gestion3.webp" alt="" />
+                <img src="/Images/Management/00.JPG" alt="" />
             </div>
 
         </section>

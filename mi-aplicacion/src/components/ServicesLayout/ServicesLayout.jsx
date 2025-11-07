@@ -45,7 +45,7 @@ function ServicesLayout({ bgImage, image, title, subtitle, text, reverse, t }) {
                 <div className='services-text'>
                     <h3>{title}</h3>
                     <h4>{subtitle}</h4>
-                    <Texts className='services-text-desc' text={text} />
+                    {/* <Texts className='services-text-desc' text={text} /> */}
 
                 </div>
             </div>
