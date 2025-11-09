@@ -4,13 +4,13 @@ import './TramLicenciasPhone.css';
 function TramLicenciasPhone({ t }) {
     return (
         <ServicesLayoutPhone
-            bgImage="/Images/Management/services/masgestion4.webp"
+            bgImage="/Images/Management/services/propertyManagement/03.JPG"
             image="/Images/Management/services/masgestion3.webp"
-            title={t('tramitacionLicencias')}
-            subtitle={t('tramitacionLicencias')}
-            text={t('sostenibilityText')}
+            title={t('propertyManagement')}
+            subtitle={t('propertyManagementSb')}
+            text={t('propertyManagementText')}
             t={t}
-            reverse={true} 
+            reverse={true}
             dark={true}
         />
     )

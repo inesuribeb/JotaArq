@@ -4,11 +4,11 @@ import './AsesoramientoUrbPhone.css';
 function AsesoramientoUrbPhone({ t }) {
     return (
         <ServicesLayoutPhone
-            bgImage="/Images/Management/services/masgestion1.webp"
+            bgImage="/Images/Management/services/projectMonitoring/02.jpg"
             image="/Images/Management/services/masgestion2.webp"
-            title={t('asesoramientoUrbanistico')}
-            subtitle={t('sostenibilitySubtitle')}
-            text={t('sostenibilityText')}
+            title={t('projectMonitoring')}
+            subtitle={t('projectMonitoringSb')}
+            text={t('projectMonitoringText')}
             t={t}
         />
     )

@@ -4,11 +4,11 @@ import './DireccionObra.css';
 function DireccionObra({ t }) {
     return (
         <ServicesLayout
-        bgImage="/Images/Management/services/gestion4.webp"
+        bgImage="/Images/Management/services/costManagement/04.jpg"
         image="/Images/Management/services/gestion1.webp"
-        title={t('direccionObra')}
-        subtitle={t('direccionObra')}
-        text={t('sostenibilityText')}
+        title={t('costManagement')}
+        subtitle={t('costManagementSb')}
+        text={t('costManagementText')}
         t={t}
     />
     )

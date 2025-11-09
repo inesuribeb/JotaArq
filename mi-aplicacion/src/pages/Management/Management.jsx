@@ -104,7 +104,9 @@ function Management() {
             {isMobile ? (
                 <MngServicesPhone t={t} />
             ) : (
-                <MngServices t={t} hideTabMenu={hideTabMenu} />
+                <div className='mng-services-principal'>
+                    <MngServices t={t} hideTabMenu={hideTabMenu} />
+                </div>
             )}
 
             <div ref={workerRef}>

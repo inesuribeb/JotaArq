@@ -4,7 +4,7 @@ import './UrbanDesign.css';
 function UrbanDesignPhone({ t }) {
     return (
         <ServicesLayoutPhone
-            bgImage="/Images/Architecture/services/1.png"
+            bgImage="/Images/Architecture/services/urbanDesign/01.LAREDO.jpg"
             image="/Images/Architecture/services/2.png"
             title={t('diseñoUrbano')}
             subtitle={t('urbanDesignSubtitle')}

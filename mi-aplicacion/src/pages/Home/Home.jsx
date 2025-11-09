@@ -48,7 +48,7 @@ import ContactPhone from './sections/Contact/ContactPhone';
 import './Home.css'
 
 function Home() {
-    const { t } = useLanguage();
+    const { t , getRoute } = useLanguage();
     const isMobile = useIsMobile(768);
     const [showPortada, setShowPortada] = useState(true);
 
@@ -95,7 +95,8 @@ function Home() {
                 <div className='parallax'>
                     {/* {isMobile ? <IntroPhone t={t} /> : <Intro t={t} />} */}
                     {isMobile ? <ServicesIntroPhone t={t} /> : <ServicesIntro t={t} />}
-                    {isMobile ? <IntroPhone t={t} /> : <Intro t={t} />}
+                    {/* {isMobile ? <IntroPhone t={t} /> : <Intro t={t} />} */}
+                    {isMobile ? <IntroPhone t={t} getRoute={getRoute} /> : <Intro t={t} getRoute={getRoute} />}
                     {isMobile ? <ContactPhone t={t} /> : <Contact t={t} />}
                 </div>
             </div>

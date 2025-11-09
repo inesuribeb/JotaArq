@@ -90,10 +90,11 @@ import { createPortal } from 'react-dom';
 import { useState, useEffect, useRef } from 'react';
 import { useHeader } from '../../../../contexts/HeaderContext';
 import TabMenu from "../../../../components/TabMenu/TabMenu";
-import Certificados from "./components/Certificados/Certificados";
-import AsesoramientoUrb from "./components/AsesoramientoUrb/AsesoramientoUrb";
-import TramLicencias from "./components/TramLicencias/TramLicencias";
-import DireccionObra from "./components/DireccionObra/DireccionObra";
+import Certificados from "./components/1.Certificados/Certificados";
+import AsesoramientoUrb from "./components/2.AsesoramientoUrb/AsesoramientoUrb";
+import TramLicencias from "./components/3.TramLicencias/TramLicencias";
+import DireccionObra from "./components/4.DireccionObra/DireccionObra";
+import Tdd from './components/5.Tdd/Tdd';
 import './MngServices.css';
 
 // function MngServices({ t }) {
@@ -194,11 +195,19 @@ function MngServices({ t, hideTabMenu }) {
     const endRef = useRef(null);
 
     const services = [
-        { id: 1, nameKey: 'certificados', sectionId: 'section-cerf' },
-        { id: 2, nameKey: 'asesoramientoUrbanistico', sectionId: 'section-asesoramiento' },
-        { id: 3, nameKey: 'tramitacionLicencias', sectionId: 'section-tramitation' },
-        { id: 4, nameKey: 'direccionObra', sectionId: 'section-direction' }
+        { id: 1, nameKey: 'projectManagement', sectionId: 'section-cerf' },
+        { id: 2, nameKey: 'projectMonitoring', sectionId: 'section-asesoramiento' },
+        { id: 3, nameKey: 'propertyManagement', sectionId: 'section-tramitation' },
+        { id: 4, nameKey: 'costManagement', sectionId: 'section-direction' },
+        { id: 5, nameKey: 'tddTechnical', sectionId: 'section-tdd' }
+
     ];
+
+    //     projectManagement: "Project Management",
+    //     projectMonitoring: "Project Monitoring",
+    //     propertyManagement: "Property Management",
+    //     costManagement: "Cost Management",
+    //     tddTechnical: "Tdd technical due diligence",
 
     useEffect(() => {
         const handleScroll = () => {
@@ -260,6 +269,10 @@ function MngServices({ t, hideTabMenu }) {
 
                     <section id="section-direction" className="service-section">
                         <DireccionObra t={t} />
+                    </section>
+
+                    <section id="section-tss" className="service-section">
+                        <Tdd t={t} />
                     </section>
                 </div>
 

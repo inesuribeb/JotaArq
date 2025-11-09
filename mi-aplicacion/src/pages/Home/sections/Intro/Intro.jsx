@@ -1,9 +1,10 @@
 import MiniTitle from '../../../../components/Titles/MiniTitle';
 import Texts from '../../../../components/Texts/Texts';
 import IntroTitle from '../../../../components/Titles/IntroTitle';
+import ButtonGeneral from '../../../../components/Button/ButtonGeneral';
 import './Intro.css';
 
-function Intro({ t }) {
+function Intro({ t , getRoute }) {
 
     const datos = [
         { id: 1, type: "diseñoUrbano", qty: 1 },
@@ -24,7 +25,14 @@ function Intro({ t }) {
                             <span>105 +</span>
                             <span>{t('projects')}</span>
                         </p>
-                        <Texts text={t('miniIntro')} />
+                        {/* <Texts text={t('miniIntro')} /> */}
+                        
+                        <ButtonGeneral
+                            className='button-introUs-home'
+                            color='minimalInverted'
+                            text={t('aboutUs')}
+                            route={getRoute('aboutUs')} 
+                        />
                     </div>
                 </div>
 

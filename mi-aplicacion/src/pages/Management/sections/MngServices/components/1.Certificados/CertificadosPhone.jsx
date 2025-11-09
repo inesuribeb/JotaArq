@@ -4,13 +4,13 @@ import './CertificadosPhone.css';
 function CertificadosPhone({ t }) {
     return (
         <ServicesLayoutPhone
-            bgImage="/Images/Management/services/gestion4.webp"
+            bgImage="/Images/Management/services/projectManagement/01S.JPG"
             image="/Images/Management/services/gestion1.webp"
-            title={t('certificados')}
-            subtitle={t('sostenibilitySubtitle')}
-            text={t('sostenibilityText')}
+            title={t('projectManagement')}
+            subtitle={t('projectManagementSb')}
+            text={t('projectManagementText')}
             t={t}
-            reverse={true} 
+            reverse={true}
             dark={true}
         />
     )

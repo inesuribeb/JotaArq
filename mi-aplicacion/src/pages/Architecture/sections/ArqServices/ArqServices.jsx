@@ -158,19 +158,19 @@ function ArqServices({ t, hideTabMenu }) {
 
             <div ref={wrapperRef} className="arq-services-wrapper">
                 <div className="arq-services-content">
-                    <section id="section-urbanDesign" className="service-section">
+                    <section id="section-urbanDesign" className="service-section-arq">
                         <UrbanDesign t={t} />
                     </section>
 
-                    <section id="section-edification" className="service-section">
+                    <section id="section-edification" className="service-section-arq">
                         <Edification t={t} />
                     </section>
 
-                    <section id="section-tramitation" className="service-section">
+                    <section id="section-tramitation" className="service-section-arq">
                         <Licenses t={t} />
                     </section>
 
-                    <section id="section-sostenibility" className="service-section">
+                    <section id="section-sostenibility" className="service-section-arq">
                         <Sostenibility t={t} />
                     </section>
                 </div>

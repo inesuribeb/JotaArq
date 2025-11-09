@@ -175,7 +175,7 @@
         max-width: 0;
     }
     to {
-        max-width: 1000px; 
+        max-width: 2000px; 
     }
 }
 
@@ -258,7 +258,7 @@
 }
 
 .service-section {
-    min-height: 100vh;
+    min-height: 140vh;
     display: flex;
     background-color: var(--background-color);
     align-items: flex-start;
@@ -270,4 +270,9 @@
     width: 100%;
     visibility: hidden;
     margin-bottom: 6rem;
+}
+
+.mng-services-principal {
+    padding: 1rem;
+    /* background-color: var(--otro-grey); */
 }

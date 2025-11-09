@@ -192,3 +192,8 @@
 .arrow-button:active:not(.disabled) {
     transform: scale(0.95);
 }
+
+.container-introUsButton {
+    padding-left: 0.75rem;
+    padding-top: 2rem;
+}

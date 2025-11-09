@@ -1,10 +1,11 @@
 import { useRef, useState, useEffect } from 'react';
 import MiniTitle from '../../../../components/Titles/MiniTitle';
 import Texts from '../../../../components/Texts/Texts';
+import ButtonGeneral from '../../../../components/Button/ButtonGeneral';
 import { HiChevronRight, HiChevronLeft } from 'react-icons/hi2';
 import './IntroPhone.css';
 
-function IntroPhone({ t }) {
+function IntroPhone({ t , getRoute }) {
 
     const scrollContainerRef = useRef(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -72,8 +73,15 @@ function IntroPhone({ t }) {
             <div className='intro-image-container'>
                 <img src="/Images/Home/spain 1.png" alt="" />
             </div>
-            <Texts className='lorem-ipsum' text={t('miniIntro')} />
-
+            {/* <Texts className='lorem-ipsum' text={t('miniIntro')} /> */}
+            <div className='container-introUsButton'>
+                <ButtonGeneral
+                    className='button-introUs-homePhone'
+                    color='minimalInverted'
+                    text={t('aboutUs')}
+                    route={getRoute('aboutUs')} 
+                />
+            </div>
             {/* <div className='second-line-phone'>
                 {datos.map(item => (
                     <div key={item.id} className='sl-item-phone'>

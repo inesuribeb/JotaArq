@@ -1,17 +1,19 @@
-import CertificadosPhone from './components/Certificados/CertificadosPhone';
-import AsesoramientoUrbPhone from './components/AsesoramientoUrb/AsesoramientoUrbPhone';
-import TramLicenciasPhone from './components/TramLicencias/TramLicenciasPhone';
-import DireccionObraPhone from './components/DireccionObra/DireccionObraPhone';
+import CertificadosPhone from './components/1.Certificados/CertificadosPhone';
+import AsesoramientoUrbPhone from './components/2.AsesoramientoUrb/AsesoramientoUrbPhone';
+import TramLicenciasPhone from './components/3.TramLicencias/TramLicenciasPhone';
+import DireccionObraPhone from './components/4.DireccionObra/DireccionObraPhone';
 import TabMenuPhone from "../../../../components/TabMenu/TabMenuPhone";
 import './MngServicesPhone.css';
 
 function MngServicesPhone({ t }) {
 
     const servicesPhone = [
-        { id: 1, nameKey: 'certificados', sectionId: 'section-cerf-phone' },
-        { id: 2, nameKey: 'asesoramientoUrbanistico', sectionId: 'section-asesoramiento-phone' },
-        { id: 3, nameKey: 'tramitacionLicencias', sectionId: 'section-tramitation-phone' },
-        { id: 4, nameKey: 'direccionObra', sectionId: 'section-direction-phone' }
+        { id: 1, nameKey: 'projectManagement', sectionId: 'section-cerf' },
+        { id: 2, nameKey: 'projectMonitoring', sectionId: 'section-asesoramiento' },
+        { id: 3, nameKey: 'propertyManagement', sectionId: 'section-tramitation' },
+        { id: 4, nameKey: 'costManagement', sectionId: 'section-direction' },
+        { id: 5, nameKey: 'tddTechnical', sectionId: 'section-tdd' }
+
     ];
 
 

@@ -108,6 +108,29 @@
     filter: brightness(0) invert(1); 
 }
 
+/* MINIMAL */
+.button-general.minimalInverted {
+    border-color: var(--dark-color);
+}
+
+.button-general.minimalInverted .button-content {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.button-general.minimalInverted .button-content-hover {
+    background-color: transparent;
+    color: var(--dark-color);
+}
+
+.button-general.minimalInverted .button-content .button-icon {
+    filter: brightness(1); 
+}
+
+.button-general.minimalInverted .button-content-hover .button-icon {
+    filter: brightness(1) invert(0); 
+}
+
 /* Animación hover */
 .button-general:hover .button-content {
     transform: translateY(-100%);

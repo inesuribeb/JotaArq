@@ -1,6 +1,7 @@
 import { useLanguage } from '../../contexts/LanguageContext';
 import Cover from './sections/Cover/Cover';
 import StatementUs from './sections/StatementUs/StatementUs';
+import Clients from './sections/Clients/Clients';
 import './AboutUs.css'
 
 function AboutUs() {
@@ -12,6 +13,10 @@ function AboutUs() {
             />
 
             <StatementUs
+                t={t}
+            />
+
+            <Clients
                 t={t}
             />
         </div>

@@ -73,7 +73,7 @@ function NavigationPhone({ t, getRoute, changeLanguage, language, availableLangu
             <div className="navigation-phone-content">
                 <Link to={getRoute('home')} onClick={onClose}>
                     <div className="navigation-phone-logo">
-                        <img src="/Logos/irregular.png" alt="Jota Logo" />
+                        <img src="/Logos/original.png" alt="Jota Logo" />
                     </div>
                 </Link>
 

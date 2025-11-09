@@ -1,4 +1,4 @@
-.services-layout {
+.services-layout3 {
     height: 137vh;
     width: 100%;
     display: flex;
@@ -8,13 +8,8 @@
     background-position: center center;
     position: relative;
     overflow: hidden;
-    /* background-color: var(--dark-color); */
     border-top: 1.5px solid var(--dark-color);
 }
-
-
-
-
 
 /* Capas de fondo superpuestas */
 .services-bg-layer {
@@ -47,7 +42,7 @@
 
 
 
-.services-content {
+.services-content3 {
     gap: 0; 
     width: 100%;
     height: 100%;
@@ -57,19 +52,19 @@
     display: flex;
 }
 
-.services-content.reverse {
+.services-content3.reverse {
     grid-template-columns: 1fr 1.5fr;
 }
 
-.services-content.reverse .services-image {
+.services-content3.reverse .services-image {
     order: 2; 
 }
 
-.services-content.reverse .services-text {
+.services-content3.reverse .services-text {
     order: 1;
 }
 
-.services-text {
+.services-text3 {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -86,7 +81,7 @@
 }
 
 
-.services-text h3 {
+.services-text3 h3 {
     color: var(--dark-color);
     margin-bottom: 0rem;   
     font-size: 1rem;
@@ -103,7 +98,7 @@
     flex: 2;
 }
 
-.services-text h4 {
+.services-text3 h4 {
     font-size: 2rem;
     font-size: clamp(2rem, 2.3vw, 3rem);
     color: var(--dark-color);
