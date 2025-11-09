@@ -12,7 +12,7 @@ function Contact({ t }) {
         { id: 1, type: "contactWithUs", style: "primary", route: getRoute('contact') }, // Usa getRoute
         { id: 2, type: "Instagram", style: "minimal", route: "https://www.instagram.com/jota.arquitectura_/" },
         { id: 3, type: "Linkedin", style: "minimal", route: "https://www.linkedin.com/company/jotaarq/" },
-        { id: 4, type: "Email", style: "minimal", route: "mailto:info@yourcompany.com" },
+        { id: 4, type: "Email", style: "minimal", route: "juan@jotamanagement.es" },
     ];
 
     return (

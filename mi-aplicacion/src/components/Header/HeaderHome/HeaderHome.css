@@ -33,6 +33,41 @@
     color: var(--light-color);
 } */
 
+
+/* Overlay oscuro detrás del menú */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Justo debajo del header y del menú */
+    animation: fadeInOverlay 0.6s ease-out forwards;
+}
+
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.menu-overlay.closing {
+    animation: fadeOutOverlay 0.6s ease-out forwards;
+}
+
+@keyframes fadeOutOverlay {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 .header-home-content {
     display: flex;
     flex-direction: row;
@@ -50,7 +85,7 @@
     justify-content: space-between;
 }
 
-.button-menu-home {
+/* .button-menu-home {
     padding: 0rem 1.4rem;
     border: 1px solid;
     border-radius: 35px;
@@ -66,9 +101,74 @@
     background-color: var(--dark-color);
     border: 1px solid var(--dark-color);
     color: var(--light-color);
-    z-index: 1001; /* Solo el botón por encima del menú */
+    z-index: 1001;
+} */
+
+
+/* .button-menu-home {
+    padding: 0rem 1.4rem;
+    border: 1px solid;
+    border-radius: 35px;
+    font-size: clamp(0.7rem, 0.40vw + 0.8rem, 1.4rem);
+    cursor: pointer;
+    width: auto;
+    font-family: 'JotaArq';
+    letter-spacing: 0.05rem;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    font-weight: 400;
+    background-color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    color: var(--light-color);
+    z-index: 1001;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: auto; 
 }
 
+.button-text {
+    display: inline-block;
+    white-space: nowrap;
+    transition: opacity 0.2s ease-out;
+} */
+
+.button-menu-home {
+    padding: 0rem 1.4rem;
+    border: 1px solid;
+    border-radius: 35px;
+    font-size: clamp(0.7rem, 0.40vw + 0.8rem, 1.4rem);
+    cursor: pointer;
+    width: auto;
+    font-family: 'JotaArq';
+    letter-spacing: 0.05rem;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    font-weight: 400;
+    background-color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    color: var(--light-color);
+    z-index: 1001;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: auto;
+}
+
+.button-text {
+    display: inline-block;
+    white-space: nowrap;
+    transition: opacity 0.2s ease-out;
+}
+
+.button-text-measure {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    white-space: nowrap;
+    font-size: clamp(0.7rem, 0.40vw + 0.8rem, 1.4rem);
+    font-family: 'JotaArq';
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+}
 
 
 
@@ -106,13 +206,6 @@
     background-color: var(--dark-color);
     z-index: 1;
 }
-
-/* .logo-content-home-hover {
-    background-color: var(--dark-color);
-    z-index: 2;
-    transform: translateY(100%);
-    opacity: 0;
-} */
 
 .logo-content-home img{
     max-width: 65%;

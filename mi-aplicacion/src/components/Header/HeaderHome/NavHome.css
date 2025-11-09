@@ -8,12 +8,32 @@
     z-index: 1000;
     display: flex;
     flex-direction: row;
-    /* animation: fadeIn 0.3s ease-in-out; */
+
+    animation: slideInFromRight 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .navigation-home.closing {
-    animation: fadeOut 0.3s ease-in-out;
+    animation: slideOutToRight 0.6s cubic-bezier(0.6, 0, 1, 1.2) forwards;
 }
+
+@keyframes slideOutToRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
 
 .home-h-col-left,
 .home-h-col-right {
@@ -24,6 +44,8 @@
     padding-bottom: 1rem;
 }
 
+
+/* Columna izquierda */
 .home-h-col-left {
     justify-content: space-between;
     padding-left: 2rem;
@@ -36,105 +58,118 @@
     font-size: clamp(1.3rem, 1.75vw + 2.2rem, 1.8rem);
     font-weight: 400;
     margin: 0;
-    /* line-height: 1.5rem; */
 }
 
 .statement-general {
     line-height: 2rem;
 }
 
+.home-title-jota {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInFromLeft 0.6s ease-out 0.4s forwards;
+}
+
+.home-logo-img {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInFromLeft 0.5s ease-out 0.8s forwards;
+}
+
+.statement-general {
+    line-height: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.6s forwards;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.navigation-home.closing .home-title-jota,
+.navigation-home.closing .home-logo-img {
+    animation: fadeOut 0s ease-in forwards;
+}
+
+.navigation-home.closing .statement-general {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes slideOutToLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/* Columna derecha */
 .home-h-col-right {
     padding-right: 2rem;
-    /* padding-bottom: 0rem; */
     border-left: 1.5px solid var(--super-light-grey);
     justify-content: space-between;
     
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeIn 0.4s ease-out 0.4s forwards;
+}
+
+
+.home-language {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.4s forwards;
+}
+
+/* Home Navigation*/
+
+.home-navigation {
+    opacity: 0;
+    transform: translate(20px, 30px);
+    animation: slideInFromBottomRight 0.6s ease-out 0.3s forwards;
+    position: relative;
+}
+
+@keyframes slideInFromBottomRight {
+    from {
+        opacity: 0;
+        transform: translate(20px, 30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
 
 .header-home-nav {
     display: flex;
     flex-direction: column;
-
     position: relative;
+
+
 }
-
-
-
-/* .header-home-nav a {
-    flex: 1;
-    text-align: left;
-    padding: 0rem 1.5rem;
-    text-decoration: none;
-    color: var(--dark-color);
-    text-transform: lowercase;
-    font-size: clamp(2.8rem, 3.25vw + 2.9rem, 3.3rem);
-    font-weight: 400;
-    position: relative;
-    transition: transform 0.3s ease;
-    z-index: 2;
-}
-
-.nav-line-indicator {
-    position: absolute;
-    left: -1.3px;
-    top: 0;
-    width: 1.5px;
-    height: calc(100% / 4);
-    background-color: var(--dark-color);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
-    z-index: 1;
-    pointer-events: none;
-} */
-
-
-
-
-
-
-
-/* .header-home-nav a {
-    flex: 1;
-    text-align: left;
-    padding: 0rem 1.5rem;
-    text-decoration: none;
-    color: var(--dark-color);
-    text-transform: lowercase;
-    font-size: clamp(3rem, 3.45vw + 3.9rem, 3.5rem);
-    font-weight: 400;
-    position: relative;
-    transition: transform 0.3s ease;
-    z-index: 2;
-}
-
-.nav-line-indicator {
-    position: absolute;
-    left: -1.3px;
-    top: 0;
-    width: 1.5px;
-    height: calc(100% / 5); 
-    background-color: var(--dark-color);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.nav-line-indicator.first-hover {
-    animation: drawLineDown 0.4s ease-out forwards;
-}
-
-@keyframes drawLineDown {
-    from {
-        transform: translateY(var(--hover-position, 0)) scaleY(0);
-        transform-origin: top;
-    }
-    to {
-        transform: translateY(var(--hover-position, 0)) scaleY(1);
-        transform-origin: top;
-    }
-} */
-
-
-
 
 .header-home-nav a {
     flex: 1;
@@ -149,9 +184,11 @@
     position: relative;
     transition: transform 0.3s ease;
     z-index: 2;
+
+    border-left: 1.5px solid transparent;
+    margin-left: -1.5px;
 }
 
-/* Línea animada que se mueve */
 .nav-line-indicator {
     position: absolute;
     left: -1.5px;
@@ -171,11 +208,12 @@
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
 }
 
-/* Primera vez que aparece - se dibuja de arriba a abajo */
 .nav-line-indicator.first-hover {
     transform: translateY(calc(var(--hover-index, 0) * 100%)) scaleY(0);
     animation: drawLineDown 0.4s ease-out forwards;
 }
+
+
 
 @keyframes drawLineDown {
     from {
@@ -189,12 +227,49 @@
 }
 
 
+.header-home-nav a.active {
+    color: var(--dark-color);
+    border-left-color: transparent;
+    z-index: 3;
+}
+
+/* Línea vertical para el link activo */
+.header-home-nav a.active::after {
+    content: '';
+    position: absolute;
+    left: -1.5px;
+    top: 0;
+    width: 1.7px;
+    height: 100%;
+    background-color: var(--dark-color);
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: drawLineDownActive 0.5s ease-out 0.87s forwards;
+}
+
+@keyframes drawLineDownActive {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+
+
+/* Fin navigation home*/
+
+
 .home-header-contact {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     padding-left: 1.5rem;
     font-weight: 300;
+
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.4s forwards;
 }
 
 .home-header-contact h2{
@@ -214,11 +289,15 @@
     color: var(--dark-color)
 }
 
+.navigation-home.closing .home-language,
+.navigation-home.closing .home-header-contact {
+    animation: fadeOut 0.3s ease-out forwards;
+}
 
 
 
 
-
+/* Carousel absoluto */
 .carousel-home-imported {
     position: absolute;
     top: 0;
