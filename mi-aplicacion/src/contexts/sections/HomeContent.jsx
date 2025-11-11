@@ -24,7 +24,7 @@ export const homeTranslations = {
         mngIntro: "Transformamos la complejidad en resultados. Gestionamos cada proyecto desde la idea inicial hasta la entrega final, garantizando plazos, presupuestos y calidad. Representamos y defendemos los intereses de nuestros clientes asegurando precisión y transparencia en cada encargo para crear valor y construir un futuro más eficiente y responsable.",
         knowMore: "Saber más",
 
-        contactUs: "Estamos a tu disposición para cualquier propuesta o interés en nuestro trabajo. Escríbenos o síguenos para estar al tanto de novedades.",
+        contactUs: "¿Quieres dar forma a una idea? Contáctanos.",
         contactWithUs: "Contáctanos",
 
         notFound: "Página no encontrada",
@@ -54,7 +54,7 @@ export const homeTranslations = {
         mngIntro: "Konplexutasuna emaitzetan bihurtzen dugu. Proiektu bakoitza hasierako ideiatik azken entregara arte kudeatzen dugu, epeak, aurrekontuak eta kalitatea bermatuz. Gure bezeroen interesak ordezkatzen eta defendatzen ditugu, zehaztasuna eta gardentasuna bermatuz enkargu bakoitzean, balioa sortzeko eta etorkizun eraginkorrago eta arduratsuago bat eraikitzeko.",
         knowMore: "Gehiago jakin",
 
-        contactUs: "Zure proposamen edo interesak entzuteko prest gaude. Idatz iezaguzu edo jarrai gaitzazu gure proiektuen berri izateko.",
+        contactUs: "Ideia bati forma eman nahi diozu? Kontaktatu gurekin.",
         contactWithUs: "Kontaktatu gurekin",
     
         notFound: "Orria ez da aurkitu",
@@ -85,7 +85,7 @@ export const homeTranslations = {
         mngIntro: "We transform complexity into results. We manage each project from the initial idea to the final delivery, ensuring deadlines, budgets, and quality. We represent and protect our clients’ interests, guaranteeing precision and transparency in every assignment to create value and build a more efficient and responsible future.",
         knowMore: "Learn more",
 
-        contactUs: "We’re available for any proposals or collaborations. Get in touch or follow us to stay updated on our latest projects.",
+        contactUs: "Would you like to bring an idea to life? Contact us.",
         contactWithUs: "Get in touch",
     
         notFound: "Page not found",

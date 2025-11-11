@@ -19,12 +19,6 @@ function Footer() {
     const aboutUsRoute = getRoute('aboutUs');
     const contactRoute = getRoute('contact');
 
-    const isDarkFooter = currentPath === homeRoute ||
-        currentPath === managementRoute ||
-        currentPath === arhitectureRoute ||
-        currentPath === aboutUsRoute ||
-        currentPath === contactRoute ||
-        currentPath === '/';
 
     const navigationLinks = [
         { key: 'home', route: 'home' },
@@ -33,6 +27,23 @@ function Footer() {
         { key: 'aboutUs', route: 'aboutUs' },
         { key: 'contact', route: 'contact' }
     ];
+
+    const isDarkFooter = currentPath === homeRoute ||
+        currentPath === managementRoute ||
+        currentPath === arhitectureRoute ||
+        currentPath === aboutUsRoute ||
+        currentPath === contactRoute ||
+        currentPath === '/' ||
+        !navigationLinks.some(link => currentPath === getRoute(link.route)); // Cualquier ruta no definida (NotFound)
+
+
+    // const navigationLinks = [
+    //     { key: 'home', route: 'home' },
+    //     { key: 'architecture', route: 'architecture' },
+    //     { key: 'management', route: 'management' },
+    //     { key: 'aboutUs', route: 'aboutUs' },
+    //     { key: 'contact', route: 'contact' }
+    // ];
 
     const scrollToTop = () => {
         window.scrollTo({

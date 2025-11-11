@@ -25,15 +25,15 @@ export const architectureTranslations = {
         edificationSubtitle: "Diseñamos el espacio donde tu negocio crece.",
         edificationText: "Entendemos la edificación como el equilibrio entre funcionalidad, sostenibilidad y belleza. Cada proyecto se desarrolla desde una mirada integral, optimizando recursos y garantizando la calidad constructiva para crear edificios eficientes, confortables y duraderos.",
 
-        licensesSubtitle: "Lugares que crecen con quienes los habitan.",
+        licensesSubtitle: "Espacios que evolucionan con quienes los habitan.",
         licensesText: "Gestionamos la tramitación de licencias y permisos con eficacia y rigor técnico. Acompañamos a nuestros clientes durante todo el proceso administrativo, asegurando el cumplimiento normativo y reduciendo los plazos para que cada proyecto avance sin obstáculos.",
 
         sostenibilitySubtitle: "Creemos en la urgencia de actuar frente a la emergencia climática. Acciones que garantizan la sostenibilidad económica, social, cultural y ambiental.",
         sostenibilityText: "Creemos en la urgencia de actuar frente a la emergencia climática. Acciones que garantizan la sostenibilidad económica, social, cultural y ambiental.",
 
         ourExperts: "Nuestros expertos",
-        juanRole: "Director Senior de Gestión de Proyectos y Desarrollo de Negocios",
-        jokinRole: "Director de Proyectos de Arquitectura y Desarrollo Empresarial",
+        juanRole: "Arquitecto superior. Master urbanismo EVETU",
+        jokinRole: "Arquitecto técnico. Project Management Professional (PMP)",
     },
     eu: {
         serviciosDe: "zerbitzuak",
@@ -61,15 +61,15 @@ export const architectureTranslations = {
         edificationSubtitle: "Zure negozioa hazten den espazioa diseinatzen dugu.",
         edificationText: "Entendemos la edificación como el equilibrio entre funcionalidad, sostenibilidad y belleza. Cada proyecto se desarrolla desde una mirada integral, optimizando recursos y garantizando la calidad constructiva para crear edificios eficientes, confortables y duraderos.",
 
-        licensesSubtitle: "Bertan bizi direnekin batera hazten diren lekuak.",
+        licensesSubtitle: "Bizi direnekin batera eboluzionatzen duten espazioak.",
         licensesText: "Gestionamos la tramitación de licencias y permisos con eficacia y rigor técnico. Acompañamos a nuestros clientes durante todo el proceso administrativo, asegurando el cumplimiento normativo y reduciendo los plazos para que cada proyecto avance sin obstáculos.",
 
         sostenibilitySubtitle: "Larrialdi klimatikoaren aurrean jarduteko premian sinesten dugu. Iraunkortasun ekonomikoa, soziala, kulturala eta ingurumenekoa bermatzen duten ekintzak.",
         sostenibilityText: "Larrialdi klimatikoaren aurrean jarduteko premia sinesten dugu. Gure ekintzek iraunkortasun ekonomikoa, soziala, kulturala eta ingurumenekoa bermatzen dute.",
-        
+
         ourExperts: "Gure Adituak",
-        juanRole: "Proiektu Kudeaketa eta Negozio Garapeneko Zuzendari Nagusia",
-        jokinRole: "Arkitektura Proiektuen eta Garapen Enpresarialeko Zuzendaria",
+        juanRole: "Arkitekto nagusia. Hirigintzako masterra (EVETU)",
+        jokinRole: "Arkitekto teknikoa. Project Management Professional (PMP)",
     },
     en: {
         serviciosDe: "services",
@@ -97,14 +97,14 @@ export const architectureTranslations = {
         edificationSubtitle: "We design the space where your business grows.",
         edificationText: "Entendemos la edificación como el equilibrio entre funcionalidad, sostenibilidad y belleza. Cada proyecto se desarrolla desde una mirada integral, optimizando recursos y garantizando la calidad constructiva para crear edificios eficientes, confortables y duraderos.",
 
-        licensesSubtitle: "Places that grow with those who inhabit them.",
+        licensesSubtitle: "Spaces that evolve with those who inhabit them.",
         licensesText: "Gestionamos la tramitación de licencias y permisos con eficacia y rigor técnico. Acompañamos a nuestros clientes durante todo el proceso administrativo, asegurando el cumplimiento normativo y reduciendo los plazos para que cada proyecto avance sin obstáculos.",
 
         sostenibilitySubtitle: "We believe in the urgency of taking action in the face of the climate emergency. Actions that ensure economic, social, cultural, and environmental sustainability.",
         sostenibilityText: "We believe in the urgency of acting against the climate emergency. Our actions ensure economic, social, cultural, and environmental sustainability.",
-    
+
         ourExperts: "Our Leadership Team",
-        juanRole: "Senior Director Project Management Business Development",
-        jokinRole: "Director of Architectural Projects and Business Development",
+        juanRole: "Senior Architect. Master's in Urban Planning (EVETU)",
+        jokinRole: "Technical Architect. Project Management Professional (PMP)",
     }
 };

@@ -45,6 +45,7 @@ import ServicesIntro from './sections/Services/ServicesIntro';
 import ServicesIntroPhone from './sections/Services/ServicesIntroPhone';
 import Contact from './sections/Contact/Contact';
 import ContactPhone from './sections/Contact/ContactPhone';
+import Map from '../../components/Map/Map'
 import './Home.css'
 
 function Home() {
@@ -98,8 +99,11 @@ function Home() {
                     {/* {isMobile ? <IntroPhone t={t} /> : <Intro t={t} />} */}
                     {isMobile ? <IntroPhone t={t} getRoute={getRoute} /> : <Intro t={t} getRoute={getRoute} />}
                     {isMobile ? <ContactPhone t={t} /> : <Contact t={t} />}
+                    {/* <Map /> */}
                 </div>
             </div>
+
+    
         </>
     )
 }

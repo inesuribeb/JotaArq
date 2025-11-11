@@ -6,6 +6,20 @@ function MgmntIntro({ t }) {
     const { getRoute } = useLanguage();
 
     return (
+        // <div className="mgmnt-intro-wrapper">
+        //     <IntroLayout2
+        //         t={t}
+        //         titleKey="two"
+        //         subtitleKey="management"
+        //         textKey="mngIntro"
+        //         buttonTextKey="knowMore"
+        //         buttonRoute={getRoute('management')} 
+        //         imageSrc="/Images/Home/SERVICIOGEST.JPG"
+        //         imageAlt="Descripción de la imagen"
+        //         reverse={true}  
+        //         variant="management"
+        //     />
+        // </div>
         <div className="mgmnt-intro-wrapper">
             <IntroLayout2
                 t={t}
@@ -14,10 +28,11 @@ function MgmntIntro({ t }) {
                 textKey="mngIntro"
                 buttonTextKey="knowMore"
                 buttonRoute={getRoute('management')} 
-                imageSrc="/Images/Home/SERVICIOGEST.JPG"
-                imageAlt="Descripción de la imagen"
+                imageSrc="/Images/Home/SERVGEST.MOV"
+                imageAlt="Management service video"
                 reverse={true}  
                 variant="management"
+                isVideo={true} // Indica que es un video
             />
         </div>
     );

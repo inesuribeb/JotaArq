@@ -271,7 +271,7 @@ function MngServices({ t, hideTabMenu }) {
                         <DireccionObra t={t} />
                     </section>
 
-                    <section id="section-tss" className="service-section">
+                    <section id="section-tdd" className="service-section">
                         <Tdd t={t} />
                     </section>
                 </div>

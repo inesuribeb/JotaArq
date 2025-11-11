@@ -42,7 +42,7 @@ function ServicesLayout3({ bgImage, image, title, subtitle, text, reverse, t }) 
                 const viewportCenter = window.innerHeight / 2;
                 const distance = viewportCenter - elementCenter;
                 
-                const parallaxSpeed = 0.3; 
+                const parallaxSpeed = 0.1; 
                 const yPos = distance * parallaxSpeed;
                 
                 const backgrounds = bgRef.current.querySelectorAll('.services-bg-layer');

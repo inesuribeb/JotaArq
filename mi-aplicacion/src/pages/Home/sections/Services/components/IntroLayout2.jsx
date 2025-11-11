@@ -1,7 +1,5 @@
-/* sin efecto parallax */
-
 // import { useEffect, useRef, useState } from 'react';
-// import { createPortal } from 'react-dom'; // AÑADE ESTO
+// import { createPortal } from 'react-dom';
 // import { useNavigate } from 'react-router-dom';
 // import Texts from '../../../../../components/Texts/Texts';
 // import ButtonGeneral from '../../../../../components/Button/ButtonGeneral';
@@ -11,6 +9,7 @@
 //     const blackBgRef = useRef(null);
 //     const markerRef = useRef(null);
 //     const column1Ref = useRef(null);
+//     const imageRef = useRef(null); 
 //     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 //     const [isHovering, setIsHovering] = useState(false);
 //     const navigate = useNavigate();
@@ -22,7 +21,6 @@
 //             const marker = markerRef.current;
 //             const blackBg = blackBgRef.current;
 //             const column1 = column1Ref.current;
-//             const section = column1.closest('.layout-intro-services');
 
 //             const markerOffsetInColumn = marker.offsetTop;
 //             const column1OffsetInSection = column1.offsetTop;
@@ -41,11 +39,34 @@
 
 //         updatePosition();
 //         window.addEventListener('resize', updatePosition);
-
 //         setTimeout(updatePosition, 100);
 
 //         return () => window.removeEventListener('resize', updatePosition);
 //     }, [variant]);
+
+//     useEffect(() => {
+//         const handleScroll = () => {
+//             if (!imageRef.current) return;
+
+//             const rect = imageRef.current.getBoundingClientRect();
+
+//             if (rect.top < window.innerHeight && rect.bottom > 0) {
+//                 const elementCenter = rect.top + rect.height / 2;
+//                 const viewportCenter = window.innerHeight / 2;
+//                 const distance = viewportCenter - elementCenter;
+
+//                 const parallaxSpeed = 0.15;
+//                 const yPos = distance * parallaxSpeed;
+
+//                 imageRef.current.style.transform = `translateY(${yPos}px)`;
+//             }
+//         };
+
+//         window.addEventListener('scroll', handleScroll);
+//         handleScroll();
+
+//         return () => window.removeEventListener('scroll', handleScroll);
+//     }, []);
 
 //     const handleMouseMove = (e) => {
 //         setMousePosition({ x: e.clientX, y: e.clientY });
@@ -97,6 +118,7 @@
 
 //             <div className='column2'>
 //                 <img
+//                     ref={imageRef}
 //                     src={imageSrc}
 //                     alt={imageAlt}
 //                     onMouseMove={handleMouseMove}
@@ -124,6 +146,7 @@
 
 // export default IntroLayout2;
 
+
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
@@ -131,11 +154,24 @@ import Texts from '../../../../../components/Texts/Texts';
 import ButtonGeneral from '../../../../../components/Button/ButtonGeneral';
 import './IntroLayout2.css';
 
-function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, buttonRoute, imageSrc, imageAlt, reverse = false, variant, buttonColor = "secondary" }) {
+function IntroLayout2({ 
+    t, 
+    titleKey, 
+    subtitleKey, 
+    textKey, 
+    buttonTextKey, 
+    buttonRoute, 
+    imageSrc, 
+    imageAlt, 
+    reverse = false, 
+    variant, 
+    buttonColor = "secondary",
+    isVideo = false // Nuevo prop para identificar si es video
+}) {
     const blackBgRef = useRef(null);
     const markerRef = useRef(null);
     const column1Ref = useRef(null);
-    const imageRef = useRef(null); 
+    const mediaRef = useRef(null); // Renombrado de imageRef
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
     const navigate = useNavigate();
@@ -172,9 +208,9 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
 
     useEffect(() => {
         const handleScroll = () => {
-            if (!imageRef.current) return;
+            if (!mediaRef.current) return;
 
-            const rect = imageRef.current.getBoundingClientRect();
+            const rect = mediaRef.current.getBoundingClientRect();
 
             if (rect.top < window.innerHeight && rect.bottom > 0) {
                 const elementCenter = rect.top + rect.height / 2;
@@ -184,7 +220,7 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
                 const parallaxSpeed = 0.15;
                 const yPos = distance * parallaxSpeed;
 
-                imageRef.current.style.transform = `translateY(${yPos}px)`;
+                mediaRef.current.style.transform = `translateY(${yPos}px)`;
             }
         };
 
@@ -206,7 +242,7 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
         setIsHovering(false);
     };
 
-    const handleImageClick = () => {
+    const handleMediaClick = () => {
         if (buttonRoute) {
             if (buttonRoute.startsWith('http://') || buttonRoute.startsWith('https://')) {
                 window.open(buttonRoute, '_blank', 'noopener,noreferrer');
@@ -243,17 +279,32 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
             </div>
 
             <div className='column2'>
-                <img
-                    ref={imageRef}
-                    src={imageSrc}
-                    alt={imageAlt}
-                    onMouseMove={handleMouseMove}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                    onClick={handleImageClick}
-                />
+                {isVideo ? (
+                    <video
+                        ref={mediaRef}
+                        src={imageSrc}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        onMouseMove={handleMouseMove}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        onClick={handleMediaClick}
+                    />
+                ) : (
+                    <img
+                        ref={mediaRef}
+                        src={imageSrc}
+                        alt={imageAlt}
+                        onMouseMove={handleMouseMove}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        onClick={handleMediaClick}
+                    />
+                )}
                 
-                {isHovering && createPortal(
+                {/* {isHovering && createPortal(
                     <span
                         className='explore-button'
                         style={{
@@ -264,7 +315,7 @@ function IntroLayout2({ t, titleKey, subtitleKey, textKey, buttonTextKey, button
                         {t('explore')}
                     </span>,
                     document.body 
-                )}
+                )} */}
             </div>
         </section>
     );

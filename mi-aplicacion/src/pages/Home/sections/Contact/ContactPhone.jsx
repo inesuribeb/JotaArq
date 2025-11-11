@@ -82,7 +82,7 @@ function ContactPhone({ t }) {
         { id: 1, type: "contactWithUs", style: "primary", route: getRoute('contact') },
         { id: 2, type: "Instagram", style: "minimal", route: "https://www.instagram.com/jota.arquitectura_/" },
         { id: 3, type: "Linkedin", style: "minimal", route: "https://www.linkedin.com/company/jotaarq/" },
-        { id: 4, type: "Email", style: "minimal", route: "mailto:info@yourcompany.com" },
+        { id: 4, type: "Email", style: "minimal", route: "mailto:juan@jotamanagement.es" },
     ];
 
     // Función para verificar si se puede hacer scroll
@@ -129,9 +129,9 @@ function ContactPhone({ t }) {
             <MiniTitle className='intro-phone-mini' text={t('contact')} />
             <h1 className='first-title-phone' dangerouslySetInnerHTML={{ __html: t('contactUs') }}></h1>
 
-            <div className='img-contact-phone'>
+            {/* <div className='img-contact-phone'>
                 <img src="/Images/Home/oficinas.jpg" alt="" />
-            </div>
+            </div> */}
 
             <div 
                 ref={scrollContainerRef}

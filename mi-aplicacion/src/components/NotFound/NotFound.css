@@ -5,6 +5,8 @@
     align-items: center;
     padding: 2rem;
     gap: 10rem;
+    /* padding-bottom: 60vh;  */
+    background-color: var(--background-color);
 }
 
 .page-not-found h1 {

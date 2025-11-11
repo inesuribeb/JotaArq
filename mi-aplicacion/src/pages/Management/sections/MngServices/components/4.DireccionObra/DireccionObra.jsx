@@ -10,6 +10,7 @@ function DireccionObra({ t }) {
         subtitle={t('costManagementSb')}
         text={t('costManagementText')}
         t={t}
+        reverse={true} 
     />
     )
 }

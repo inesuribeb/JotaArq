@@ -2,7 +2,18 @@ import Texts from '../../../../../components/Texts/Texts';
 import ButtonGeneral from '../../../../../components/Button/ButtonGeneral';
 import './IntroLayoutPhone.css';
 
-function IntroLayoutPhone({ t, titleKey, subtitleKey, textKey, buttonTextKey, buttonRoute, imageSrc, imageAlt, buttonColor = "secondary" }) {
+function IntroLayoutPhone({
+    t,
+    titleKey,
+    subtitleKey,
+    textKey,
+    buttonTextKey,
+    buttonRoute,
+    imageSrc,
+    imageAlt,
+    buttonColor = "secondary",
+    isVideo = false // Nuevo prop
+}) {
     return (
         <section className='intro-layout-phone'>
             <div className='intro-line1-phone' >
@@ -18,10 +29,24 @@ function IntroLayoutPhone({ t, titleKey, subtitleKey, textKey, buttonTextKey, bu
             </div>
 
             <div className='intro-line2-phone'>
-                <img
+                {/* <img
                     src={imageSrc}
                     alt={imageAlt}
-                />             
+                />              */}
+                {isVideo ? (
+                    <video
+                        src={imageSrc}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                ) : (
+                    <img
+                        src={imageSrc}
+                        alt={imageAlt}
+                    />
+                )}
             </div>
         </section>
     )

@@ -101,6 +101,12 @@ function Management() {
 
             {isMobile ? <StatementMphone t={t} /> : <StatementM t={t} />}
 
+            {!isMobile && (
+                <div className='black-gap'>
+                    {/* <h1>{t('services')}</h1> */}
+                </div>
+            )}
+
             {isMobile ? (
                 <MngServicesPhone t={t} />
             ) : (
@@ -109,11 +115,17 @@ function Management() {
                 </div>
             )}
 
+            {!isMobile && (
+                <div className='black-gap-2'>
+                    {/* <h1>{t('services')}</h1> */}
+                </div>
+            )}
+
             <div ref={workerRef}>
-                <Worker 
+                <Worker
                     t={t}
-                    workerName="Juan Bilbao"
-                    workerRole={t('juanRole')}
+                    workerName="Jokin Tapia"
+                    workerRole={t('jokinRole')}
                 />
             </div>
         </div>

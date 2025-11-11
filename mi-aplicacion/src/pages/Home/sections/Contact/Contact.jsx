@@ -12,30 +12,28 @@ function Contact({ t }) {
         { id: 1, type: "contactWithUs", style: "primary", route: getRoute('contact') }, // Usa getRoute
         { id: 2, type: "Instagram", style: "minimal", route: "https://www.instagram.com/jota.arquitectura_/" },
         { id: 3, type: "Linkedin", style: "minimal", route: "https://www.linkedin.com/company/jotaarq/" },
-        { id: 4, type: "Email", style: "minimal", route: "juan@jotamanagement.es" },
+        { id: 4, type: "Email", style: "minimal", route: "mailto:juan@jotamanagement.es" },
     ];
 
     return (
         <section className='home-contact'>
-            <div className='img-contact'>
-                {/* <img src="/Images/Management/services/masgestion4.webp" alt="" /> */}
+            {/* <div className='img-contact'>
                 <img src="/Images/Home/oficinas.jpg" alt="" />
-            </div>
+            </div> */}
 
             <div className='contact-refs'>
-                <div className='first-line'>
-                    <div className='fl-left'>
-                        <div className='fl-left-content'>
+                <div className='first-line-contact'>
+                    <div className='fl-left-contact'>
+                        <div className='fl-left-contact'>
                             <MiniTitle text={t('contact')} />
 
                         </div>
                     </div>
 
-                    <div className='fl-right'>
-                        {/* <h1 dangerouslySetInnerHTML={{ __html: t('contactUs') }}></h1> */}
+                    <div className='fl-right-contact'>
                         <IntroTitle
                         title={t('contactUs')}
-                        // className="first-title"
+                        className='contactus-fix'
                     />
                     </div>
                 </div>

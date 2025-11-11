@@ -61,3 +61,16 @@
 .button-services-home-phone {
     margin-left: 1rem;
 }
+
+
+
+
+.intro-line2-phone video {
+    background-color: var(--light-grey);
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 10px;
+    cursor: pointer; 
+    position: relative;
+    object-fit: cover;
+}

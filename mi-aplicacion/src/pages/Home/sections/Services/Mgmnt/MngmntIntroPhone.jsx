@@ -7,7 +7,7 @@ function MngmntIntroPhone({ t }) {
 
     return (
         <div className="mgmnt-intro-wrapper">
-            <IntroLayoutPhone
+            {/* <IntroLayoutPhone
                 t={t}
                 titleKey="two"
                 subtitleKey="management"
@@ -16,8 +16,17 @@ function MngmntIntroPhone({ t }) {
                 buttonRoute={getRoute('management')} 
                 imageSrc="/Images/Home/Parke.png"
                 imageAlt="Descripción de la imagen"
-                // reverse={true}  
-                // variant="management"
+            /> */}
+            <IntroLayoutPhone
+                t={t}
+                titleKey="two"
+                subtitleKey="management"
+                textKey="mngIntro"
+                buttonTextKey="knowMore"
+                buttonRoute={getRoute('management')} 
+                imageSrc="/Images/Home/SERVGEST.MOV"
+                imageAlt="Management service video"
+                isVideo={true} // Indica que es un video
             />
         </div>
     )

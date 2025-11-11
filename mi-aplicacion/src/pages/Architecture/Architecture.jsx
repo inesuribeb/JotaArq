@@ -128,8 +128,8 @@ function Architecture() {
             <div ref={workerRef}>
                 <Worker
                     t={t}
-                    workerName="Jokin Tapia"
-                    workerRole={t('jokinRole')}
+                    workerName="Juan Bilbao"
+                    workerRole={t('juanRole')}
                 />
             </div>
         </div>

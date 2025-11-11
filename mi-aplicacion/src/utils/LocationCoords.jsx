@@ -1,0 +1,28 @@
+// src/utils/LocationCoords.js
+export const locationCoords = {
+    "Laredo": { lat: 43.41063, lng: -3.4173 },
+    "Donosti": { lat: 41.6419887, lng: -0.9112027 },
+    "Mungia": { lat: 43.3540663, lng: -2.8464157 },
+    "Bilbao": { lat: 43.2630018, lng: -2.9350039 },
+    "Erandio": { lat: 43.3055981, lng: -2.9729697 },
+    "Sondika": { lat: 43.2979405, lng: -2.9272819 },
+    "Arrankudiaga": { lat: 43.1731446, lng: -2.9199144 },
+    "Tacoronte, Tenerife": { lat: 28.4805316, lng: -16.4137605 },
+    "Comillas": { lat: 43.3855344, lng: -4.2901505 },
+    "Bermeo": { lat: 43.4194242, lng: -2.7231562 },
+    "Gatika": { lat: 43.3637855, lng: -2.8761795 },
+    "Butroi": { lat: 43.355045, lng: -2.8481047 },
+    "Gorliz": { lat: 43.4127349, lng: -2.9375015 },
+    "Getxo": { lat: 43.3479409, lng: -3.0087671 },
+    "Las Arenas": { lat: 43.3033792, lng: -4.8147149 },
+    "Gijon": { lat: 43.5449422, lng: -5.66275 },
+    "Durango": { lat: 43.1707065, lng: -2.6334897 },
+    "Deusto": { lat: 43.2730147, lng: -2.9559029 },
+    "Etxebarri": { lat: 43.2473784, lng: -2.8898182 },
+    "Bakio": { lat: 43.4284384, lng: -2.8090387 },
+    "Tudela": { lat: 42.063972, lng: -1.6053391 },
+    "Barcelona": { lat: 41.3825802, lng: 2.177073 },
+    "Madrid": { lat: 40.416782, lng: -3.703507 },
+    "Mallorca": { lat: 39.613432, lng: 2.8829185 },
+    "Zaragoza": { lat: 41.6521342, lng: -0.8809428 }
+  };

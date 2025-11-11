@@ -1,5 +1,5 @@
 .services-layout3 {
-    height: 137vh;
+    height: 130vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -9,6 +9,7 @@
     position: relative;
     overflow: hidden;
     border-top: 1.5px solid var(--dark-color);
+    /* padding-top: 2rem; */
 }
 
 /* Capas de fondo superpuestas */
@@ -70,7 +71,7 @@
     justify-content: flex-start;
    
     padding: 0rem;
-    height: 37vh;
+    height: 30vh;
     width: 100%;
     background-color: var(--background-color);
     /* background-color: transparent; */

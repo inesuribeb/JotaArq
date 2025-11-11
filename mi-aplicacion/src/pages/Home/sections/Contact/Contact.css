@@ -28,7 +28,8 @@
 .second-line-contact {
     display: flex;
     align-items: stretch;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    margin-top: 0px;
     border-top: 1px solid var(--light-grey);
     border-bottom: 1px solid var(--light-grey);
     gap: 1rem;
@@ -51,4 +52,22 @@
     padding-left: 1rem;
     border-left: 1px solid var(--light-grey);
     padding-bottom: 1rem;
+}
+
+.first-line-contact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.fl-left-contact,
+.fl-right-contact {
+    display: flex;
+}
+
+.fl-left-contact{
+    flex: 2;
+}
+.fl-right-contact{
+    flex: 3;
 }

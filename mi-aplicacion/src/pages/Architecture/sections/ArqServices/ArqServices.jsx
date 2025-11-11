@@ -175,7 +175,7 @@ function ArqServices({ t, hideTabMenu }) {
                     </section>
                 </div>
 
-                <div ref={endRef} className="arq-services-end" />
+                {/* <div ref={endRef} className="arq-services-end" /> */}
             </div>
         </>
     );

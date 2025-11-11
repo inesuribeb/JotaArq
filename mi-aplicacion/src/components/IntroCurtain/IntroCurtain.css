@@ -1,0 +1,83 @@
+/* .curtain-section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-color);
+}
+
+
+.curtain-section img {
+    width: 400px; 
+    height: auto;
+} */
+
+.curtain-section {
+    display: flex;
+    width: 100%;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-color);
+    position: relative;
+}
+
+.curtain-section img {
+    position: absolute;
+    height: auto;
+}
+
+/* Favicon pequeño */
+.favicon-logo {
+    width: 50px; /* Ajusta el tamaño que quieras */
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.favicon-logo.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.favicon-logo.hide {
+    opacity: 0;
+    transform: scale(1);
+}
+
+.favicon-logo.rotating {
+    animation: rotate 1.5s linear infinite;
+}
+
+/* JotaWhite grande */
+.jota-logo {
+    width: 400px;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.jota-logo.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.jota-logo.hide {
+    opacity: 0;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .jota-logo {
+        width: 250px;
+    }
+}

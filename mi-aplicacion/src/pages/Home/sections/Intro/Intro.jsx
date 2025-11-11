@@ -2,6 +2,7 @@ import MiniTitle from '../../../../components/Titles/MiniTitle';
 import Texts from '../../../../components/Texts/Texts';
 import IntroTitle from '../../../../components/Titles/IntroTitle';
 import ButtonGeneral from '../../../../components/Button/ButtonGeneral';
+import Map from '../../../../components/Map/Map';
 import './Intro.css';
 
 function Intro({ t , getRoute }) {
@@ -25,7 +26,7 @@ function Intro({ t , getRoute }) {
                             <span>105 +</span>
                             <span>{t('projects')}</span>
                         </p>
-                        {/* <Texts text={t('miniIntro')} /> */}
+                        <Texts className="igual-aqui" text={t('introText')} />
                         
                         <ButtonGeneral
                             className='button-introUs-home'
@@ -36,13 +37,14 @@ function Intro({ t , getRoute }) {
                     </div>
                 </div>
 
-                <div className='fl-right'>
+                <div className='fl-right-map'>
+                    <Map />
                     {/* <h1 className='first-title' dangerouslySetInnerHTML={{ __html: t('introText') }}></h1> */}
-                    <IntroTitle
+                    {/* <IntroTitle
                         title={t('introText')}
                         className="first-title"
                     />
-                    <img src="/Images/Home/spain 1.png" alt="" />
+                    <img src="/Images/Home/spain 1.png" alt="" /> */}
                 </div>
             </div>
 

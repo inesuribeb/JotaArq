@@ -3,6 +3,7 @@ import MiniTitle from '../../../../components/Titles/MiniTitle';
 import Texts from '../../../../components/Texts/Texts';
 import ButtonGeneral from '../../../../components/Button/ButtonGeneral';
 import { HiChevronRight, HiChevronLeft } from 'react-icons/hi2';
+import Map from '../../../../components/Map/Map';
 import './IntroPhone.css';
 
 function IntroPhone({ t , getRoute }) {
@@ -71,7 +72,8 @@ function IntroPhone({ t , getRoute }) {
             {/* <Texts text={t('miniIntro')} /> */}
 
             <div className='intro-image-container'>
-                <img src="/Images/Home/spain 1.png" alt="" />
+                {/* <img src="/Images/Home/spain 1.png" alt="" /> */}
+                <Map />
             </div>
             {/* <Texts className='lorem-ipsum' text={t('miniIntro')} /> */}
             <div className='container-introUsButton'>

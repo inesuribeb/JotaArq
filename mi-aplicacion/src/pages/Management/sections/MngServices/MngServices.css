@@ -254,11 +254,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 5rem;
 }
 
 .service-section {
-    min-height: 140vh;
+    min-height: 125vh;
     display: flex;
     background-color: var(--background-color);
     align-items: flex-start;

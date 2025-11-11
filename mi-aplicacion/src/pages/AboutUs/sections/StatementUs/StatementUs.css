@@ -64,11 +64,12 @@ line-height: 1.5rem;
 
 .first-title3 {
     /* font-size: 1.65rem; */
-    font-size: clamp(1.1rem, 1.75vw + 0.1rem, 2.5rem);
+    font-size: clamp(0.9rem, 1.55vw , 2.2rem);
     /* line-height: 2rem; */
-    line-height: clamp(2rem, 1.7vw + 0.3rem, 2.6rem);
+    line-height: clamp(1.8rem, 1.5vw + 0.1rem, 2.3rem);
     margin-bottom: 3rem;
     font-weight: 400;
+    width: 95%;
 }
 
 .rw1,
@@ -85,8 +86,8 @@ line-height: 1.5rem;
     margin-left: 0rem;
     font-weight: 400;
     font-size: 1rem;
-    font-size: clamp(1rem, 1vw + 0.05rem, 1.5rem);
-    width: 95%;
+    font-size: clamp(1.1rem, 1.2vw + 0.05rem, 1.6rem);
+    width: 90%;
 
 }
 

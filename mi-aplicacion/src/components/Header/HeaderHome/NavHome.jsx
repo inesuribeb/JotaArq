@@ -81,7 +81,7 @@ function NavHome({ t, getRoute, changeLanguage, language, availableLanguages, on
                         </a>
                     </h2>
                     <h2 className='grey'>
-                        <a href="juan@jotamanagement.es" target="_blank" rel="noopener noreferrer">
+                        <a href="mailto:juan@jotamanagement.es">
                             Email
                         </a>
                     </h2>

@@ -1,0 +1,110 @@
+.projects-map {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    /* padding: 3rem; */
+    background: var(--background-color);
+    /* Asegura el fondo aquí también */
+}
+
+.map-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.5rem;
+}
+
+.custom-marker {
+
+    background: none;
+    border: none;
+}
+
+/* Contenedor principal del popup */
+.leaflet-popup-content-wrapper {
+    background-color: var(--dark-color);
+    border-radius: 4px;
+    padding: 0;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Flecha/punta del popup */
+.leaflet-popup-tip {
+    background-color: var(--dark-color);
+}
+
+/* Contenido del popup */
+.leaflet-popup-content {
+    margin: 0;
+    min-width: 150px;
+}
+
+/* Tu contenedor personalizado */
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--light-color);
+    padding: 1.2rem 1.5rem;
+    font-weight: 500;
+}
+
+/* Hacer los tiles transparentes */
+/* .leaflet-tile-pane {
+    opacity: 1;
+}
+.leaflet-tile-pane {
+    filter: grayscale(100%) brightness(1);
+} */
+
+
+.leaflet-tile-pane {
+    filter: grayscale(100%) brightness(1) contrast(1.1);
+}
+
+.leaflet-tile {
+    opacity: 1;
+}
+/* Fondo transparente para el contenedor */
+.leaflet-container {
+    background: var(--background-color) !important;
+}
+
+/* Asegurar que no haya fondos blancos en los tiles */
+.leaflet-tile {
+    opacity: 1 !important;
+}
+
+
+.map-overlay {
+    position: absolute;
+    inset: 3rem;
+    /* Equivale a top, right, bottom, left: 3rem */
+    background: rgba(1, 1, 1, 0.5);
+    border-radius: 8px;
+    z-index: 1000;
+    pointer-events: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-overlay p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--light-color);
+    font-weight: 600;
+}
+
+/* Habilitar zoom con cmd/ctrl */
+.leaflet-container.leaflet-touch .leaflet-bar {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+}

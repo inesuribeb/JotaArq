@@ -4,3 +4,42 @@
     padding-bottom: 3rem;
     background-color: var(--background-color);
 }
+
+
+.black-gap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    /* background-color: var(--otro-grey); */
+    color: var(--light-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+.black-gap h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+.arq-services-principal {
+    padding: 1rem;
+    /* background-color: var(--otro-grey); */
+}
+
+.black-gap-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    /* background-color: var(--otro-grey); */
+    color: var(--light-color);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

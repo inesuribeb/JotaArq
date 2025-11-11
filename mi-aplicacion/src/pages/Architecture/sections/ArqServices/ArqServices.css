@@ -162,7 +162,7 @@
 }
 
 .service-section-arq {
-    height: 137vh;
+    height: 130vh;
     display: flex; 
     background-color: var(--background-color);
     align-items: flex-start;
