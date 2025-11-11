@@ -10,7 +10,7 @@ function Tdd({ t }) {
         subtitle={t('tddTechnicalSb')}
         text={t('tddTechnicalText')}
         t={t}
-        reverse={true} 
+        // reverse={true} 
     />
     )
 }
