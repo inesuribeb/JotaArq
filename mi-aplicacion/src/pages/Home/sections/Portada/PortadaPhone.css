@@ -3,12 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--background-color);
     /* background-image: url('/Images/Home/WelcomeHome.png'); */
-    background-image: url('/Images/Home/render.jpg');
+    /* background-image: url('/Images/Home/render.jpg');
     background-color: var(--background-color);
     background-size: 450%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     height: 100vh;
     padding: 0.75rem;
 }
