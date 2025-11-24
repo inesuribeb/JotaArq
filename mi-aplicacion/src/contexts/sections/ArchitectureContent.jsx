@@ -8,9 +8,9 @@ export const architectureTranslations = {
         historiaVision: "Historia y Visión",
         creemosJuntos: "Creemos juntos",
 
-        sloganArq1: "Desarrollando proyectos",
-        sloganArq2: "Diseñando edificios",
-        sloganArq3: "Actualizando ciudades",
+        sloganArq1: "Desarrollamos proyectos",
+        sloganArq2: "Diseñamos edificios",
+        sloganArq3: "Mejoramos ciudades",
 
         archStatement: "Creemos que la arquitectura debe estar guiada por la singularidad de su entorno, de modo que el edificio resalte el lugar y el lugar habite en el edificio.",
 
@@ -25,7 +25,7 @@ export const architectureTranslations = {
         edificationSubtitle: "Diseñamos el espacio donde tu negocio crece.",
         edificationText: "Entendemos la edificación como el equilibrio entre funcionalidad, sostenibilidad y belleza. Cada proyecto se desarrolla desde una mirada integral, optimizando recursos y garantizando la calidad constructiva para crear edificios eficientes, confortables y duraderos.",
 
-        licensesSubtitle: "Espacios que evolucionan con quienes los habitan.",
+        licensesSubtitle: "Arquitectura que añade valor.",
         licensesText: "Gestionamos la tramitación de licencias y permisos con eficacia y rigor técnico. Acompañamos a nuestros clientes durante todo el proceso administrativo, asegurando el cumplimiento normativo y reduciendo los plazos para que cada proyecto avance sin obstáculos.",
 
         sostenibilitySubtitle: "Creemos en la urgencia de actuar frente a la emergencia climática. Acciones que garantizan la sostenibilidad económica, social, cultural y ambiental.",
@@ -44,9 +44,9 @@ export const architectureTranslations = {
         historiaVision: "Historia eta Ikuspegia",
         creemosJuntos: "Elkarrekin Sortu",
 
-        sloganArq1: "Proiektuak garatuz",
-        sloganArq2: "Eraikinak diseinatuz",
-        sloganArq3: "Hiriak berrituz",
+        sloganArq1: "Proiektuak garatu",
+        sloganArq2: "Eraikinak diseinatu",
+        sloganArq3: "Hiriak hobetu",
 
         archStatement: "Uste dugu arkitektura ingurumenaren berezitasunak gidatu behar duela, eraikinak lekua nabarmentzeko eta lekua eraikinean bizitzeko.",
 
@@ -80,9 +80,9 @@ export const architectureTranslations = {
         historiaVision: "History & Vision",
         creemosJuntos: "Let's Create Together",
 
-        sloganArq1: "Developing projects",
-        sloganArq2: "Designing buildings",
-        sloganArq3: "Updating cities",
+        sloganArq1: "We develop projects",
+        sloganArq2: "We design buildings",
+        sloganArq3: "We improve cities",
 
         archStatement: "We believe that architecture should be guided by the uniqueness of its environment, so that the building highlights the place and the place lives within the building.",
 

@@ -2,9 +2,10 @@ export const homeTranslations = {
     es: {
         close: "Cerrar",
         homeIntro: 'Crecemos juntos.<br/>Generamos valor.',
+        homeIntro22: 'Crecemos juntos. Generamos valor.',
         homeIntroPhone: 'Crecemos juntos. Generamos valor.',
 
-        introText: 'JOTA es una oficina multidisciplinar ubicada en Bilbao, donde se combina la práctica de la arquitectura, la ingeniería, el urbanismo y la gestión.',
+        introText: 'JOTA es una oficina multidisciplinar ubicada en Bilbao, donde conviven arquitectura, ingeniería, urbanismo y gestión.',
         us: "Sobre<br/>Nosotros",
         usPhone: "Sobre Nosotros",
         projects: "proyectos",
@@ -33,8 +34,9 @@ export const homeTranslations = {
     eu: {
         close: "Itxi",
         homeIntro: 'Elkarrekin hazten gara.<br/>Balioa sortzen dugu.',
+        homeIntro22: 'Elkarrekin hazten gara. Balioa sortzen dugu.',
         homeIntroPhone: 'Elkarrekin hazten gara. Balioa sortzen dugu.',
-        introText: 'JOTA diziplina anitzeko bulegoa da, Bilbon kokatua, non arkitektura, ingeniaritza, hirigintza eta kudeaketa uztartzen diren.',
+        introText: 'JOTA diziplina anitzeko bulegoa da, Bilbon kokatua, non arkitektura, ingeniaritza, hirigintza eta kudeaketa elkarrekin bizi diren.',
         us: "Guri buruz",
         usPhone: "Guri buruz",
         projects: "proiektuak",
@@ -64,8 +66,9 @@ export const homeTranslations = {
     en: {
         close: "Close",
         homeIntro: 'We grow together.<br />We create value.',
+        homeIntro22: 'We grow together. We create value.',
         homeIntroPhone: 'We grow together. We create value.',
-        introText: 'JOTA is a multidisciplinary office based in Bilbao, where architecture, engineering, urban planning, and management come together in practice.',
+        introText: 'JOTA is a multidisciplinary office located in Bilbao, where architecture, engineering, urban planning and management coexist.',
         us: "About us",
         usPhone: "About us",
         projects: "projects",

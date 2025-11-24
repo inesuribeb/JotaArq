@@ -1,4 +1,4 @@
-// import { useEffect, useRef } from "react";
+// import { useEffect, useRef, useState } from "react";
 // import { Outlet, useLocation } from "react-router-dom";
 // import { LanguageProvider, useLanguage } from "../contexts/LanguageContext";
 // import { HeaderProvider } from "../contexts/HeaderContext";
@@ -15,9 +15,34 @@
 //   const mainRef = useRef(null);
 //   const isMobile = useIsMobile(768);
 //   const { getRoute } = useLanguage();
+//   const [showSplash, setShowSplash] = useState(true);
+//   const [splashAnimating, setSplashAnimating] = useState(false);
 
 //   const homeRoute = getRoute('home');
 //   const isHomePage = location.pathname === homeRoute || location.pathname === '/';
+
+//   useEffect(() => {
+//     sessionStorage.removeItem('hasSeenSplash');
+
+//     const hasSeenSplash = sessionStorage.getItem('hasSeenSplash');
+
+//     if (hasSeenSplash) {
+//       setShowSplash(false);
+//       return;
+//     }
+
+//     const timer = setTimeout(() => {
+//       setSplashAnimating(true);
+
+//       setTimeout(() => {
+//         setShowSplash(false);
+//         sessionStorage.setItem('hasSeenSplash', 'true');
+//       }, 500);
+
+//     }, 2000); 
+
+//     return () => clearTimeout(timer);
+//   }, []);
 
 //   useEffect(() => {
 //     window.scrollTo(0, 0);
@@ -54,6 +79,14 @@
 //     };
 //   }, [location.pathname]);
 
+//   if (showSplash) {
+//     return (
+//       <div className={`splash-wrapper ${splashAnimating ? 'fade-out' : ''}`}>
+//         <IntroCurtain />
+//       </div>
+//     );
+//   }
+
 //   return (
 //     <div className="app">
 //       {isHomePage && !isMobile ? (
@@ -65,7 +98,9 @@
 //       <main ref={mainRef} className="main-content">
 //         <Outlet />
 //       </main>
-//       <Footer />
+//       <div className="footer-container-root">
+//         <Footer />
+//       </div>
 //     </div>
 //   );
 // }
@@ -81,7 +116,6 @@
 // }
 
 // export default Root;
-
 
 import { useEffect, useRef, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
@@ -107,7 +141,6 @@ function RootContent() {
   const isHomePage = location.pathname === homeRoute || location.pathname === '/';
 
   // Manejo de la splash screen
-  // Manejo de la splash screen
   useEffect(() => {
     // Limpiar sessionStorage para que aparezca siempre (útil para desarrollo)
     sessionStorage.removeItem('hasSeenSplash');
@@ -129,7 +162,7 @@ function RootContent() {
         sessionStorage.setItem('hasSeenSplash', 'true');
       }, 500); // Duración de la animación de salida
 
-    }, 3000); // Tiempo que se muestra la splash
+    }, 2000); // Tiempo que se muestra la splash
 
     return () => clearTimeout(timer);
   }, []);
@@ -169,30 +202,31 @@ function RootContent() {
     };
   }, [location.pathname]);
 
-  // Si la splash está visible, solo mostrar eso
-  if (showSplash) {
-    return (
-      <div className={`splash-wrapper ${splashAnimating ? 'fade-out' : ''}`}>
-        <IntroCurtain />
-      </div>
-    );
-  }
-
   return (
-    <div className="app">
-      {isHomePage && !isMobile ? (
-        <HeaderHome />
-      ) : (
-        isMobile ? <HeaderPhone /> : <Header />
-      )}
+    <>
+      {/* Contenido principal - siempre renderizado */}
+      <div className="app">
+        {isHomePage && !isMobile ? (
+          <HeaderHome />
+        ) : (
+          isMobile ? <HeaderPhone /> : <Header />
+        )}
 
-      <main ref={mainRef} className="main-content">
-        <Outlet />
-      </main>
-      <div className="footer-container-root">
-        <Footer />
+        <main ref={mainRef} className="main-content">
+          <Outlet />
+        </main>
+        <div className="footer-container-root">
+          <Footer />
+        </div>
       </div>
-    </div>
+
+      {/* Splash screen - por encima durante la animación */}
+      {showSplash && (
+        <div className={`splash-wrapper ${splashAnimating ? 'fade-out' : ''}`}>
+          <IntroCurtain />
+        </div>
+      )}
+    </>
   );
 }
 

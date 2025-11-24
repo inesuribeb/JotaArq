@@ -87,6 +87,10 @@ function Management() {
                 subtitle={t('deGestion')}
                 className="custom-class"
             /> */}
+            <div className='arquitectura-superImagen'>
+                <img src="/Images/Management/00.JPG" alt="" />
+            </div>
+
             <MainTitle
                 title={t('serviciosDeGest')}
                 subtitles={[
@@ -94,10 +98,10 @@ function Management() {
                     t('sloganMng2'),
                     t('sloganMng3'),
                 ]}
-                className="custom-class"
+                className="management-class"
             />
 
-            <Pictures />
+            {/* <Pictures /> */}
 
             {isMobile ? <StatementMphone t={t} /> : <StatementM t={t} />}
 

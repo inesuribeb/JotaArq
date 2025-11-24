@@ -1,27 +1,14 @@
 import { useLanguage } from '../../../../../contexts/LanguageContext';
 import IntroLayout2 from '../components/IntroLayout2';
+import JetasLayout from '../Jetas/JetasLayout';
 import './MngmntIntro.css';
 
 function MgmntIntro({ t }) {
     const { getRoute } = useLanguage();
 
     return (
-        // <div className="mgmnt-intro-wrapper">
-        //     <IntroLayout2
-        //         t={t}
-        //         titleKey="two"
-        //         subtitleKey="management"
-        //         textKey="mngIntro"
-        //         buttonTextKey="knowMore"
-        //         buttonRoute={getRoute('management')} 
-        //         imageSrc="/Images/Home/SERVICIOGEST.JPG"
-        //         imageAlt="Descripción de la imagen"
-        //         reverse={true}  
-        //         variant="management"
-        //     />
-        // </div>
         <div className="mgmnt-intro-wrapper">
-            <IntroLayout2
+            {/* <IntroLayout2
                 t={t}
                 titleKey="two"
                 subtitleKey="management"
@@ -32,7 +19,21 @@ function MgmntIntro({ t }) {
                 imageAlt="Management service video"
                 reverse={true}  
                 variant="management"
-                isVideo={true} // Indica que es un video
+                isVideo={true} 
+            /> */}
+            <JetasLayout
+                t={t}
+                titleKey="two"
+                subtitleKey="management"
+                textKey="mngIntro"
+                buttonTextKey="knowMore"
+                buttonRoute={getRoute('management')} 
+                imageSrc="/Images/Home/SERVGEST.MOV"
+                imageAlt="Management service video"
+                // reverse={true}  
+                variant="management"
+                isVideo={true} 
+                // darkVariant={true} 
             />
         </div>
     );

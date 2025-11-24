@@ -4,7 +4,7 @@ import './LicensesPhone.css';
 function LicensesPhone({ t }) {
     return (
         <ServicesLayoutPhone
-            bgImage="/Images/Architecture/services/residential/01.jpg"
+            bgImage="/Images/Architecture/services/residential/NEGUBIDEMOVIL.png"
             image="/Images/Architecture/services/prueba2.jpg"
             title={t('tramitacionLicencias')}
             subtitle={t('licensesSubtitle')}

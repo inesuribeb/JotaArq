@@ -4,7 +4,7 @@ import './Licenses.css';
 function Licenses({ t }) {
     return (
         <ServicesLayout3
-            bgImage="/Images/Architecture/services/residential/01.jpg"
+            bgImage="/Images/Architecture/services/residential/negubideDeskto.jpg"
             image="/Images/Architecture/services/prueba2.jpg"
             title={t('tramitacionLicencias')}
             subtitle={t('licensesSubtitle')}

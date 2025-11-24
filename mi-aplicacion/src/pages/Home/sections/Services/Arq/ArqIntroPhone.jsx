@@ -14,7 +14,8 @@ function ArqIntroPhone({ t }) {
                 textKey="arqIntro"
                 buttonTextKey="knowMore"
                 buttonRoute={getRoute('architecture')} 
-                imageSrc="/Images/Home/Parke.png"
+                // imageSrc="/Images/Home/Parke.png"
+                imageSrc="/Images/Home/movilArq.jpg"
                 imageAlt="Descripción de la imagen"
                 // variant="architecture"
                 buttonColor="primary"

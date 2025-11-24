@@ -38,24 +38,25 @@ function Intro({ t , getRoute }) {
                 </div>
 
                 <div className='fl-right-map'>
-                    <Map />
+                    {/* <Map /> */}
                     {/* <h1 className='first-title' dangerouslySetInnerHTML={{ __html: t('introText') }}></h1> */}
                     {/* <IntroTitle
                         title={t('introText')}
                         className="first-title"
                     />
                     <img src="/Images/Home/spain 1.png" alt="" /> */}
+                    <img src="/Images/Home/mapaJota.png" alt="" />
                 </div>
             </div>
 
-            <div className='second-line'>
+            {/* <div className='second-line'>
                 {datos.map(item => (
                     <div key={item.id} className='sl-item'>
                         <p className='type'>{t(item.type)}</p>
                         <p className='qty'>{item.qty}</p>
                     </div>
                 ))}
-            </div>
+            </div> */}
         </section>
     )
 }

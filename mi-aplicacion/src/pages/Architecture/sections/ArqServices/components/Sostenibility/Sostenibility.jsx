@@ -6,9 +6,9 @@ function Sostenibility({ t }) {
         <ServicesLayout3
             // bgImage="/Images/Architecture/services/plantaSolar.jpg"
             bgImage={[
-                "/Images/Architecture/services/sostenibility/01.png",
-                "/Images/Architecture/services/sostenibility/02.jpeg",
-                "/Images/Architecture/services/sostenibility/03.jpg",
+                "/Images/Architecture/services/sostenibility/1solar.png",
+                "/Images/Architecture/services/sostenibility/2solar.jpeg",
+                "/Images/Architecture/services/sostenibility/3solar.jpg",
             ]}
             image="/Images/Architecture/services/solar2.jpg"
             title={t('sostenibilidad')}

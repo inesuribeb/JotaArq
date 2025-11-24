@@ -6,7 +6,7 @@ import './ServicesIntro.css';
 function ServicesIntro({ t }) {
     return (
         <section className='section-services-intro'>
-            <MiniTitle className='mini-title-services' text={t('services')} />
+            {/* <MiniTitle className='mini-title-services' text={t('services')} /> */}
             <div className='container-services'>
                 <ArqIntro
                     t={t}

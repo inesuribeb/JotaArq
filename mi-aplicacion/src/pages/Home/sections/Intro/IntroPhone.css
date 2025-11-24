@@ -50,7 +50,8 @@
 
 .intro-image-container {
     width: 100%;
-    height: 200px; /* Altura fija - ajusta este valor */
+    /* height: 200px;  */
+height: auto;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -63,6 +64,7 @@
 
 .intro-image-container img {
     width: 100%;
+    aspect-ratio: 9/16;
     height: 100%; /* Para que ocupe toda la altura del contenedor */
     object-fit: cover; /* Mantiene proporciones y recorta si es necesario */
     object-position: right center; /* Posiciona desde la derecha */

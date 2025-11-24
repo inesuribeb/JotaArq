@@ -4,7 +4,7 @@ import './UrbanDesign.css';
 function UrbanDesign({ t }) {
     return (
         <ServicesLayout3
-            bgImage="/Images/Architecture/services/urbanDesign/01.LAREDO.jpg"
+            bgImage="/Images/Architecture/services/urbanDesign/DESKTOPLAREDO.jpg"
             image="/Images/Architecture/services/2.png"
             title={t('diseñoUrbano')}
             subtitle={t('urbanDesignSubtitle')}

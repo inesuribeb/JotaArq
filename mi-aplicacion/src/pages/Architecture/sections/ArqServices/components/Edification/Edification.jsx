@@ -7,13 +7,13 @@ function Edification({ t }) {
             // bgImage="/Images/Architecture/Randstand.png"
             bgImage={[
                 "/Images/Architecture/services/corporative/01.jpg",
-                "/Images/Architecture/services/corporative/02.jpg",
-                "/Images/Architecture/services/corporative/03.jpg",
-                "/Images/Architecture/services/corporative/04.JPG",
-                "/Images/Architecture/services/corporative/05.jpg",
-                "/Images/Architecture/services/corporative/06.jpg",
-                "/Images/Architecture/services/corporative/07.jpg",
-                "/Images/Architecture/services/corporative/08.JPG",
+                "/Images/Architecture/services/corporative/desktop2.jpg",
+                "/Images/Architecture/services/corporative/desktop3.jpg",
+                "/Images/Architecture/services/corporative/desktop4.JPG",
+                "/Images/Architecture/services/corporative/desktop5.jpg",
+                "/Images/Architecture/services/corporative/desktop6.jpg",
+                "/Images/Architecture/services/corporative/desktop7.jpg",
+                "/Images/Architecture/services/corporative/desktop8.JPG",
             ]}
             image="/Images/Architecture/Randstand.png"
             title={t('edificacion')}

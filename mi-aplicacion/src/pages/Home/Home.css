@@ -21,7 +21,8 @@
     border-top-right-radius: 20px; */
     border-radius: 20px;
     min-height: 100vh;
-    padding-top: 5vh;
+    /* padding-top: 5vh; */
+    padding-top: 0;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
 }
 

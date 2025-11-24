@@ -1,40 +1,40 @@
 .app {
-    position: relative;
+  position: relative;
 }
 
 .main-content {
-    position: relative;
-    z-index: 2;
-    background-color: transparent;
-    transition: transform 0.8s ease-out;
-    border-radius: 0px;
-    border-bottom: 1px solid var(--dark-color);
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  transition: transform 0.8s ease-out;
+  border-radius: 0px;
+  border-bottom: 1px solid var(--dark-color);
 }
 
 .main-content::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 0vh; 
-    background-color: transparent;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0vh;
+  background-color: transparent;
 
-    z-index: -1;
+  z-index: -1;
 }
 
 .footer-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 
 
 
-.splash-wrapper {
+/* .splash-wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -64,19 +64,103 @@
     to {
       opacity: 0;
     }
+  } */
+.splash-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.splash-wrapper.fade-out .curtain-section {
+  animation: fadeOutBackgroundOnly 0.5s ease-out forwards;
+}
+
+@keyframes fadeOutBackgroundOnly {
+  from {
+    background-color: var(--dark-color);
   }
 
+  to {
+    background-color: transparent;
+  }
+}
 
-  .footer-container-root {
+/* .splash-wrapper.fade-out .jota-logo {
+  animation: fadeOutLogo 0.5s ease-out forwards;
+}
+
+@keyframes fadeOutLogo {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 1;
+  }
+
+  100% {
     opacity: 0;
-    animation: footerFadeIn 0.6s ease-in 0.3s forwards;
+  }
+} */
+
+.curtain-section {
+  display: flex;
+  width: 100%;
+  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--dark-color);
+  transition: background-color 0.5s ease-out;
+}
+
+.curtain-section img {
+  position: absolute;
+  height: auto;
+  filter: invert();
+}
+
+.jota-logo {
+  width: 400px;
+  opacity: 1;
+}
+
+/* @media (max-width: 768px) {
+  .jota-logo {
+    width: 250px;
+  }
+} */
+
+
+
+.footer-container-root {
+  opacity: 0;
+  animation: footerFadeIn 0.6s ease-in 0.3s forwards;
 }
 
 @keyframes footerFadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .jota-logo {
+      width: 250px;
+  }
+}
+
+@media (max-width: 468px) {
+  .jota-logo {
+      width: 250px;
+  }
 }

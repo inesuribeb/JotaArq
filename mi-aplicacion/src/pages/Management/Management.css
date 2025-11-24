@@ -43,3 +43,14 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+.management-class {
+    height: 45vh;
+}
+
+@media (max-width: 768px) {
+    .management-class {
+        height: 35vh;
+        padding-top: 3rem;
+    }
+}

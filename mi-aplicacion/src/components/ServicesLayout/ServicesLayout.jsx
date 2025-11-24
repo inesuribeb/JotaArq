@@ -145,7 +145,7 @@ function ServicesLayout({ bgImage, image, title, subtitle, text, reverse = false
                 const viewportCenter = window.innerHeight / 2;
                 const distance = viewportCenter - elementCenter;
 
-                const parallaxSpeed = 0.1;
+                const parallaxSpeed = 0;
                 const yPos = distance * parallaxSpeed;
 
                 bgRef.current.style.backgroundPosition = `center calc(50% + ${yPos}px)`;

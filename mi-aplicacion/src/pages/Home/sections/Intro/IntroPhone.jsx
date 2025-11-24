@@ -73,7 +73,9 @@ function IntroPhone({ t , getRoute }) {
 
             <div className='intro-image-container'>
                 {/* <img src="/Images/Home/spain 1.png" alt="" /> */}
-                <Map />
+                {/* <Map /> */}
+                <img src="/Images/Home/mapaMovil.png" alt="" />
+
             </div>
             {/* <Texts className='lorem-ipsum' text={t('miniIntro')} /> */}
             <div className='container-introUsButton'>
@@ -93,7 +95,7 @@ function IntroPhone({ t , getRoute }) {
                 ))}
             </div> */}
 
-            <div
+            {/* <div
                 ref={scrollContainerRef}
                 className='second-line-phone'
                 onScroll={checkScrollability}
@@ -123,7 +125,7 @@ function IntroPhone({ t , getRoute }) {
                 >
                     <HiChevronRight />
                 </button>
-            </div>
+            </div> */}
 
         </section>
     )

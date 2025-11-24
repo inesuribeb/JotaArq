@@ -3,8 +3,8 @@
     width: 100%;
     min-height: 100vh;
     flex-direction: column;
-    padding: 2rem 0rem;
-    padding-top: 6rem;
+    /* padding: 2rem 0rem; */
+    /* padding-top: 6rem; */
 }
 
 .container-services {
@@ -20,7 +20,8 @@
 .black-connector {
     width: 100vw;
     height: 3rem; 
-    background-color: var(--dark-color);
+    /* height: 0rem;  */
+    background-color: var(--background-color);
     position: relative;
     left: 50%;
     transform: translateX(-50%);
