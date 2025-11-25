@@ -19,6 +19,7 @@ function ArqIntroPhone({ t }) {
                 imageAlt="Descripción de la imagen"
                 // variant="architecture"
                 buttonColor="primary"
+                page="home" 
             />
         </div>
     );

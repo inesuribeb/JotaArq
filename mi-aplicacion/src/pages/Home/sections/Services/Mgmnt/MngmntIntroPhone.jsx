@@ -27,6 +27,7 @@ function MngmntIntroPhone({ t }) {
                 imageSrc="/Images/Home/SERVGEST.MOV"
                 imageAlt="Management service video"
                 isVideo={true} // Indica que es un video
+                page="home"  
             />
         </div>
     )

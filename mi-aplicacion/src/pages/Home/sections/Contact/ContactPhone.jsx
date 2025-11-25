@@ -127,7 +127,8 @@ function ContactPhone({ t }) {
     return (
         <section className='contact-phone'>
             <MiniTitle className='intro-phone-mini' text={t('contact')} />
-            <h1 className='first-title-phone' dangerouslySetInnerHTML={{ __html: t('contactUs') }}></h1>
+            {/* <h1 className='first-title-phone' dangerouslySetInnerHTML={{ __html: t('contactUs') }}></h1> */}
+            <h1 className='first-title-phone' dangerouslySetInnerHTML={{ __html: t('contactUs', 'home') }}></h1>
 
             {/* <div className='img-contact-phone'>
                 <img src="/Images/Home/oficinas.jpg" alt="" />

@@ -64,7 +64,8 @@ function IntroPhone({ t , getRoute }) {
     return (
         <section className='intro-phone-container'>
             <MiniTitle className='intro-phone-mini' text={t('usPhone')} />
-            <h1 className='first-title-phone' dangerouslySetInnerHTML={{ __html: t('introText') }}></h1>
+            {/* <h1 className='first-title-phone' dangerouslySetInnerHTML={{ __html: t('introText') }}></h1> */}
+            <h1 className='first-title-phone' dangerouslySetInnerHTML={{ __html: t('introText', 'home') }}></h1>
             <p className='mini-intro-phone'>
                 <span>105 +</span>
                 <span>{t('projects')}</span>

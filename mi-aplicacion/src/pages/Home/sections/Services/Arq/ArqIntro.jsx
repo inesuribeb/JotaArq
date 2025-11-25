@@ -33,6 +33,7 @@ function ArqIntro({ t }) {
                 buttonColor="primary"
                 reverse={true}  
                 darkVariant={true} 
+                page="home" 
             />
         </div>
     );

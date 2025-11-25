@@ -9,8 +9,10 @@ function AsesoramientoUrbPhone({ t }) {
             // image="/Images/Management/services/masgestion2.webp"
             bgImage="/Images/Management/services/projectMonitoring/movilMonitoring.JPG"
             title={t('projectMonitoring')}
-            subtitle={t('projectMonitoringSb')}
-            text={t('projectMonitoringText')}
+            // subtitle={t('projectMonitoringSb')}
+            // text={t('projectMonitoringText')}
+            subtitle={t('projectMonitoringSb', 'management')} // ← CAMBIO
+            text={t('projectMonitoringText', 'management')}
             t={t}
         />
     )

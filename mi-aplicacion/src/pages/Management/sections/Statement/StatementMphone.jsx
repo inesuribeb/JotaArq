@@ -17,7 +17,8 @@ function StatementMphone({ t }) {
                 </div> */}
 
                 <MiniTitle text={t('services')} />
-                <h1 className='first-title-phone2' dangerouslySetInnerHTML={{ __html: t('mngStatement') }}></h1>
+                {/* <h1 className='first-title-phone2' dangerouslySetInnerHTML={{ __html: t('mngStatement') }}></h1> */}
+                <h1 className='first-title-phone2' dangerouslySetInnerHTML={{ __html: t('mngStatement', 'management') }}></h1>
             </div>
     )
 }

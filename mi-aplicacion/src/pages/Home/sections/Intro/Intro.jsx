@@ -26,8 +26,9 @@ function Intro({ t , getRoute }) {
                             <span>105 +</span>
                             <span>{t('projects')}</span>
                         </p>
-                        <Texts className="igual-aqui" text={t('introText')} />
-                        
+                        {/* <Texts className="igual-aqui" text={t('introText')} /> */}
+                        <Texts className="igual-aqui" text={t('introText', 'home')} />
+
                         <ButtonGeneral
                             className='button-introUs-home'
                             color='minimalInverted'

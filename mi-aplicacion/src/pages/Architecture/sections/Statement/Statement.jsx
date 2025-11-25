@@ -15,9 +15,11 @@ function Statement({ t }) {
 
                 <div className='fl-right'>
                     {/* <h1 dangerouslySetInnerHTML={{ __html: t('archStatement') }}></h1> */}
-                    <IntroTitle
+                    {/* <IntroTitle
                         title={t('archStatement')}
-                        // className="first-title"
+                    /> */}
+                    <IntroTitle
+                        title={t('archStatement', 'architecture')}
                     />
                 </div>
             </div>

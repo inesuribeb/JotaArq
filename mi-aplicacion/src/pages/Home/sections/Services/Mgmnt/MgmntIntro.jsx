@@ -34,6 +34,7 @@ function MgmntIntro({ t }) {
                 variant="management"
                 isVideo={true} 
                 // darkVariant={true} 
+                page="home"
             />
         </div>
     );

@@ -7,8 +7,10 @@ function LicensesPhone({ t }) {
             bgImage="/Images/Architecture/services/residential/NEGUBIDEMOVIL.png"
             image="/Images/Architecture/services/prueba2.jpg"
             title={t('tramitacionLicencias')}
-            subtitle={t('licensesSubtitle')}
-            text={t('licensesText')}
+            // subtitle={t('licensesSubtitle')}
+            // text={t('licensesText')}
+            subtitle={t('licensesSubtitle', 'architecture')}
+            text={t('licensesText', 'architecture')}
             t={t}
             dark={true}
         />

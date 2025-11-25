@@ -35,11 +35,13 @@ function EdificationPhone({ t }) {
             ]}
             image="/Images/Architecture/Randstand.png"
             title={t('edificacion')}
-            subtitle={t('edificationSubtitle')}
-            text={t('edificationText')}
+            // subtitle={t('edificationSubtitle')}
+            // text={t('edificationText')}
+            subtitle={t('edificationSubtitle', 'architecture')} // ← CAMBIO
+            text={t('edificationText', 'architecture')}
             t={t}
-            reverse={true} 
-            // dark={true}
+            reverse={true}
+        // dark={true}
         />
     )
 }

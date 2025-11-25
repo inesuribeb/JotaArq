@@ -14,7 +14,8 @@ function JetasLayout({
     reverse = false,
     darkVariant = false,
     buttonColor = "secondary",
-    isVideo = false
+    isVideo = false,
+    page = null 
 }) {
     return (
         <section className={`jetas-layout ${reverse ? 'reverse' : ''} ${darkVariant ? 'dark' : ''}`}>
@@ -38,7 +39,8 @@ function JetasLayout({
             <div className='jetacolumn2'>
                 <h4 className="title">{t(titleKey)}</h4>
                 <h5 className="subtitle">{t(subtitleKey)}</h5>
-                <Texts className="intro-services-home2text" text={t(textKey)} />
+                {/* <Texts className="intro-services-home2text" text={t(textKey)} /> */}
+                <Texts className="intro-services-home2text" text={t(textKey, page)} />
                 <ButtonGeneral
                     className='button-services-home'
                     color={buttonColor}

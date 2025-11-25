@@ -12,14 +12,17 @@ function IntroLayoutPhone({
     imageSrc,
     imageAlt,
     buttonColor = "secondary",
-    isVideo = false // Nuevo prop
+    isVideo = false, // Nuevo prop
+    page = null  
 }) {
     return (
         <section className='intro-layout-phone'>
             <div className='intro-line1-phone' >
                 <h4>{t(titleKey)}</h4>
                 <h5>{t(subtitleKey)}</h5>
-                <Texts className='intro-layout-phone-text' text={t(textKey)} />
+                {/* <Texts className='intro-layout-phone-text' text={t(textKey)} /> */}
+                <Texts className='intro-layout-phone-text' text={t(textKey, page)} />
+
                 <ButtonGeneral
                     className='button-services-home-phone'
                     color={buttonColor}

@@ -31,10 +31,14 @@ function Contact({ t }) {
                     </div>
 
                     <div className='fl-right-contact'>
-                        <IntroTitle
+                        {/* <IntroTitle
                         title={t('contactUs')}
                         className='contactus-fix'
-                    />
+                    /> */}
+                        <IntroTitle
+                            title={t('contactUs', 'home')}
+                            className='contactus-fix'
+                        />
                     </div>
                 </div>
 

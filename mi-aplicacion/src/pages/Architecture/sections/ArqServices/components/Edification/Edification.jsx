@@ -17,10 +17,12 @@ function Edification({ t }) {
             ]}
             image="/Images/Architecture/Randstand.png"
             title={t('edificacion')}
-            subtitle={t('edificationSubtitle')}
-            text={t('edificationText')}
-            t={t}
-            // reverse={true} 
+            // subtitle={t('edificationSubtitle')}
+            // text={t('edificationText')}
+            subtitle={t('edificationSubtitle', 'architecture')} // ← CAMBIO
+            text={t('edificationText', 'architecture')} 
+            t = { t }
+        // reverse={true} 
         />
     )
 }

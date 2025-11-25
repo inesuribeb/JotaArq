@@ -14,10 +14,11 @@ function StatementM({ t }) {
                 </div>
 
                 <div className='fl-right'>
-                    {/* <h1 dangerouslySetInnerHTML={{ __html: t('mngStatement') }}></h1> */}
-                    <IntroTitle
+                    {/* <IntroTitle
                         title={t('mngStatement')}
-                        // className="first-title"
+                    /> */}
+                    <IntroTitle
+                        title={t('mngStatement', 'management')}
                     />
                 </div>
             </div>

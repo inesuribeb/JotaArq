@@ -12,8 +12,10 @@ function Sostenibility({ t }) {
             ]}
             image="/Images/Architecture/services/solar2.jpg"
             title={t('sostenibilidad')}
-            subtitle={t('sostenibilitySubtitle')}
-            text={t('sostenibilityText')}
+            // subtitle={t('sostenibilitySubtitle')}
+            // text={t('sostenibilityText')}
+            subtitle={t('sostenibilitySubtitle', 'architecture')} // ← CAMBIO
+            text={t('sostenibilityText', 'architecture')}
             t={t}
             // reverse={true} 
         />

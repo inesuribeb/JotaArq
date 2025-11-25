@@ -1,50 +1,3 @@
-// import { useLanguage } from '../../contexts/LanguageContext';
-// import useIsMobile from '../../hooks/useMobile';
-// import MainTitle from '../../components/Titles/MainTitle';
-// import Pictures from './sections/Pictures/Pictures';
-// import PictureS from '../Management/sections/Picture/PictureS';
-// import './Architecture.css'
-// import Statement from './sections/Statement/Statement';
-// import StatementPhone from './sections/Statement/StatementPhone';
-// import ArqServices from './sections/ArqServices/ArqServices';
-// import ArqServicesPhone from './sections/ArqServices/ArqServicesPhone';
-// import Worker from '../../components/Worker/Worker';
-
-// function Architecture() {
-//     const { t, getRoute, changeLanguage, language, availableLanguages } = useLanguage();
-//     const isMobile = useIsMobile(768);
-
-//     return (
-//         <div className="architecture-content">
-//             <MainTitle
-//                 title={t('serviciosDeArq')}
-//                 subtitles={[
-//                     t('sloganArq1'),
-//                     t('sloganArq2'),
-//                     t('sloganArq3'),
-//                 ]}
-//                 className="custom-class"
-//             />
-
-//             <PictureS />
-
-//             {isMobile ? <StatementPhone t={t} /> : <Statement t={t} />}
-
-//             {isMobile ? <ArqServicesPhone t={t} /> : <ArqServices t={t} />}
-
-//             <Worker 
-//                 t={t}
-//                 workerName="Jokin Tapia"
-//                 workerRole={t('jokinRole')}
-//             />
-
-//         </div>
-//     )
-// }
-
-// export default Architecture; 
-
-
 import { useRef, useEffect, useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import useIsMobile from '../../hooks/useMobile';
@@ -59,10 +12,14 @@ import ArqServicesPhone from './sections/ArqServices/ArqServicesPhone';
 import Worker from '../../components/Worker/Worker';
 
 function Architecture() {
-    const { t, getRoute, changeLanguage, language, availableLanguages } = useLanguage();
+    const { t, getRoute, changeLanguage, language, availableLanguages, loadPageContent } = useLanguage(); // ← AÑADIR loadPageContent
     const isMobile = useIsMobile(768);
     const workerRef = useRef(null);
     const [hideTabMenu, setHideTabMenu] = useState(false);
+
+    useEffect(() => {
+        loadPageContent('architecture');
+    }, [language]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -92,12 +49,21 @@ function Architecture() {
             <div className='arquitectura-superImagen'>
                 <img src="/Images/Home/MANTILLA.jpg" alt="" />
             </div>
-            <MainTitle
+            {/* <MainTitle
                 title={t('serviciosDeArq')}
                 subtitles={[
                     t('sloganArq1'),
                     t('sloganArq2'),
                     t('sloganArq3'),
+                ]}
+                className="architecture-class"
+            /> */}
+            <MainTitle
+                title={t('serviciosDeArq', 'architecture')}
+                subtitles={[
+                    t('sloganArq1', 'architecture'),
+                    t('sloganArq2', 'architecture'),
+                    t('sloganArq3', 'architecture'),
                 ]}
                 className="architecture-class"
             />
@@ -132,7 +98,8 @@ function Architecture() {
                 <Worker
                     t={t}
                     workerName="Juan Bilbao"
-                    workerRole={t('juanRole')}
+                    // workerRole={t('juanRole')}
+                    workerRole={t('juanRole', 'architecture')} 
                 />
             </div>
         </div>

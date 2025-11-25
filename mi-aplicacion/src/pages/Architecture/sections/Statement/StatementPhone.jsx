@@ -5,7 +5,8 @@ function StatementPhone({ t }) {
     return (
         <div className='statement-phone'>
                 <MiniTitle text={t('services')} />
-                <h1 className='first-title-phone2' dangerouslySetInnerHTML={{ __html: t('archStatement') }}></h1>
+                {/* <h1 className='first-title-phone2' dangerouslySetInnerHTML={{ __html: t('archStatement') }}></h1> */}
+                <h1 className='first-title-phone2' dangerouslySetInnerHTML={{ __html: t('archStatement', 'architecture') }}></h1>
             </div>
     )
 }

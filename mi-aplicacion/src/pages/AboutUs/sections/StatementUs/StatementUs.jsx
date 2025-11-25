@@ -13,9 +13,11 @@ function StatementUs({ t }) {
                 <div className='rw1'>
                 </div>
                 <div className='rw2'>
-                    <h1 className='first-title3' dangerouslySetInnerHTML={{ __html: t('aboutUsText') }}></h1>
-                    <Texts className='aboutUsText2' text={t('whoWeAre')} />
+                    {/* <h1 className='first-title3' dangerouslySetInnerHTML={{ __html: t('aboutUsText') }}></h1> */}
+                    <h1 className='first-title3' dangerouslySetInnerHTML={{ __html: t('aboutUsText', 'aboutUs') }}></h1>
 
+                    {/* <Texts className='aboutUsText2' text={t('whoWeAre')} /> */}
+                    <Texts className='aboutUsText2' text={t('whoWeAre', 'aboutUs')} />
                 </div>
             </div>
 
