@@ -100,7 +100,7 @@ const Portada = ({ t }) => {
                 preload="auto"
                 className="video-background"
             >
-                <source src="/Videos/JOTA_LANDING.mp4" type="video/mp4" />
+                <source src="/Videos/videoOrdenador.mp4" type="video/mp4" />
                 Tu navegador no soporta videos HTML5.
             </video>
             

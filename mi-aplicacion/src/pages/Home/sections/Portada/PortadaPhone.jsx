@@ -67,7 +67,7 @@ function PortadaPhone({ t }) {
                 preload="auto"
                 className="video-background-phone"
             >
-                <source src="/Videos/JOTA_LANDING.mp4" type="video/mp4" />
+                <source src="/Videos/videoMovil.mp4" type="video/mp4" />
                 Tu navegador no soporta videos HTML5.
             </video>
 

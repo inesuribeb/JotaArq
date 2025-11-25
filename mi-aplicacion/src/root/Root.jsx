@@ -117,6 +117,11 @@
 
 // export default Root;
 
+
+
+
+
+
 import { useEffect, useRef, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { LanguageProvider, useLanguage } from "../contexts/LanguageContext";
@@ -140,9 +145,7 @@ function RootContent() {
   const homeRoute = getRoute('home');
   const isHomePage = location.pathname === homeRoute || location.pathname === '/';
 
-  // Manejo de la splash screen
   useEffect(() => {
-    // Limpiar sessionStorage para que aparezca siempre (útil para desarrollo)
     sessionStorage.removeItem('hasSeenSplash');
 
     const hasSeenSplash = sessionStorage.getItem('hasSeenSplash');
@@ -152,17 +155,15 @@ function RootContent() {
       return;
     }
 
-    // Esperar 2 segundos y luego animar salida
     const timer = setTimeout(() => {
       setSplashAnimating(true);
 
-      // Después de la animación, ocultar completamente
       setTimeout(() => {
         setShowSplash(false);
         sessionStorage.setItem('hasSeenSplash', 'true');
-      }, 500); // Duración de la animación de salida
+      }, 500); 
 
-    }, 2000); // Tiempo que se muestra la splash
+    }, 2000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -220,7 +221,6 @@ function RootContent() {
         </div>
       </div>
 
-      {/* Splash screen - por encima durante la animación */}
       {showSplash && (
         <div className={`splash-wrapper ${splashAnimating ? 'fade-out' : ''}`}>
           <IntroCurtain />
@@ -241,3 +241,8 @@ function Root() {
 }
 
 export default Root;
+
+
+
+
+
