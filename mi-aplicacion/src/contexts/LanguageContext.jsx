@@ -187,6 +187,9 @@ import { homeTranslations } from './sections/HomeContent';
 import { managementTranslations } from './sections/ManagementContent';
 import { footerTranslations } from './sections/FooterContent';
 
+// const STRAPI_URL = 'https://brilliant-birds-48093a13c8.strapiapp.com';
+const STRAPI_URL = 'https://brilliant-birds-48093a13c8.strapiapp.com';
+
 const translations = {
   es: {
     home: "Inicio",
@@ -332,7 +335,7 @@ export const LanguageProvider = ({ children }) => {
   
     try {
       const response = await fetch(
-        `http://localhost:1337/api/${endpoint}?filters[slug][$eq]=${page}&locale=${language}&populate=*`
+        `${STRAPI_URL}/api/${endpoint}?filters[slug][$eq]=${page}&locale=${language}&populate=*`
       );
   
       if (!response.ok) {
@@ -344,7 +347,6 @@ export const LanguageProvider = ({ children }) => {
       console.log('🚀 Datos recibidos de Strapi:', data); 
       
       if (data.data && data.data.length > 0) {
-
         setDynamicTranslations(prev => ({
           ...prev,
           [page]: data.data[0] 
