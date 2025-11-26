@@ -188,7 +188,7 @@ import { managementTranslations } from './sections/ManagementContent';
 import { footerTranslations } from './sections/FooterContent';
 
 // const STRAPI_URL = 'https://brilliant-birds-48093a13c8.strapiapp.com';
-const STRAPI_URL = 'https://brilliant-birds-48093a13c8.strapiapp.com';
+const STRAPI_URL = 'https://brilliant-birds-48093a13eb.strapiapp.com';
 
 const translations = {
   es: {
