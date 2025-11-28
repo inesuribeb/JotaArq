@@ -1,0 +1,136 @@
+.accesibility-container {
+    display: flex;
+    background-color: var(--background-color);
+    padding: 10rem 2rem;
+}
+
+.accesibility-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--dark-color);
+}
+
+.accesibility-content h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.accesibility-content h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.accesibility-content h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.accesibility-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.accesibility-content ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.accesibility-content li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.accesibility-content a {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+
+.accesibility-content a:hover {
+    opacity: 0.7;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .accesibility-container {
+        padding: 8rem 2rem;
+    }
+
+    .accesibility-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .accesibility-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .accesibility-content h3 {
+        font-size: 1.35rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .accesibility-container {
+        padding: 6rem 1.5rem;
+    }
+
+    .accesibility-content h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .accesibility-content h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .accesibility-content h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+    }
+
+    .accesibility-content p {
+        font-size: 1rem;
+    }
+
+    .accesibility-content ul {
+        margin-left: 1.5rem;
+    }
+
+    .accesibility-content li {
+        font-size: 0.95rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .accesibility-container {
+        padding: 5rem 1rem;
+    }
+
+    .accesibility-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .accesibility-content h2 {
+        font-size: 1.35rem;
+    }
+
+    .accesibility-content h3 {
+        font-size: 1.15rem;
+    }
+
+    .accesibility-content p,
+    .accesibility-content li {
+        font-size: 0.9rem;
+    }
+
+    .accesibility-content ul {
+        margin-left: 1rem;
+    }
+}

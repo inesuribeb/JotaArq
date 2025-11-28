@@ -71,3 +71,15 @@
 .fl-right-contact{
     flex: 3;
 }
+
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .home-contact {
+        min-height: auto;  /* O quita el min-height completamente */
+    }
+
+    .second-line-contact {
+        height: 15vh;
+    }
+}

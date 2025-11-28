@@ -186,9 +186,103 @@ import { contactTranslations } from './sections/ContactContent';
 import { homeTranslations } from './sections/HomeContent';
 import { managementTranslations } from './sections/ManagementContent';
 import { footerTranslations } from './sections/FooterContent';
+import { accesibilityTranslations } from './sections/AccesibilityContent';
+import { siteMapTranslations } from './sections/SiteMapContent';
 
 // const STRAPI_URL = 'https://brilliant-birds-48093a13c8.strapiapp.com';
 const STRAPI_URL = 'https://brilliant-birds-48093a13eb.strapiapp.com';
+
+// const translations = {
+//   es: {
+//     home: "Inicio",
+//     architecture: "Arquitectura",
+//     management: "Gestión",
+//     aboutUs: "Nosotros",
+//     contact: "Contacto",
+//     ...aboutUsTranslations.es,
+//     ...architectureTranslations.es,
+//     ...contactTranslations.es,
+//     ...homeTranslations.es,
+//     ...managementTranslations.es,
+//     ...footerTranslations.es,
+//     ...accesibilityTranslations.es,
+//     ...siteMapTranslations.es,
+//   },
+//   eu: {
+//     home: "Hasiera",
+//     architecture: "Arkitektura",
+//     management: "Kudeaketa",
+//     aboutUs: "Guri Buruz",
+//     contact: "Kontaktua",
+//     ...aboutUsTranslations.eu,
+//     ...architectureTranslations.eu,
+//     ...contactTranslations.eu,
+//     ...homeTranslations.eu,
+//     ...managementTranslations.eu,
+//     ...footerTranslations.eu,
+//     ...accesibilityTranslations.eu,
+//     ...siteMapTranslations.eu,
+//   },
+//   en: {
+//     home: "Home",
+//     architecture: "Architecture",
+//     management: "Management",
+//     aboutUs: "About Us",
+//     contact: "Contact",
+//     ...aboutUsTranslations.en,
+//     ...architectureTranslations.en,
+//     ...contactTranslations.en,
+//     ...homeTranslations.en,
+//     ...managementTranslations.en,
+//     ...footerTranslations.en,
+//     ...accesibilityTranslations.en,
+//     ...siteMapTranslations.en,
+//   }
+// };
+
+// const routes = {
+//   es: {
+//     home: "/inicio",
+//     architecture: "/arquitectura",
+//     management: "/gestion",
+//     aboutUs: "/sobre-nosotros",
+//     contact: "/contacto"
+//   },
+//   eu: {
+//     home: "/hasiera",
+//     architecture: "/arkitektura",
+//     management: "/kudeaketa",
+//     aboutUs: "/guri-buruz",
+//     contact: "/kontaktua"
+//   },
+//   en: {
+//     home: "/home",
+//     architecture: "/architecture",
+//     management: "/management",
+//     aboutUs: "/about-us",
+//     contact: "/contact"
+//   }
+// };
+
+// const routeMap = {
+//   "/inicio": { es: "/inicio", eu: "/hasiera", en: "/home" },
+//   "/arquitectura": { es: "/arquitectura", eu: "/arkitektura", en: "/architecture" },
+//   "/gestion": { es: "/gestion", eu: "/kudeaketa", en: "/management" },
+//   "/sobre-nosotros": { es: "/sobre-nosotros", eu: "/guri-buruz", en: "/about-us" },
+//   "/contacto": { es: "/contacto", eu: "/kontaktua", en: "/contact" },
+
+//   "/hasiera": { es: "/inicio", eu: "/hasiera", en: "/home" },
+//   "/arkitektura": { es: "/arquitectura", eu: "/arkitektura", en: "/architecture" },
+//   "/kudeaketa": { es: "/gestion", eu: "/kudeaketa", en: "/management" },
+//   "/guri-buruz": { es: "/sobre-nosotros", eu: "/guri-buruz", en: "/about-us" },
+//   "/kontaktua": { es: "/contacto", eu: "/kontaktua", en: "/contact" },
+
+//   "/home": { es: "/inicio", eu: "/hasiera", en: "/home" },
+//   "/architecture": { es: "/arquitectura", eu: "/arkitektura", en: "/architecture" },
+//   "/management": { es: "/gestion", eu: "/kudeaketa", en: "/management" },
+//   "/about-us": { es: "/sobre-nosotros", eu: "/guri-buruz", en: "/about-us" },
+//   "/contact": { es: "/contacto", eu: "/kontaktua", en: "/contact" }
+// };
 
 const translations = {
   es: {
@@ -197,12 +291,16 @@ const translations = {
     management: "Gestión",
     aboutUs: "Nosotros",
     contact: "Contacto",
+    accessibility: "Declaración de Accesibilidad",
+    siteMap: "Mapa del Sitio",
     ...aboutUsTranslations.es,
     ...architectureTranslations.es,
     ...contactTranslations.es,
     ...homeTranslations.es,
     ...managementTranslations.es,
     ...footerTranslations.es,
+    ...accesibilityTranslations.es,
+    ...siteMapTranslations.es,
   },
   eu: {
     home: "Hasiera",
@@ -210,12 +308,16 @@ const translations = {
     management: "Kudeaketa",
     aboutUs: "Guri Buruz",
     contact: "Kontaktua",
+    accessibility: "Irisgarritasun Adierazpena",
+    siteMap: "Gune Mapak",
     ...aboutUsTranslations.eu,
     ...architectureTranslations.eu,
     ...contactTranslations.eu,
     ...homeTranslations.eu,
     ...managementTranslations.eu,
     ...footerTranslations.eu,
+    ...accesibilityTranslations.eu,
+    ...siteMapTranslations.eu,
   },
   en: {
     home: "Home",
@@ -223,12 +325,16 @@ const translations = {
     management: "Management",
     aboutUs: "About Us",
     contact: "Contact",
+    accessibility: "Accessibility Statement",
+    siteMap: "Site Map",
     ...aboutUsTranslations.en,
     ...architectureTranslations.en,
     ...contactTranslations.en,
     ...homeTranslations.en,
     ...managementTranslations.en,
     ...footerTranslations.en,
+    ...accesibilityTranslations.en,
+    ...siteMapTranslations.en,
   }
 };
 
@@ -238,21 +344,27 @@ const routes = {
     architecture: "/arquitectura",
     management: "/gestion",
     aboutUs: "/sobre-nosotros",
-    contact: "/contacto"
+    contact: "/contacto",
+    accessibility: "/declaracion-de-accesibilidad",
+    siteMap: "/mapa-del-sitio"
   },
   eu: {
     home: "/hasiera",
     architecture: "/arkitektura",
     management: "/kudeaketa",
     aboutUs: "/guri-buruz",
-    contact: "/kontaktua"
+    contact: "/kontaktua",
+    accessibility: "/irisgarritasun-adierazpena",
+    siteMap: "/gune-mapak"
   },
   en: {
     home: "/home",
     architecture: "/architecture",
     management: "/management",
     aboutUs: "/about-us",
-    contact: "/contact"
+    contact: "/contact",
+    accessibility: "/accessibility-statement",
+    siteMap: "/site-map"
   }
 };
 
@@ -263,6 +375,8 @@ const routeMap = {
   "/gestion": { es: "/gestion", eu: "/kudeaketa", en: "/management" },
   "/sobre-nosotros": { es: "/sobre-nosotros", eu: "/guri-buruz", en: "/about-us" },
   "/contacto": { es: "/contacto", eu: "/kontaktua", en: "/contact" },
+  "/declaracion-de-accesibilidad": { es: "/declaracion-de-accesibilidad", eu: "/irisgarritasun-adierazpena", en: "/accessibility-statement" },
+  "/mapa-del-sitio": { es: "/mapa-del-sitio", eu: "/gune-mapak", en: "/site-map" },
 
   // Euskera
   "/hasiera": { es: "/inicio", eu: "/hasiera", en: "/home" },
@@ -270,13 +384,17 @@ const routeMap = {
   "/kudeaketa": { es: "/gestion", eu: "/kudeaketa", en: "/management" },
   "/guri-buruz": { es: "/sobre-nosotros", eu: "/guri-buruz", en: "/about-us" },
   "/kontaktua": { es: "/contacto", eu: "/kontaktua", en: "/contact" },
+  "/irisgarritasun-adierazpena": { es: "/declaracion-de-accesibilidad", eu: "/irisgarritasun-adierazpena", en: "/accessibility-statement" },
+  "/gune-mapak": { es: "/mapa-del-sitio", eu: "/gune-mapak", en: "/site-map" },
 
   // Inglés
   "/home": { es: "/inicio", eu: "/hasiera", en: "/home" },
   "/architecture": { es: "/arquitectura", eu: "/arkitektura", en: "/architecture" },
   "/management": { es: "/gestion", eu: "/kudeaketa", en: "/management" },
   "/about-us": { es: "/sobre-nosotros", eu: "/guri-buruz", en: "/about-us" },
-  "/contact": { es: "/contacto", eu: "/kontaktua", en: "/contact" }
+  "/contact": { es: "/contacto", eu: "/kontaktua", en: "/contact" },
+  "/accessibility-statement": { es: "/declaracion-de-accesibilidad", eu: "/irisgarritasun-adierazpena", en: "/accessibility-statement" },
+  "/site-map": { es: "/mapa-del-sitio", eu: "/gune-mapak", en: "/site-map" }
 };
 
 // ============================================
@@ -324,34 +442,34 @@ export const LanguageProvider = ({ children }) => {
   // ============================================
   const loadPageContent = async (page) => {
     const endpoint = pageToEndpoint[page];
-    
+
     if (!endpoint) {
       console.warn(`No endpoint configured for page: ${page}`);
       return;
     }
-  
+
     setLoading(true);
     setError(null);
-  
+
     try {
       const response = await fetch(
         `${STRAPI_URL}/api/${endpoint}?filters[slug][$eq]=${page}&locale=${language}&populate=*`
       );
-  
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-  
+
       const data = await response.json();
-      
-      console.log('🚀 Datos recibidos de Strapi:', data); 
-      
+
+      console.log('🚀 Datos recibidos de Strapi:', data);
+
       if (data.data && data.data.length > 0) {
         setDynamicTranslations(prev => ({
           ...prev,
-          [page]: data.data[0] 
+          [page]: data.data[0]
         }));
-        
+
         console.log('✅ Traducciones dinámicas actualizadas:', data.data[0]);
       }
     } catch (err) {
@@ -375,7 +493,7 @@ export const LanguageProvider = ({ children }) => {
     navigate(redirectPath);
 
     setLanguage(newLanguage);
-    
+
     // NUEVO: Limpiar traducciones dinámicas cuando cambias de idioma
     setDynamicTranslations({});
   };
@@ -388,7 +506,7 @@ export const LanguageProvider = ({ children }) => {
     if (page && dynamicTranslations[page]?.[key]) {
       return dynamicTranslations[page][key];
     }
-    
+
     // Fallback: usa las traducciones estáticas
     return translations[language][key] || key;
   };

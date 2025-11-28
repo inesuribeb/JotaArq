@@ -4,8 +4,10 @@ import Architecture from '../pages/Architecture/Architecture'
 import Management from '../pages/Management/Management'
 import AboutUs from '../pages/AboutUs/AboutUs'
 import Contact from '../pages/Contact/Contact'
+import Accesibility from "../pages/Accesibility/Accesibility"
+import SiteMap from "../pages/SiteMap/SiteMap"
 import NotFound from "../components/NotFound/NotFound";
-import Root from '../root/Root'
+import Root from '../root/Root';
 
 
 const router = createBrowserRouter([
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
                 path: "/contacto",
                 element: <Contact />
             },
+            {
+                path: "/declaracion-de-accesibilidad",
+                element: <Accesibility />
+            },
+            {
+                path: "/mapa-del-sitio",
+                element: <SiteMap />
+            },
 
             {
                 path: "/hasiera",
@@ -59,6 +69,14 @@ const router = createBrowserRouter([
                 path: "/kontaktua",
                 element: <Contact />
             },
+            {
+                path: "/irisgarritasun-adierazpena",
+                element: <Accesibility />
+            },
+            {
+                path: "/gune-mapak",
+                element: <SiteMap />
+            },
 
             {
                 path: "/home",
@@ -79,6 +97,14 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />
+            },
+            {
+                path: "/accessibility-statement",
+                element: <Accesibility />
+            },
+            {
+                path: "/site-map",
+                element: <SiteMap />
             },
 
             {

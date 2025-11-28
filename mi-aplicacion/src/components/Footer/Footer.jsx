@@ -18,6 +18,8 @@ function Footer() {
     const arhitectureRoute = getRoute('architecture');
     const aboutUsRoute = getRoute('aboutUs');
     const contactRoute = getRoute('contact');
+    const accessibilityRoute = getRoute('accessibility');
+    const siteMapRoute = getRoute('siteMap');
 
 
     const navigationLinks = [
@@ -25,7 +27,9 @@ function Footer() {
         { key: 'architecture', route: 'architecture' },
         { key: 'management', route: 'management' },
         { key: 'aboutUs', route: 'aboutUs' },
-        { key: 'contact', route: 'contact' }
+        { key: 'contact', route: 'contact' },
+        { key: 'accessibility', route: 'accessibility' },
+        { key: 'siteMap', route: 'siteMap' }
     ];
 
     const isDarkFooter = currentPath === homeRoute ||
@@ -33,6 +37,8 @@ function Footer() {
         currentPath === arhitectureRoute ||
         currentPath === aboutUsRoute ||
         currentPath === contactRoute ||
+        currentPath === accessibilityRoute ||
+        currentPath === siteMapRoute ||
         currentPath === '/' ||
         !navigationLinks.some(link => currentPath === getRoute(link.route)); // Cualquier ruta no definida (NotFound)
 
@@ -88,6 +94,10 @@ function Footer() {
                 <a href="https://www.linkedin.com/company/jotaarq/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <FaLinkedin size={24} />
                 </a>
+            </div>
+
+            <div className='kit-logo'>
+                <img src="/Logos/logo_kit.webp" alt="" />
             </div>
 
             <div className='footer-f3'>
