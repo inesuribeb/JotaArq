@@ -19,7 +19,8 @@ html {
   margin: 0px;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  /* overflow-x: clip; */
   overscroll-behavior-y: none;
 }
 
@@ -27,7 +28,9 @@ body {
   padding: 0px;
   margin: 0px;
   width: 100%;
-  overflow-x: hidden;
+  max-width: 100vw; 
+  /* overflow-x: hidden; */
+  /* overflow-x: clip; */
   overflow-y: auto;
   background-color: var(--background-color);
   overscroll-behavior-y: none;

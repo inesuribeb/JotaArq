@@ -122,6 +122,129 @@
 
 
 
+// import { useEffect, useRef, useState } from "react";
+// import { Outlet, useLocation } from "react-router-dom";
+// import { LanguageProvider, useLanguage } from "../contexts/LanguageContext";
+// import { HeaderProvider } from "../contexts/HeaderContext";
+// import useIsMobile from "../hooks/useMobile";
+// import Header from "../components/Header/Header";
+// import HeaderHome from "../components/Header/HeaderHome/HeaderHome";
+// import HeaderPhone from "../components/Header/HeaderPhone";
+// import Footer from "../components/Footer/Footer";
+// import IntroCurtain from "../components/IntroCurtain/IntroCurtain";
+// import './Root.css';
+
+// function RootContent() {
+//   const location = useLocation();
+//   const mainRef = useRef(null);
+//   const isMobile = useIsMobile(768);
+//   const { getRoute } = useLanguage();
+//   const [showSplash, setShowSplash] = useState(true);
+//   const [splashAnimating, setSplashAnimating] = useState(false);
+
+//   const homeRoute = getRoute('home');
+//   const isHomePage = location.pathname === homeRoute || location.pathname === '/';
+
+//   useEffect(() => {
+//     sessionStorage.removeItem('hasSeenSplash');
+
+//     const hasSeenSplash = sessionStorage.getItem('hasSeenSplash');
+
+//     if (hasSeenSplash) {
+//       setShowSplash(false);
+//       return;
+//     }
+
+//     const timer = setTimeout(() => {
+//       setSplashAnimating(true);
+
+//       setTimeout(() => {
+//         setShowSplash(false);
+//         sessionStorage.setItem('hasSeenSplash', 'true');
+//       }, 500); 
+
+//     }, 2000); 
+
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [location.pathname]);
+
+//   useEffect(() => {
+//     const footerHeight = window.innerHeight * 0.4;
+//     document.body.style.paddingBottom = `${footerHeight}px`;
+
+//     const handleScroll = () => {
+//       if (!mainRef.current) return;
+
+//       const mainElement = mainRef.current;
+//       const mainRect = mainElement.getBoundingClientRect();
+//       const windowHeight = window.innerHeight;
+
+//       const mainBottom = mainRect.bottom;
+
+//       if (mainBottom <= windowHeight) {
+//         const offset = windowHeight - mainBottom;
+//         const clampedOffset = Math.max(0, Math.min(offset, footerHeight));
+//         mainElement.style.transform = `translateY(-${clampedOffset}px)`;
+//       } else {
+//         mainElement.style.transform = 'translateY(0)';
+//       }
+//     };
+
+//     window.addEventListener('scroll', handleScroll);
+//     handleScroll();
+
+//     return () => {
+//       window.removeEventListener('scroll', handleScroll);
+//       document.body.style.paddingBottom = '0';
+//     };
+//   }, [location.pathname]);
+
+//   return (
+//     <>
+//       <div className="app">
+//         {isHomePage && !isMobile ? (
+//           <HeaderHome />
+//         ) : (
+//           isMobile ? <HeaderPhone /> : <Header />
+//         )}
+
+//         <main ref={mainRef} className="main-content">
+//           <Outlet />
+//         </main>
+//         <div className="footer-container-root">
+//           <Footer />
+//         </div>
+//       </div>
+
+//       {showSplash && (
+//         <div className={`splash-wrapper ${splashAnimating ? 'fade-out' : ''}`}>
+//           <IntroCurtain />
+//         </div>
+//       )}
+//     </>
+//   );
+// }
+
+// function Root() {
+//   return (
+//     <LanguageProvider>
+//       <HeaderProvider>
+//         <RootContent />
+//       </HeaderProvider>
+//     </LanguageProvider>
+//   );
+// }
+
+// export default Root;
+
+
+
+
+
 import { useEffect, useRef, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { LanguageProvider, useLanguage } from "../contexts/LanguageContext";
@@ -176,36 +299,79 @@ function RootContent() {
     const footerHeight = window.innerHeight * 0.4;
     document.body.style.paddingBottom = `${footerHeight}px`;
 
+    let rafId = null;
+    let isScrolling = false;
+
     const handleScroll = () => {
-      if (!mainRef.current) return;
+      if (isScrolling) return;
+      isScrolling = true;
 
-      const mainElement = mainRef.current;
-      const mainRect = mainElement.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      const mainBottom = mainRect.bottom;
-
-      if (mainBottom <= windowHeight) {
-        const offset = windowHeight - mainBottom;
-        const clampedOffset = Math.max(0, Math.min(offset, footerHeight));
-        mainElement.style.transform = `translateY(-${clampedOffset}px)`;
-      } else {
-        mainElement.style.transform = 'translateY(0)';
+      if (rafId) {
+        cancelAnimationFrame(rafId);
       }
+
+      rafId = requestAnimationFrame(() => {
+        try {
+          if (!mainRef.current) {
+            isScrolling = false;
+            return;
+          }
+
+          const mainElement = mainRef.current;
+          const mainRect = mainElement.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          const mainBottom = mainRect.bottom;
+
+          if (!isFinite(mainBottom) || !isFinite(windowHeight) || windowHeight <= 0) {
+            console.warn('Valores inválidos en handleScroll', { mainBottom, windowHeight });
+            isScrolling = false;
+            return;
+          }
+
+          if (mainBottom <= windowHeight) {
+            const offset = windowHeight - mainBottom;
+            const clampedOffset = Math.max(0, Math.min(offset, footerHeight));
+
+            if (!isFinite(clampedOffset)) {
+              console.warn('clampedOffset inválido', { offset, footerHeight });
+              isScrolling = false;
+              return;
+            }
+
+            mainElement.style.transform = `translateY(-${clampedOffset}px)`;
+          } else {
+            mainElement.style.transform = 'translateY(0)';
+          }
+        } catch (error) {
+          console.error('Error en handleScroll:', error);
+          if (mainRef.current) {
+            mainRef.current.style.transform = 'translateY(0)';
+          }
+        } finally {
+          isScrolling = false;
+        }
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    setTimeout(handleScroll, 100);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
       document.body.style.paddingBottom = '0';
+      // Reset del transform al desmontar
+      if (mainRef.current) {
+        mainRef.current.style.transform = 'translateY(0)';
+      }
     };
   }, [location.pathname]);
 
   return (
     <>
-      {/* Contenido principal - siempre renderizado */}
       <div className="app">
         {isHomePage && !isMobile ? (
           <HeaderHome />
@@ -241,8 +407,3 @@ function Root() {
 }
 
 export default Root;
-
-
-
-
-
