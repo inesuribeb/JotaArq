@@ -18,8 +18,8 @@ function Footer() {
     const arhitectureRoute = getRoute('architecture');
     const aboutUsRoute = getRoute('aboutUs');
     const contactRoute = getRoute('contact');
-    const accessibilityRoute = getRoute('accessibility');
-    const siteMapRoute = getRoute('siteMap');
+    // const accessibilityRoute = getRoute('accessibility');
+    // const siteMapRoute = getRoute('siteMap');
 
 
     const navigationLinks = [
@@ -28,8 +28,8 @@ function Footer() {
         { key: 'management', route: 'management' },
         { key: 'aboutUs', route: 'aboutUs' },
         { key: 'contact', route: 'contact' },
-        { key: 'accessibility', route: 'accessibility' },
-        { key: 'siteMap', route: 'siteMap' }
+        // { key: 'accessibility', route: 'accessibility' },
+        // { key: 'siteMap', route: 'siteMap' }
     ];
 
     const isDarkFooter = currentPath === homeRoute ||
@@ -37,8 +37,8 @@ function Footer() {
         currentPath === arhitectureRoute ||
         currentPath === aboutUsRoute ||
         currentPath === contactRoute ||
-        currentPath === accessibilityRoute ||
-        currentPath === siteMapRoute ||
+        // currentPath === accessibilityRoute ||
+        // currentPath === siteMapRoute ||
         currentPath === '/' ||
         !navigationLinks.some(link => currentPath === getRoute(link.route)); // Cualquier ruta no definida (NotFound)
 
@@ -96,9 +96,9 @@ function Footer() {
                 </a>
             </div>
 
-            <div className='kit-logo'>
+            {/* <div className='kit-logo'>
                 <img src="/Logos/logo_kit.webp" alt="" />
-            </div>
+            </div> */}
 
             <div className='footer-f3'>
                 <div className='col3'>
