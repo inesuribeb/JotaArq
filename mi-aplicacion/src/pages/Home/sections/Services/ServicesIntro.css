@@ -20,8 +20,8 @@
 .black-connector {
     width: 100vw;
     height: 3rem; 
-    /* height: 0rem;  */
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    background-color: var(--dark-color);
     position: relative;
     left: 50%;
     transform: translateX(-50%);

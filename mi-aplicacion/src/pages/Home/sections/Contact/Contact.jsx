@@ -17,9 +17,9 @@ function Contact({ t }) {
 
     return (
         <section className='home-contact'>
-            {/* <div className='img-contact'>
+            <div className='img-contact'>
                 <img src="/Images/Home/oficinas.jpg" alt="" />
-            </div> */}
+            </div>
 
             <div className='contact-refs'>
                 <div className='first-line-contact'>

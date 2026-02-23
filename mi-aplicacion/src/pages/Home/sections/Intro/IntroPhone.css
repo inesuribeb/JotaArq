@@ -64,11 +64,12 @@ height: auto;
 
 .intro-image-container img {
     width: 100%;
-    aspect-ratio: 9/16;
+    aspect-ratio: 4/5;
     height: 100%; /* Para que ocupe toda la altura del contenedor */
     object-fit: cover; /* Mantiene proporciones y recorta si es necesario */
     object-position: right center; /* Posiciona desde la derecha */
     display: block;
+    border-radius: 10px;
 }
 
 .lorem-ipsum {

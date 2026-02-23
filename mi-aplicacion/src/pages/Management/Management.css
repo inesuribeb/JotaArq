@@ -3,6 +3,9 @@
     flex-direction: column;
     padding-bottom: 3rem;
     background-color: var(--background-color);
+
+    /*mi layout*/
+    padding-top: 25vh;
 }
 
 
@@ -49,6 +52,13 @@
 }
 
 @media (max-width: 768px) {
+
+    .management-content {
+
+        /*mi layout*/
+        padding-top: 15vh;
+    }
+
     .management-class {
         height: 35vh;
         padding-top: 3rem;

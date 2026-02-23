@@ -304,7 +304,7 @@ function IntroLayout2({
                     />
                 )}
                 
-                {/* {isHovering && createPortal(
+                {isHovering && createPortal(
                     <span
                         className='explore-button'
                         style={{
@@ -315,7 +315,7 @@ function IntroLayout2({
                         {t('explore')}
                     </span>,
                     document.body 
-                )} */}
+                )}
             </div>
         </section>
     );

@@ -8,7 +8,7 @@ function ArqIntro({ t }) {
 
     return (
         <div>
-            {/* <IntroLayout2
+            <IntroLayout2
                 t={t}
                 titleKey="one"
                 subtitleKey="architecture"
@@ -19,8 +19,8 @@ function ArqIntro({ t }) {
                 imageAlt="Descripción de la imagen"
                 variant="architecture"
                 buttonColor="primary"
-            /> */}
-            <JetasLayout
+            />
+            {/* <JetasLayout
                 t={t}
                 titleKey="one"
                 subtitleKey="architecture"
@@ -34,7 +34,7 @@ function ArqIntro({ t }) {
                 reverse={true}  
                 darkVariant={true} 
                 page="home" 
-            />
+            /> */}
         </div>
     );
 }

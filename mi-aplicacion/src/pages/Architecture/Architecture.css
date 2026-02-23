@@ -3,6 +3,9 @@
     flex-direction: column;
     padding-bottom: 3rem;
     background-color: var(--background-color);
+
+    /*mi layout*/
+    padding-top: 25vh;
 }
 
 .arquitectura-superImagen {
@@ -63,6 +66,13 @@
 
 
 @media (max-width: 768px) {
+
+    .architecture-content {
+
+        /*mi layout*/
+        padding-top: 15vh;
+    }
+
     .architecture-class {
         height: 35vh;
         padding-top: 3rem;

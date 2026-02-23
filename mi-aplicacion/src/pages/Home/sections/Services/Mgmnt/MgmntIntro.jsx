@@ -8,7 +8,7 @@ function MgmntIntro({ t }) {
 
     return (
         <div className="mgmnt-intro-wrapper">
-            {/* <IntroLayout2
+            <IntroLayout2
                 t={t}
                 titleKey="two"
                 subtitleKey="management"
@@ -20,8 +20,8 @@ function MgmntIntro({ t }) {
                 reverse={true}  
                 variant="management"
                 isVideo={true} 
-            /> */}
-            <JetasLayout
+            />
+            {/* <JetasLayout
                 t={t}
                 titleKey="two"
                 subtitleKey="management"
@@ -30,12 +30,10 @@ function MgmntIntro({ t }) {
                 buttonRoute={getRoute('management')} 
                 imageSrc="/Images/Home/SERVGEST.MOV"
                 imageAlt="Management service video"
-                // reverse={true}  
                 variant="management"
                 isVideo={true} 
-                // darkVariant={true} 
                 page="home"
-            />
+            /> */}
         </div>
     );
 }

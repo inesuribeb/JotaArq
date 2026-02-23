@@ -54,7 +54,7 @@
 import { useState, useEffect } from 'react';
 import './Portada.css'
 
-const Portada = ({ t, loading }) => { // ← AÑADIDO loading
+const Portada = ({ t, loading }) => { 
     const [showH1, setShowH1] = useState(false);
     const [fadeOut, setFadeOut] = useState(false);
 
@@ -93,9 +93,7 @@ const Portada = ({ t, loading }) => { // ← AÑADIDO loading
                 className={`portada-logo ${fadeOut ? 'fade-out' : ''}`}
             />
 
-            {/* ============================================ */}
-            {/* MODIFICADO: Ahora usa contenido de Strapi */}
-            {/* ============================================ */}
+            
             <h1
                 dangerouslySetInnerHTML={{
                     __html: t('homeIntro22', 'home')  // ← Sin el loading, usa fallback directamente

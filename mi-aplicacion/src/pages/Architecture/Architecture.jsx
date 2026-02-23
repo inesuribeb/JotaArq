@@ -46,9 +46,9 @@ function Architecture() {
 
     return (
         <div className="architecture-content">
-            <div className='arquitectura-superImagen'>
+            {/* <div className='arquitectura-superImagen'>
                 <img src="/Images/Home/MANTILLA.jpg" alt="" />
-            </div>
+            </div> */}
             {/* <MainTitle
                 title={t('serviciosDeArq')}
                 subtitles={[
@@ -68,7 +68,7 @@ function Architecture() {
                 className="architecture-class"
             />
 
-            {/* <PictureS /> */}
+            <PictureS />
 
             {isMobile ? <StatementPhone t={t} /> : <Statement t={t} />}
 
