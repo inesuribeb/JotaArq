@@ -77,6 +77,7 @@ import { useEffect, useState } from 'react';
 import Portada from './sections/Portada/Portada';
 import PortadaPhone from './sections/Portada/PortadaPhone';
 import Intro from './sections/Intro/Intro';
+import Intro2 from './sections/Intro/Intro2';
 import IntroPhone from './sections/Intro/IntroPhone';
 import ServicesIntro from './sections/Services/ServicesIntro';
 import ServicesIntroPhone from './sections/Services/ServicesIntroPhone';
@@ -139,7 +140,7 @@ function Home() {
             <div className="home-content">
                 <div className='parallax'>
                     {isMobile ? <ServicesIntroPhone t={t} /> : <ServicesIntro t={t} />}
-                    {isMobile ? <IntroPhone t={t} getRoute={getRoute} /> : <Intro t={t} getRoute={getRoute} />}
+                    {isMobile ? <IntroPhone t={t} getRoute={getRoute} /> : <Intro2 t={t} getRoute={getRoute} />}
                     {isMobile ? <ContactPhone t={t} /> : <Contact t={t} />}
                     {/* <Map /> */}
                 </div>
