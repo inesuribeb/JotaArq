@@ -96,7 +96,7 @@ function IntroPhone({ t , getRoute }) {
                 ))}
             </div> */}
 
-            {/* <div
+            <div
                 ref={scrollContainerRef}
                 className='second-line-phone'
                 onScroll={checkScrollability}
@@ -126,7 +126,7 @@ function IntroPhone({ t , getRoute }) {
                 >
                     <HiChevronRight />
                 </button>
-            </div> */}
+            </div>
 
         </section>
     )

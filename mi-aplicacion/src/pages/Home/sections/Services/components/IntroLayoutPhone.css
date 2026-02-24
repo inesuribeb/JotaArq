@@ -29,12 +29,13 @@
 .intro-layout-phone-text {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    width: 90%;
+    width: 85%;
     border-left: 1px solid var(--light-grey);
     padding-left: 1rem;
     font-weight: 400;
     margin-left: 1rem;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.2rem;
 }
 
 
